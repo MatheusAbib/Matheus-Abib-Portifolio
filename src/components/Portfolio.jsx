@@ -283,34 +283,20 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
       priority: 2
     },
-    {
-      id: 19,
-      title: "Meus Dashboards Power BI",
-      title_key: "project_dashboards",
-      description_key: "project_dashboards_desc",
-      category: "Links",
-      filter: "links",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Tela-Power-BI.png",
-      github: "https://github.com/MatheusAbib/Tela-de-Links-PowerBI",
-      live: "https://matheusabib.github.io/Tela-de-Links-PowerBI/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 3
-    },
-    {
-      id: 20,
-      title: "Meus Projetos Figma",
-      title_key: "project_figma_links",
-      description_key: "project_figma_links_desc",
-      category: "Links",
-      filter: "links",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Tela-Figma.png",
-      github: "https://github.com/MatheusAbib/Tela-de-links-Figma",
-      live: "https://matheusabib.github.io/Tela-de-links-Figma/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 3
-    },
+{
+  id: 20,
+  title: "Figma & Power BI",
+  title_key: "project_links",
+  description_key: "project_links_desc",
+  category: "Links",
+  filter: "links",
+  stack: "frontend-only",
+  image: "/assets/img/portfolio/Projetos_Figma_Powerbi.png",
+  github: "https://github.com/MatheusAbib/Projetos-Figma-Powerbi",
+  live: "https://matheusabib.github.io/Projetos-Figma-Powerbi/",
+  tags: ["Figma", "Power BI", "UI/UX", "Data Analytics"],
+  priority: 3
+},
   ];
 
   const filters = [
@@ -396,6 +382,10 @@ const Portfolio = () => {
       'Node.Js': 'js-tag',
       'Flutter': 'flutter-tag',
       'Dart': 'dart-tag',
+      'Figma': 'figma-tag',
+      'Power BI': 'powerbi-tag',
+      'UI/UX': 'uxtag',
+      'Data Analytics': 'data-tag',
     };
     return tagClasses[tag] || 'js-tag';
   };

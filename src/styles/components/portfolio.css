@@ -444,6 +444,30 @@
   border: 1px solid rgba(211, 47, 47, 0.25);
 }
 
+.tag.figma-tag {
+  background: rgba(134, 56, 58, 0.12);
+  color: #e06c6e;
+  border: 1px solid rgba(134, 56, 58, 0.3);
+}
+
+.tag.powerbi-tag {
+  background: rgba(167, 170, 99, 0.12);
+  color: #c4c77a;
+  border: 1px solid rgba(167, 170, 99, 0.3);
+}
+
+.tag.uxtag {
+  background: rgba(80, 80, 57, 0.12);
+  color: #b8b88a;
+  border: 1px solid rgba(80, 80, 57, 0.3);
+}
+
+.tag.data-tag {
+  background: rgba(167, 170, 99, 0.1);
+  color: #a7aa63;
+  border: 1px solid rgba(167, 170, 99, 0.25);
+}
+
 .stack-indicator {
   margin-top: auto;
   display: flex;
