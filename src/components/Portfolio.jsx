@@ -186,19 +186,6 @@ const Portfolio = () => {
       priority: 1
     },
     {
-      id: 9,
-      title: "To Do List",
-      title_key: "project_todolist",
-      description_key: "project_todolist_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "angular-badge",
-      image: "/assets/img/portfolio/To-Do-List.png",
-      github: "https://github.com/MatheusAbib/Gerenciador-de-Tarefas",
-      tags: ["HTML", "SCSS", "TypeScript", "Docker"],
-      priority: 1
-    },
-    {
       id: 10,
       title: "Floricultura Web",
       title_key: "project_floricultura",
