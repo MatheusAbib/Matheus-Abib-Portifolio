@@ -72,7 +72,7 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para as secretarias de Mogi
     certificate_skills_developed: "Habilidades desenvolvidas",
   
     
-    portfolio_title: "Meus Projetos",
+    portfolio_title: "Projetos Principais",
     filter_all: "Todos",
     filter_websites: "Sites",
     filter_links: "Figma & Power BI",
@@ -422,7 +422,7 @@ exp_2_text: "Development of applications for the Health and Sports departments, 
 
     certificate_skills_developed: "Developed Skills",
   
-    portfolio_title: "My Projects",
+    portfolio_title: "Main Projects",
     filter_all: "All",
     filter_websites: "Websites",
     filter_links: "Figma & Power BI",

@@ -228,20 +228,6 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 14,
-      title: "Editor de Imagem",
-      title_key: "project_editor",
-      description_key: "project_editor_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Editor-de-Fotos.png",
-      github: "https://github.com/MatheusAbib/Editor-de-Imagem",
-      live: "https://matheusabib.github.io/Editor-de-Imagem/",
-      tags: ["HTML", "CSS", "JavaScript", "Canvas API"],
-      priority: 2
-    },
-    {
       id: 15,
       title: "Bloco de Notas",
       title_key: "project_notas",
