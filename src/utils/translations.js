@@ -80,6 +80,8 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para as secretarias de Mogi
     filter_fun: "Diversão",
 
     projects_count: "projetos",
+      see_more_github: "Ver mais no GitHub",
+
 
     
     project_floricultura: "Floricultura Web",
@@ -430,6 +432,7 @@ exp_2_text: "Development of applications for the Health and Sports departments, 
     filter_fun: "Fun",
     
     projects_count: "projects",
+    see_more_github: "See more on GitHub",
 
 
     project_desfumo: "Desfumo - Smoking Cessation Control App",

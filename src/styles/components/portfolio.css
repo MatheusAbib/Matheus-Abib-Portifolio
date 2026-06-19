@@ -156,17 +156,6 @@
   overflow: hidden;
 }
 
-.projects-count {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--cream);
-  background: var(--green-deep);
-  padding: 0.35rem 1.5rem;
-  border-radius: 15px;
-}
-
 .portfolio-image img {
   width: 100%;
   height: 100%;
@@ -523,6 +512,71 @@
   50% { transform: translateX(8px); }
 }
 
+.section-title .title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-title .title-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.projects-count {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream);
+  background: var(--green-deep);
+  padding: 0.3rem 1.2rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  margin-top: 0;
+}
+
+.github-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 1rem 0.3rem 0.8rem;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.github-badge i {
+  font-size: 1rem;
+}
+
+.github-badge .bi-arrow-right {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.github-badge:hover {
+  border-color: var(--fg);
+  background: var(--surface-2);
+  color: var(--fg) !important;
+  transform: translateY(-2px);
+}
+
+.github-badge:hover .bi-arrow-right {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
   .portfolio-item {
     flex: 0 0 380px;
@@ -661,6 +715,26 @@
     margin-top: 1rem;
     font-size: 0.7rem;
   }
+  .section-title .title-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section-title .title-badges {
+    justify-content: center;
+  }
+  .projects-count {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+  }
+  .github-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.5rem;
+    gap: 0.3rem;
+  }
+  .github-badge i {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -683,8 +757,24 @@
   .tech-tags {
     gap: 0.3rem;
   }
+  .section-title .title-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section-title .title-badges {
+    justify-content: center;
+  }
   .projects-count {
-    display: none;
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+  }
+  .github-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.8rem 0.25rem 0.6rem;
+  }
+  .github-badge i {
+    font-size: 0.85rem;
   }
 }
 

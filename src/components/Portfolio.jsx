@@ -1,5 +1,4 @@
-
- import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import SectionLabel from './SectionLabel';
 
@@ -14,7 +13,6 @@ const Portfolio = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const [showAllTags, setShowAllTags] = useState({});
-
 
   useEffect(() => {
     let velocity = 0;
@@ -269,20 +267,20 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
       priority: 2
     },
-{
-  id: 20,
-  title: "Figma & Power BI",
-  title_key: "project_links",
-  description_key: "project_links_desc",
-  category: "Links",
-  filter: "links",
-  stack: "frontend-only",
-  image: "/assets/img/portfolio/Projetos_Figma_Powerbi.png",
-  github: "https://github.com/MatheusAbib/Projetos-Figma-Powerbi",
-  live: "https://matheusabib.github.io/Projetos-Figma-Powerbi/",
-  tags: ["Figma", "Power BI", "UI/UX", "Data Analytics"],
-  priority: 3
-},
+    {
+      id: 20,
+      title: "Figma & Power BI",
+      title_key: "project_links",
+      description_key: "project_links_desc",
+      category: "Links",
+      filter: "links",
+      stack: "frontend-only",
+      image: "/assets/img/portfolio/Projetos_Figma_Powerbi.png",
+      github: "https://github.com/MatheusAbib/Projetos-Figma-Powerbi",
+      live: "https://matheusabib.github.io/Projetos-Figma-Powerbi/",
+      tags: ["Figma", "Power BI", "UI/UX", "Data Analytics"],
+      priority: 3
+    },
   ];
 
   const filters = [
@@ -390,7 +388,20 @@ const Portfolio = () => {
         <SectionLabel sectionId="portfolio" />
         <div className="section-title" data-aos="fade-up">
           <h2 data-translate="portfolio_title">{t('portfolio_title')}</h2>
-          <span className="projects-count">{filteredProjects.length} {t('projects_count')}</span>
+          <div className="title-badges">
+            <span className="projects-count">{filteredProjects.length} {t('projects_count')}</span>
+            <a 
+              href="https://github.com/MatheusAbib" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="github-badge"
+              title="Ver todos os projetos no GitHub"
+            >
+              <i className="bi bi-github"></i>
+              <span>{t('see_more_github')}</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -480,21 +491,21 @@ const Portfolio = () => {
                         </div>
                       </div>
                       <h3 data-translate={project.title_key}>{t(project.title_key)}</h3>
-<div className="tech-tags">
-  {project.tags.slice(0, showAllTags[project.id] ? project.tags.length : 3).map((tag, idx) => (
-    <span key={idx} className={`tag ${getTagClass(tag)}`}>
-      {tag}
-    </span>
-  ))}
-  {project.tags.length > 3 && (
-    <button 
-      className="show-more-tags"
-      onClick={() => setShowAllTags(prev => ({...prev, [project.id]: !prev[project.id]}))}
-    >
-      {showAllTags[project.id] ? t('show_less') : `${t('show_more')} +${project.tags.length - 3} `}
-    </button>
-  )}
-</div>
+                      <div className="tech-tags">
+                        {project.tags.slice(0, showAllTags[project.id] ? project.tags.length : 3).map((tag, idx) => (
+                          <span key={idx} className={`tag ${getTagClass(tag)}`}>
+                            {tag}
+                          </span>
+                        ))}
+                        {project.tags.length > 3 && (
+                          <button 
+                            className="show-more-tags"
+                            onClick={() => setShowAllTags(prev => ({...prev, [project.id]: !prev[project.id]}))}
+                          >
+                            {showAllTags[project.id] ? t('show_less') : `${t('show_more')} +${project.tags.length - 3}`}
+                          </button>
+                        )}
+                      </div>
                       <p data-translate={project.description_key}>{t(project.description_key)}</p>
                     </div>
                   </div>
@@ -510,10 +521,10 @@ const Portfolio = () => {
           )}
         </div>
         
-<div className="scroll-hint">
-  <i className="bi bi-arrow-left-right"></i>
-  <span data-translate="scroll_hint">{t('scroll_hint')}</span>
-</div>
+        <div className="scroll-hint">
+          <i className="bi bi-arrow-left-right"></i>
+          <span data-translate="scroll_hint">{t('scroll_hint')}</span>
+        </div>
       </div>
     </section>
   );
