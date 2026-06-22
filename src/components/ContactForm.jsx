@@ -160,7 +160,7 @@ const ContactForm = () => {
       ]);
       
       if (response.ok) {
-        setResponseMessage('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+        setResponseMessage('Mensagem enviada com sucesso! Obrigado.');
         setResponseType('success');
         setFormData({
           name: '',
