@@ -177,7 +177,7 @@ project_desfumo_desc: "Aplicativo para controle de consumo de tabaco com registr
     form_validation_email: "Por favor, insira um email válido",
     form_validation_subject: "Por favor, insira o assunto",
     form_validation_message: "Por favor, escreva sua mensagem",
-    form_success: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+    form_success: "Mensagem enviada com sucesso! Obrigado.",
     form_error: "Ocorreu um erro ao enviar a mensagem. Tente novamente.",
     form_loading: "Enviando...",
     
@@ -534,7 +534,7 @@ exp_2_text: "Development of applications for the Health and Sports departments, 
     form_validation_email: "Please enter a valid email",
     form_validation_subject: "Please enter the subject",
     form_validation_message: "Please write your message",
-    form_success: "Message sent successfully! I'll contact you soon.",
+    form_success: "Message sent successfully! Thank You.",
     form_error: "An error occurred while sending the message. Please try again.",
     form_loading: "Sending...",
     
