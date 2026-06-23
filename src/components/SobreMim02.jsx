@@ -35,7 +35,7 @@ const SobreMim02 = () => {
               <i className="bi bi-whatsapp"></i>
               <span>(11) 97507-2008</span>
             </a>
-            <a href="mailto:matheus.abib.ma@gmail.com" className="contact-link-mini">
+            <a className="contact-link-mini">
               <i className="bi bi-envelope-fill"></i>
               <span>matheus.abib.ma@gmail.com</span>
             </a>
