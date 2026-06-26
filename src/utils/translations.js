@@ -105,6 +105,8 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para as secretarias de Mogi
     project_tarot: "Cartas do Destino - Tarot Online",
     project_login: "Página de Login",
     project_desfumo: "Desfumo - Controle de Consumo ao Tabagismo",
+    project_imperator: "Imperatore - Sistema de Gestão para Restaurantes, Bares e Cafés",
+
     
 project_floricultura_desc: "E-commerce de flores com carrinho de compras, filtros por categoria e sistema de busca integrado.",
 project_receitas_desc: "Aplicação completa de receitas com cadastro, edição, busca por ingredientes e categorias organizadas.",
@@ -128,6 +130,7 @@ project_lamen_desc: "Site responsivo para restaurante de lamen japonês com card
 project_tarot_desc: "Plataforma de consultas de tarot com tiragem aleatória de cartas, interpretações personalizadas e meios de contato.",
 project_login_desc: "Sistema de autenticação com login, registro e sessão persistente usando Angular, Java Spring e TypeScript.",
 project_desfumo_desc: "Aplicativo para controle de consumo de tabaco com registro diário, metas de redução, acesso a unidades de saúde (UPAS) e recursos de apoio psicológico.",
+project_imperator_desc: "Sistema completo para gestão de restaurantes, bares e cafés. Controle de estoque, ficha técnica, comandas digitais, análises de vendas e relatórios em uma plataforma integrada para otimizar o atendimento.",
 
     scroll_hint: "Role ou use as setas para ver mais projetos",
     show_more: "Ver",
@@ -436,6 +439,7 @@ exp_2_text: "Development of applications for the Health and Sports departments, 
 
 
     project_desfumo: "Desfumo - Smoking Cessation Control App",
+    project_imperator: "Imperatore - Restaurant, Bar and Café Management System",
     project_floricultura: "Floriculture Website",
     project_receitas: "Recipe Journal",
     project_dashboard: "Sales Dashboard",
@@ -480,6 +484,7 @@ exp_2_text: "Development of applications for the Health and Sports departments, 
     project_tarot_desc: "Dynamic tarot consultation platform",
     project_login_desc: "Complete authentication system with Java Spring and TypeScript",
     project_desfumo_desc: "App for smoking consumption control with access to UPAS and psychological support resources",
+    project_imperator_desc: "Complete management system for restaurants, bars and cafés. Inventory control, product specification, digital order tickets, sales analytics and reports in an integrated platform to optimize service.",
 
     scroll_hint: "Scroll or use the arrows to see more projects",
 

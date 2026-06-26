@@ -86,6 +86,21 @@ const Portfolio = () => {
 
   const projects = [
     {
+      id: 0,
+      title: "Imperatore - Sistema de Gestão para Restaurantes",
+      title_key: "project_imperator",
+      description_key: "project_imperator_desc",
+      category: "Ferramenta",
+      filter: "web",
+      stack: "fullstack",
+      image: "/assets/img/portfolio/imperatore.png",
+      github: "https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas",
+      live: "https://imperatore-zeta.vercel.app/",
+      tags: ["React", "Node.js", "Express", "MySQL", "JWT"],
+      priority: 0,
+      featured: true
+    },
+    {
       id: 1,
       title: "Desfumo - App de Controle de Consumo ao Tabagismo",
       title_key: "project_desfumo",
@@ -97,6 +112,36 @@ const Portfolio = () => {
       github: "https://github.com/MatheusAbib/Tabagismo-Saude-Publica",
       live: "https://tinyurl.com/desfumo",
       tags: ["Flutter", "Dart", "Node.js", "CSS", "Express", "MySQL"],
+      priority: 1,
+      featured: true
+    },
+        {
+      id: 4,
+      title: "Organizador de Arquivos",
+      title_key: "project_arquivos",
+      description_key: "project_arquivos_desc",
+      category: "Ferramenta",
+      filter: "motion",
+      stack: "fullstack",
+      image: "/assets/img/portfolio/Organizador-Arquivos.png",
+      github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
+      live: "https://tinyurl.com/organizador-arquivos",
+      tags: ["HTML", "CSS", "Node.Js", "Express", "MySQL"],
+      priority: 1,
+      featured: true
+    },
+        {
+      id: 3,
+      title: "Jornal de Receitas",
+      title_key: "project_receitas",
+      description_key: "project_receitas_desc",
+      category: "Site",
+      filter: "web",
+      stack: "fullstack",
+      image: "/assets/img/portfolio/Jornal-de-Receitas.png",
+      github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
+      live: "https://jornal-de-receitas-b6ti.onrender.com",
+      tags: ["HTML", "CSS", "Java", "JavaScript", "MySQL"],
       priority: 1
     },
     {
@@ -113,34 +158,8 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "Node.Js", "Express", "Java", "MySQL", "Charts"],
       priority: 1
     },
-    {
-      id: 3,
-      title: "Jornal de Receitas",
-      title_key: "project_receitas",
-      description_key: "project_receitas_desc",
-      category: "Site",
-      filter: "web",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Jornal-de-Receitas.png",
-      github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
-      live: "https://jornal-de-receitas-b6ti.onrender.com",
-      tags: ["HTML", "CSS", "Java", "JavaScript", "MySQL"],
-      priority: 1
-    },
-    {
-      id: 4,
-      title: "Organizador de Arquivos",
-      title_key: "project_arquivos",
-      description_key: "project_arquivos_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Organizador-Arquivos.png",
-      github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
-      live: "https://tinyurl.com/organizador-arquivos",
-      tags: ["HTML", "CSS", "Node.Js", "Express", "MySQL"],
-      priority: 1
-    },
+
+
     {
       id: 5,
       title: "E-Commerce - Livros Online",
@@ -370,6 +389,9 @@ const Portfolio = () => {
       'Power BI': 'powerbi-tag',
       'UI/UX': 'uxtag',
       'Data Analytics': 'data-tag',
+      'React': 'react-tag',
+      'Express': 'js-tag',
+      'JWT': 'auth-tag',
     };
     return tagClasses[tag] || 'js-tag';
   };
@@ -399,7 +421,7 @@ const Portfolio = () => {
             >
               <i className="bi bi-github"></i>
               <span>{t('see_more_github')}</span>
-              <i class="bi bi-arrow-right"></i>
+              <i className="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -443,6 +465,11 @@ const Portfolio = () => {
                   style={{ transitionDelay: visibleProjects.includes(project.id) ? `${index * 50}ms` : '0ms' }}
                 >
                   <div className="portfolio-card">
+                    {project.featured && (
+                      <span className="featured-badge">
+                        <i className="bi bi-star-fill"></i> Destaque
+                      </span>
+                    )}
                     <div className="portfolio-image">
                       <img 
                         src={project.image} 
@@ -481,6 +508,7 @@ const Portfolio = () => {
                           {project.category === "Ferramenta" && t('category_ferramenta')}
                           {project.category === "Diversão" && t('category_diversao')}
                           {project.category === "Links" && t('category_links')}
+                          {project.category === "Sistema" && t('category_system')}
                         </span>
                         <div className="stack-simple">
                           <i className="bi bi-code-slash"></i>
