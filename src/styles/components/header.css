@@ -142,11 +142,21 @@
 #header.header.scrolled .mobile-nav-toggle {
   color: var(--fg-muted) !important;
 }
+#header.header.scrolled .navmenu ul li a:hover {
+  color: var(--accent-color) !important;
+}
+
+#header.header.scrolled .navmenu ul li a:hover::before {
+  background: var(--accent-color) !important;
+}
 
 #header.header.scrolled .navmenu ul li a.active {
   color: var(--accent-color) !important;
 }
 
+#header.header.scrolled .navmenu ul li a.active::before {
+  background: var(--accent-color) !important;
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -487,7 +497,6 @@ body.mobile-nav-active .d-none.d-xl-flex {
 
 @media (min-width: 992px) and (hover: hover) and (pointer: fine) {
   .navmenu ul li a:hover {
-    color: var(--accent-color) !important;
     transform: translateY(-1px);
   }
 
@@ -498,7 +507,7 @@ body.mobile-nav-active .d-none.d-xl-flex {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--accent-color);
+    background: var(--fg-muted);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
