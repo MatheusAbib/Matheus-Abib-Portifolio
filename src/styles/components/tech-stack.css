@@ -1,5 +1,5 @@
 #testimonials {
-  background-color: #2a2a26;
+  background-color: var(--ink);
   position: relative;
 }
 
@@ -27,31 +27,8 @@
   margin-bottom: 0;
 }
 
-.tech-stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.tech-stack-list .stack-tag {
-  padding: 0.4rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: var(--radius-pill);
-  background: var(--surface-1);
-  color: var(--accent-color);
-  border: 1px solid var(--hairline);
-  transition: all 0.2s ease;
-}
-
-.tech-stack-list .stack-tag:hover {
-  transform: translateY(-2px);
-  background: var(--surface-2);
-  border-color: var(--green-soft);
-}
-
 .tech-category {
-  background: var(--surface-1);
+  background: var(--surface-2);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -76,7 +53,7 @@
 }
 
 .category-icon-wrapper {
-  background:  var(--green-deep);
+  background: var(--green-deep);
   width: 44px;
   height: 44px;
   border-radius: var(--radius-md);
@@ -109,17 +86,18 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem 0.5rem;
-  background: #f5f3ee26;
+  background: var(--surface-1);
   border-radius: var(--radius-md);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--hairline);
   cursor: pointer;
+  min-height: 100px;
 }
 
 .tech-card:hover {
   transform: translateY(-5px);
   border-color: var(--green-soft);
-  background: var(--surface-1);
+  background: var(--surface-2);
 }
 
 .tech-icon-wrapper {
@@ -128,6 +106,7 @@
   align-items: center;
   margin-bottom: 0.5rem;
   min-height: 44px;
+  min-width: 44px;
 }
 
 .tech-icon-wrapper i,
@@ -136,6 +115,12 @@
   width: 36px;
   height: 36px;
   transition: all 0.3s ease;
+}
+
+.tech-icon-wrapper i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tech-card:hover .tech-icon-wrapper i,
@@ -148,10 +133,11 @@
   font-weight: 600;
   color: var(--fg-muted);
   text-align: center;
+  margin-top: 2px;
 }
 
 .tech-card:hover .tech-name {
-  color: var(--accent-color);
+  color: var(--fg);
 }
 
 @media (max-width: 992px) {
@@ -222,16 +208,18 @@
   }
 
   .tech-grid {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
     gap: 0.75rem;
   }
 
   .tech-card {
     padding: 0.75rem 0.5rem;
+    min-height: 85px;
   }
 
   .tech-icon-wrapper {
     min-height: 36px;
+    min-width: 36px;
   }
 
   .tech-icon-wrapper i,

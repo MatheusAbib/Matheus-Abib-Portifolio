@@ -5,33 +5,32 @@ const TechStack = () => {
 const frontend = [
   { icon: "fab fa-html5", name: "HTML", color: "#E34F26" },
   { icon: "fab fa-css3-alt", name: "CSS", color: "#1572B6" },
-  { name: "SCSS", isIconify: true, iconifyIcon: "logos:sass" },
   { icon: "fab fa-js-square", name: "JavaScript", color: "#F7DF1E" },
-  { icon: "devicon-typescript-plain", name: "TypeScript", color: "#3178C6" },
+  { icon: "devicon-typescript-plain", name: "TypeScript", color: "#3178C6" }
+];
+
+const frameworks = [
+  { icon: "fab fa-react", name: "React", color: "#61DAFB" },
+  { icon: "fab fa-angular", name: "Angular", color: "#DD0031" },
+  { name: "Spring Boot", isIconify: true, iconifyIcon: "logos:spring-icon" },
+  { name: "Express", isIconify: true, iconifyIcon: "simple-icons:express" },
+  { name: "Flutter", isIconify: true, iconifyIcon: "logos:flutter" },
   { name: "Dart", isIconify: true, iconifyIcon: "logos:dart" }
 ];
 
-  const frameworks = [
-    { icon: "fab fa-react", name: "React", color: "#61DAFB" },
-    { icon: "fab fa-angular", name: "Angular", color: "#DD0031" },
-    { name: "Flutter", isIconify: true, iconifyIcon: "logos:flutter" },
-    { name: "Spring Boot", isIconify: true, iconifyIcon: "logos:spring-icon" },
-    { icon: "", name: "Express", isIconify: true, iconifyIcon: "simple-icons:express" },
-  ];
+const backend = [
+  { icon: "fab fa-node", name: "Node.js", color: "#4CA54C" },
+  { name: "MySQL", isIconify: true, iconifyIcon: "logos:mysql" }
+];
 
-  const backend = [
-    { icon: "devicon-java-plain", name: "Java", color: "#f89820" },
-    { icon: "fab fa-node", name: "Node.js", color: "#339933" },
-    { icon: "", name: "MySQL", isIconify: true, iconifyIcon: "logos:mysql" }
-  ];
+const tools = [
+  { icon: "fab fa-git-alt", name: "Git", color: "#F05032" },
+  { icon: "fab fa-github", name: "GitHub", color: "#ffffff" },
+  { icon: "fab fa-figma", name: "Figma", color: "#F24E1E" },
+  { icon: "bi-kanban", name: "Trello", color: "#0079BF" },
+  { icon: "bi-graph-up", name: "Power BI", color: "#F2C811" }
+];
 
-
-  const tools = [
-    { icon: "fab fa-figma", name: "Figma", color: "#f2371eff" },
-    { icon: "bi-kanban", name: "Trello", color: "#0079BF" },
-    { icon: "bi-graph-up", name: "Power BI", color: "#F2C811" },
-    { icon: "fab fa-github", name: "GitHub", color: "#181717" }
-  ];
 
   return (
     <section id="testimonials" className="testimonials section">
