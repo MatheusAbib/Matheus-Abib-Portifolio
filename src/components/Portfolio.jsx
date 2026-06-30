@@ -225,8 +225,8 @@ const Portfolio = () => {
       filter: "web",
       stack: "frontend-only",
       image: "/assets/img/portfolio/Yummy-Lamen.png",
-      github: "https://github.com/MatheusAbib/Restaurante-Lamen",
-      live: "https://matheusabib.github.io/Restaurante-Lamen/",
+      github: "https://github.com/MatheusAbib/Restaurante-de-Lamen",
+      live: "https://matheusabib.github.io/Restaurante-de-Lamen/",
       tags: ["HTML", "CSS", "JavaScript"],
       priority: 2
     },
