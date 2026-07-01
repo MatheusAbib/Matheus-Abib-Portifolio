@@ -111,7 +111,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Desfumo.png",
       github: "https://github.com/MatheusAbib/Tabagismo-Saude-Publica",
       live: "https://tinyurl.com/desfumo",
-      tags: ["Flutter", "Dart", "Node.js", "CSS", "Express", "MySQL"],
+      tags: ["Flutter", "Dart", "Node.js", "Express", "MySQL"],
       priority: 1,
       featured: true
     },
@@ -126,7 +126,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Organizador-Arquivos.png",
       github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
       live: "https://tinyurl.com/organizador-arquivos",
-      tags: ["HTML", "CSS", "Node.Js", "Express", "MySQL"],
+      tags: ["Node.Js", "Express", "MySQL"],
       priority: 1,
       featured: true
     },
@@ -141,7 +141,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Jornal-de-Receitas.png",
       github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
       live: "https://jornal-de-receitas-b6ti.onrender.com",
-      tags: ["HTML", "CSS", "Java", "JavaScript", "MySQL"],
+      tags: ["Java", "SpringBoot", "JavaScript", "MySQL"],
       priority: 1
     },
     {
@@ -155,7 +155,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Dashboard.png",
       github: "https://github.com/MatheusAbib/Dashboard-Vendas",
       live: "https://tinyurl.com/vendas-dashboard",
-      tags: ["HTML", "CSS", "Node.Js", "Express", "Java", "MySQL", "Charts"],
+      tags: ["Node.Js", "Express", "Java", "MySQL", "Charts"],
       priority: 1
     },
 
@@ -171,7 +171,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Livraria-Online.png",
       github: "https://github.com/MatheusAbib/e-commerce-livraria",
       live: "https://tinyurl.com/livrariaonline",
-      tags: ["HTML", "CSS",  "Java", "Node.Js", "Express", "MySQL"],
+      tags: ["Java", "SpringBoot", "Node.Js", "Express", "MySQL"],
       priority: 1
     },
     {
@@ -185,7 +185,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/CRUD-Cadastro.png",
       github: "https://github.com/MatheusAbib/Formulario-Cliente",
       live: "https://tinyurl.com/crud-correios",
-      tags: ["HTML", "CSS", "Java", "JavaScript", "MySQL"],
+      tags: ["Java", "SpringBoot", "JavaScript", "MySQL"],
       priority: 1
     },
     {
@@ -199,7 +199,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Pagina-de-Login.png",
       github: "https://github.com/MatheusAbib/Pagina-de-login",
       live: "https://pagina-de-login.up.railway.app/login",
-      tags: ["HTML", "SCSS", "TypeScript", "Java", "H2-Database", "Authentication"],
+      tags: ["Angular", "TypeScript", "Java", "H2-Database", "Authentication"],
       priority: 1
     },
     {
@@ -370,6 +370,7 @@ const Portfolio = () => {
       'CSS': 'css-tag',
       'JavaScript': 'js-tag',
       'Java': 'java-tag',
+      'SpringBoot' : 'java-tag',
       'MySQL': 'mysql-tag',
       'TypeScript': 'typescript-tag',
       'SCSS': 'css-tag',
@@ -392,6 +393,7 @@ const Portfolio = () => {
       'React': 'react-tag',
       'Express': 'js-tag',
       'JWT': 'auth-tag',
+      'Angular': 'angular-tag'
     };
     return tagClasses[tag] || 'js-tag';
   };
@@ -525,7 +527,7 @@ const Portfolio = () => {
                             {tag}
                           </span>
                         ))}
-                        {project.tags.length > 3 && (
+                        {project.tags.length > 6 && (
                           <button 
                             className="show-more-tags"
                             onClick={() => setShowAllTags(prev => ({...prev, [project.id]: !prev[project.id]}))}

@@ -379,6 +379,12 @@
   border: 1px solid rgba(248, 152, 32, 0.25);
 }
 
+.tag.angular-tag {
+  background: rgba(244, 67, 54, 0.12);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.25);
+}
+
 .tag.mysql-tag {
   background: rgba(0, 188, 212, 0.15);
   color: #22d3ee;
