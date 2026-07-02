@@ -55,6 +55,15 @@ const Certificates = () => {
       image: 'assets/img/services/react.png'
     },
     {
+      id: 'ia',
+      title_key: 'certificate_ia_title',
+      institution: 'Alura + Google',
+      description_key: 'certificate_ia_desc',
+      skills: ['Python', 'Machine Learning', 'Deep Learning', 'Redes Neurais', 'Data Analysis'],
+      date: '2024',
+      image: 'assets/img/services/IA.jpg'
+    },
+    {
       id: 'java',
       title_key: 'certificate_java_title',
       institution: 'Rocketseat',
@@ -134,6 +143,13 @@ const Certificates = () => {
         <span className="cert-dot"></span>
         <span data-translate="certificate_react_title">React com JavaScript</span>
       </button>
+      <button
+      className={`certificate-sidebar-item ${activeCert === 'ia' ? 'active' : ''}`}
+      onClick={() => setActiveCert('ia')}
+    >
+      <span className="cert-dot"></span>
+      <span data-translate="certificate_ia_title">Inteligência Artificial</span>
+    </button>
       <button
         className={`certificate-sidebar-item ${activeCert === 'java' ? 'active' : ''}`}
         onClick={() => setActiveCert('java')}

@@ -57,6 +57,9 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi da
     certificate_logic_title: "Lógica de Programação",
     certificate_ai_title: "Inteligência Artificial",
     certificate_java_title: "Java & Spring Boot",
+
+    certificate_ia_title: "Inteligência Artificial",
+  certificate_ia_desc: "Imersão em Inteligência Artificial com foco em fundamentos de machine learning, deep learning, Python, redes neurais, processamento de linguagem natural, análise de dados e como treinar a IA para seguir exatamente o que você deseja.",
     
     certificate_webdev_desc: "Curso de Desenvolvimento Web Front-end com foco em HTML5, CSS3, JavaScript, Bootstrap e AJAX, abordando tecnologias fundamentais para interfaces modernas e responsivas",
     certificate_powerbi_desc: "Curso completo de Microsoft Power BI para Business Intelligence e Data Science, abordando com ênfase em DAX, Power Query, modelagem de dados e dashboards interativos.",
@@ -412,6 +415,9 @@ exp_2_text: "<ul><li>Development of applications for Mogi das Cruzes municipal d
     certificate_logic_title: "Programming Logic",
     certificate_ai_title: "Artificial Intelligence",
     certificate_java_title: "Java & Spring Boot",
+
+    certificate_ia_title: "Artificial Intelligence",
+certificate_ia_desc: "Immersion in Artificial Intelligence focusing on fundamentals of machine learning, deep learning, Python, neural networks, natural language processing, data analysis, and how to train AI to follow exactly what you want.",
     
     certificate_webdev_desc: "Specialized course in front-end web development, covering fundamental technologies for building modern and responsive interfaces.",
     certificate_powerbi_desc: "Complete Microsoft Power BI course for Business Intelligence and Data Science, covering from basic concepts to advanced data analysis and visualization techniques.",
