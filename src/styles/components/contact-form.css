@@ -41,7 +41,7 @@
 .contact-info-icon {
   width: 70px;
   height: 70px;
-  background:  var(--green-deep);
+  background: var(--green-deep);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -65,8 +65,8 @@
   color: var(--fg-muted);
   font-size: 0.8rem;
   line-height: 1.6;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
 }
 
 .contact-info-links {
@@ -203,11 +203,12 @@ textarea.form-input ~ .input-icon {
   background: var(--surface-2);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--fg);
   transition: all 0.3s ease;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
+  -webkit-text-size-adjust: 100%;
 }
 
 .form-input:focus {
@@ -233,8 +234,8 @@ textarea.form-input:focus + .input-icon {
 textarea.form-input {
   resize: vertical;
   min-height: 120px;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
   padding-top: 1rem;
 }
 
@@ -311,7 +312,9 @@ textarea.form-input {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeInUp {
@@ -388,5 +391,21 @@ textarea.form-input {
 
   .form-input {
     padding: 0.75rem 0.85rem 0.75rem 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-input {
+    font-size: 16px;
+  }
+
+  .form-input {
+    padding: 0.75rem 0.85rem 0.75rem 2.5rem;
+  }
+
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
   }
 }

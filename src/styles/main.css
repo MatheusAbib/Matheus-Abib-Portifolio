@@ -45,7 +45,6 @@ section, .section {
 .section-title {
   text-align: center;
   position: relative;
-  margin-bottom: 4rem;
 }
 
 .section-title h2 {

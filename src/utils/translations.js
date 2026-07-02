@@ -37,7 +37,7 @@ feature_1_title: "Full Stack & Arquitetura",
 feature_1_text: "<strong>Desenvolvo</strong> com Angular, React, Spring Boot e Node.js. Atualmente explorando Flutter e Dart.",
 
 feature_2_title: "Metodologias Ágeis",
-feature_2_text: "<strong>Trabalho</strong> diretamente com clientes para levantar requisitos e validar entregas. Experiência prática em documentação técnica e regras de negócio.",
+feature_2_text: "<strong>Trabalho</strong> com clientes para levantar requisitos e validar entregas. Experiência prática em documentação e regras de negócio.",
 
 feature_3_title: "UI/UX & Dados",
 feature_3_text: "<strong>Crio</strong> protótipos no Figma e visualização de dados com Power BI, unindo design e tomada de decisão.",

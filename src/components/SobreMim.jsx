@@ -25,9 +25,7 @@ const SobreMim = () => {
             <span>Métodos Ágeis</span>
             <span>UI/UX</span>
           </div>
-            <p className="hero-description-tagline" data-aos="fade-up" data-aos-delay="400">
-              {t('hero_tagline')}
-            </p>
+
         </div>
       </div>
     </section>
