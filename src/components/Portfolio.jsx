@@ -265,11 +265,11 @@ const Portfolio = () => {
       description_key: "project_uno_desc",
       category: "Diversão",
       filter: "brand",
-      stack: "frontend-only",
+      stack: "angular-badge",
       image: "/assets/img/portfolio/UNO.png",
       github: "https://github.com/MatheusAbib/UNO",
       live: "https://matheusabib.github.io/UNO/",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["Angular", "TypeScript", "HTML", "CSS"],
       priority: 2
     },
     {
@@ -522,7 +522,7 @@ const Portfolio = () => {
                       </div>
                       <h3 data-translate={project.title_key}>{t(project.title_key)}</h3>
                       <div className="tech-tags">
-                        {project.tags.slice(0, showAllTags[project.id] ? project.tags.length : 3).map((tag, idx) => (
+                        {project.tags.slice(0, showAllTags[project.id] ? project.tags.length : 6).map((tag, idx) => (
                           <span key={idx} className={`tag ${getTagClass(tag)}`}>
                             {tag}
                           </span>

@@ -29,7 +29,9 @@ about_title: "Sobre mim",
 hero_tagline: "Crio softwares completos, dos requisitos à entrega, unindo minhas habilidades em tecnologia, design e tomada de decisão.",
 
 cv_button: "Download CV",
+
 cv_portuguese: "Português",
+
 cv_english: "Inglês",
 
 feature_1_title: "Full Stack & Arquitetura",
