@@ -272,6 +272,20 @@ const Portfolio = () => {
       tags: ["Angular", "TypeScript", "HTML", "CSS"],
       priority: 2
     },
+        {
+      id: 19,
+      title: "A Forca",
+      title_key: "project_forca",
+      description_key: "project_forca_desc",
+      category: "Diversão",
+      filter: "brand",
+      stack: "frontend-only",
+      image: "/assets/img/portfolio/Jogo-da-Forca.png",
+      github: "https://github.com/MatheusAbib/Jogo-da-Forca",
+      live: "https://matheusabib.github.io/Jogo-da-Forca/",
+      tags: ["HTML", "CSS","JavaScript"],
+      priority: 2
+    },
     {
       id: 18,
       title: "Tocador de Música",
@@ -286,6 +300,7 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
       priority: 2
     },
+
     {
       id: 20,
       title: "Figma & Power BI",
