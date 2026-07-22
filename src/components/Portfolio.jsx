@@ -245,20 +245,6 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 15,
-      title: "Bloco de Notas",
-      title_key: "project_notas",
-      description_key: "project_notas_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Bloco-de-Notas.png",
-      github: "https://github.com/MatheusAbib/Bloco-de-Notas",
-      live: "https://matheusabib.github.io/Bloco-de-Notas/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 2
-    },
-    {
       id: 17,
       title: "UNO",
       title_key: "project_uno",
