@@ -213,7 +213,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Floricultura-Web.png",
       github: "https://github.com/MatheusAbib/Floricultura-Web",
       live: "https://matheusabib.github.io/Floricultura-Web/",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["React", "HTML", "SCSS", "JavaScript"],
       priority: 2
     },
     {

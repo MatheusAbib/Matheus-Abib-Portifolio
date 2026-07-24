@@ -111,7 +111,7 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi da
     project_imperator: "Imperatore - Sistema de Gestão para Restaurantes, Bares e Cafés",
 
     
-project_floricultura_desc: "E-commerce de flores com carrinho de compras, filtros por categoria e sistema de busca integrado.",
+project_floricultura_desc: "E-commerce de flores e presentes com carrinho, favoritos, busca, ordenação e pagamento integrado",
 project_receitas_desc: "Aplicação completa de receitas com cadastro, edição, busca por ingredientes e categorias organizadas.",
 project_dashboard_desc: "Dashboard interativo com gráficos dinâmicos, filtros por período e análise de métricas de vendas em tempo real.",
 project_livros_desc: "Loja virtual completa com catálogo de livros, carrinho de compras, checkout, gerenciamento de pedidos, estoque e status de entrega do pedido.",
