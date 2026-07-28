@@ -175,31 +175,17 @@ const Portfolio = () => {
       priority: 1
     },
     {
-      id: 6,
-      title: "CRUD - Formulário de Cadastro",
-      title_key: "project_crud",
-      description_key: "project_crud_desc",
-      category: "Site",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/CRUD-Cadastro.png",
-      github: "https://github.com/MatheusAbib/Formulario-Cliente",
-      live: "https://tinyurl.com/crud-correios",
-      tags: ["Java", "SpringBoot", "JavaScript", "MySQL"],
-      priority: 1
-    },
-    {
       id: 8,
-      title: "Página de Login",
+      title: "Meu Painel",
       title_key: "project_login",
       description_key: "project_login_desc",
-      category: "Site",
+      category: "Ferramenta",
       filter: "motion",
       stack: "angular-badge",
       image: "/assets/img/portfolio/Pagina-de-Login.png",
-      github: "https://github.com/MatheusAbib/Pagina-de-login",
-      live: "https://pagina-de-login.up.railway.app/login",
-      tags: ["Angular", "TypeScript", "Java", "H2-Database", "Authentication"],
+      github: "https://github.com/MatheusAbib/Pagina-de-Login",
+      live: "https://pagina-de-login-rho.vercel.app/login",
+      tags: ["Angular", "TypeScript", "SCSS", "JavaScript"],
       priority: 1
     },
     {

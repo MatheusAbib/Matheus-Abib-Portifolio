@@ -106,7 +106,7 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi da
     project_links: "Projetos Figma & Power BI",
     project_lamen: "Yummy Lamen - Restaurante de Lamen",
     project_tarot: "Cartas do Destino - Tarot Online",
-    project_login: "Página de Login",
+    project_login: "Meu Painel - CRUD",
     project_desfumo: "Desfumo - Controle de Consumo ao Tabagismo",
     project_imperator: "Imperatore - Sistema de Gestão para Restaurantes, Bares e Cafés",
 
@@ -131,7 +131,7 @@ project_links_desc: "Projetos organizados em categorias (Figma e Power BI), com 
 project_arquivos_desc: "Ferramenta de organização de arquivos com funcionalidades de mover, copiar, renomear e pesquisar em pastas.",
 project_lamen_desc: "Site responsivo para restaurante de lamen japonês com cardápio digital, horário de funcionamento e localização.",
 project_tarot_desc: "Plataforma de consultas de tarot com tiragem aleatória de cartas, interpretações personalizadas e meios de contato.",
-project_login_desc: "Sistema de autenticação com login, registro e sessão persistente usando Angular, Java Spring e TypeScript.",
+"project_login_desc": "Sistema completo de autenticação e gerenciamento com Angular, Node.js e MySQL, incluindo login, cadastro, CRUD de endereços e cartões, foto de perfil e logo dinâmica.",
 project_desfumo_desc: "Aplicativo para controle de consumo de tabaco com registro diário, metas de redução, acesso a unidades de saúde (UPAS) e recursos de apoio psicológico.",
 project_imperator_desc: "Sistema completo para gestão de restaurantes, bares e cafés. Controle de estoque, ficha técnica, comandas digitais, análises de vendas e relatórios em uma plataforma integrada para otimizar o atendimento.",
 
@@ -465,7 +465,7 @@ certificate_ia_desc: "Immersion in Artificial Intelligence focusing on fundament
     project_links: "Figma & Power BI Projects",
     project_lamen: "Yummy Lamen - Ramen Restaurant",
     project_tarot: "Destiny Cards - Online Tarot",
-    project_login: "Login Page",
+    project_login: "My Dashboard - CRUD",
     
     project_floricultura_desc: "Responsive florist website with shopping cart and filters",
     project_receitas_desc: "Complete system with recipe registration, search and categories",
@@ -487,7 +487,7 @@ certificate_ia_desc: "Immersion in Artificial Intelligence focusing on fundament
     project_arquivos_desc: "Complete file organization tool with full functionalities",
     project_lamen_desc: "Website for restaurant specialized in Japanese ramen",
     project_tarot_desc: "Dynamic tarot consultation platform",
-    project_login_desc: "Complete authentication system with Java Spring and TypeScript",
+    "project_login_desc": "Complete authentication and management system with Angular, Node.js and MySQL, including login, registration, CRUD for addresses and cards, profile photo and dynamic logo.",
     project_desfumo_desc: "App for smoking consumption control with access to UPAS and psychological support resources",
     project_imperator_desc: "Complete management system for restaurants, bars and cafés. Inventory control, product specification, digital order tickets, sales analytics and reports in an integrated platform to optimize service.",
 

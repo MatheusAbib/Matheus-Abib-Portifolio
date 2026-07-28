@@ -5,6 +5,7 @@ const TechStack = () => {
 const frontend = [
   { icon: "fab fa-html5", name: "HTML", color: "#E34F26" },
   { icon: "fab fa-css3-alt", name: "CSS", color: "#1572B6" },
+  { icon: "devicon-sass-original", name: "SCSS", color: "#CC6699" },
   { icon: "fab fa-js-square", name: "JavaScript", color: "#F7DF1E" },
   { icon: "devicon-typescript-plain", name: "TypeScript", color: "#3178C6" }
 ];
