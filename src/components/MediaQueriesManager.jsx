@@ -300,11 +300,9 @@ const MediaQueriesManager = () => {
         padding: 20px;
       }
       .portfolio .portfolio-card .portfolio-content h3 {
-        font-size: 16px;
-      }
-      .portfolio .portfolio-card .portfolio-content p {
         font-size: 14px;
       }
+
       .portfolio-scroll-container::-webkit-scrollbar {
         display: none;
       }

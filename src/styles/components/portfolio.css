@@ -160,10 +160,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .portfolio-card:hover .portfolio-image img {
   transform: scale(1.05);
 }
@@ -286,7 +284,7 @@
 }
 
 .portfolio-content p {
-  font-size: 0.85rem !important;
+  font-size: 0.85rem;
   color: var(--fg-muted);
   margin: 0 0 1rem 0;
   line-height: 1.6;
@@ -624,12 +622,13 @@
     max-width: 380px;
   }
   .portfolio-image {
-    height: 240px;
+    height: 188px;
   }
   .portfolio-horizontal-grid {
     gap: 1.5rem;
     padding: 1rem 0;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -638,12 +637,13 @@
     max-width: 460px;
   }
   .portfolio-image {
-    height: 280px;
+    height: 228px;
   }
   .portfolio-horizontal-grid {
     gap: 1.5rem;
     padding: 1rem 0;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -652,7 +652,7 @@
     max-width: 540px;
   }
   .portfolio-image {
-    height: 320px;
+    height: 270px;
   }
   .portfolio-horizontal-grid {
     gap: 1.75rem;
@@ -661,9 +661,7 @@
   .portfolio-content h3 {
     font-size: 1.3rem;
   }
-  .portfolio-content p {
-    font-size: 0.85rem !important;
-  }
+
   .portfolio-actions a {
     width: 56px;
     height: 56px;
@@ -677,7 +675,7 @@
     max-width: 620px;
   }
   .portfolio-image {
-    height: 360px;
+    height: 340px;
   }
   .portfolio-horizontal-grid {
     gap: 2rem;
@@ -689,9 +687,6 @@
   .portfolio-item {
     flex: 0 0 700px;
     max-width: 680px;
-  }
-  .portfolio-image {
-    height: 400px;
   }
   .portfolio-horizontal-grid {
     gap: 1.5rem;
@@ -705,7 +700,7 @@
     max-width: 800px;
   }
   .portfolio-image {
-    height: 440px;
+    height: 395px;
   }
   .portfolio-horizontal-grid {
     gap: 2rem;
@@ -714,6 +709,7 @@
 }
 
 @media (max-width: 575px) {
+
   .portfolio-horizontal-grid {
     gap: 1rem;
     padding: 0.75rem 0;
@@ -723,7 +719,7 @@
     max-width: 85vw;
   }
   .portfolio-image {
-    height: 220px;
+    height: 207px;
   }
   .portfolio-content {
     padding: 1rem;
@@ -732,7 +728,7 @@
     font-size: 1rem;
   }
   .portfolio-content p {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
     -webkit-line-clamp: 4;
   }
   .tech-tags .tag {
@@ -816,6 +812,12 @@
   }
   .github-badge i {
     font-size: 0.85rem;
+  }
+    .portfolio-content p{
+    font-size: 0.7rem;
+  }
+  .portfolio-content h3{
+    font-size: 1rem ;
   }
 }
 
