@@ -112,7 +112,7 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi da
     
 project_floricultura_desc: "E-commerce de flores e presentes com carrinho, favoritos, busca, ordenação e pagamento integrado",
 project_receitas_desc: "Aplicação completa de receitas com cadastro, edição, busca por ingredientes e categorias organizadas.",
-project_dashboard_desc: "Dashboard interativo com gráficos dinâmicos, filtros por período e análise de métricas de vendas em tempo real.",
+project_dashboard_desc: "Dashboard de vendas com gráficos dinâmicos, filtros inteligentes, mapa interativo e exportação de relatórios.",
 project_livros_desc: "Loja virtual completa com catálogo de livros, carrinho de compras, checkout, gerenciamento de pedidos, estoque e status de entrega do pedido.",
 project_calendario_desc: "Calendário interativo com navegação mensal e anual, suporte para eventos e datas comemorativas.",
 project_forca_desc: "Jogo da forca com 6 categorias, 3 dificuldades, dicas, ranking local, efeitos de fogo e sons imersivos.",
@@ -466,7 +466,7 @@ certificate_ia_desc: "Immersion in Artificial Intelligence focusing on fundament
     
     project_floricultura_desc: "Responsive florist website with shopping cart and filters",
     project_receitas_desc: "Complete system with recipe registration, search and categories",
-    project_dashboard_desc: "Interactive dashboard with sales data analysis and charts",
+    project_dashboard_desc: "Sales dashboard with dynamic charts, smart filters, interactive map, and report export functionality.",
     project_livros_desc: "Complete e-commerce with shopping cart, checkout and order system",
     project_calendario_desc: "Interactive calendar with month and year navigation",
     project_forca_desc: "Hangman game with 6 categories, 3 difficulty levels, hints, local ranking, fire effects and immersive sounds.",

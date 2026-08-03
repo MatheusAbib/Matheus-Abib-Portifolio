@@ -154,7 +154,7 @@ const Portfolio = () => {
       stack: "fullstack",
       image: "/assets/img/portfolio/Dashboard.png",
       github: "https://github.com/MatheusAbib/Dashboard-Vendas",
-      live: "https://tinyurl.com/vendas-dashboard",
+      live: "https://dashboard-vendas-node.netlify.app/",
       tags: ["Node.Js", "Express", "Java", "MySQL", "Charts"],
       priority: 1
     },
