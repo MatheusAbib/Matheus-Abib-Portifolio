@@ -125,7 +125,7 @@ const Portfolio = () => {
       stack: "fullstack",
       image: "/assets/img/portfolio/Organizador-Arquivos.png",
       github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
-      live: "https://tinyurl.com/organizador-arquivos",
+      live: "https://organizador-arquivos.vercel.app/",
       tags: ["Node.Js", "Express", "MySQL"],
       priority: 1,
       featured: true
