@@ -47,11 +47,9 @@ Olá! Eu sou **Matheus Bilitardo Abib**, um desenvolvedor de software brasileiro
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
 
 ### Banco de Dados
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white)
 
 ### Ferramentas & Design
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
@@ -75,13 +73,11 @@ Este portfólio apresenta **16 projetos** divididos em categorias:
 | **Yummy Lamen** | Site responsivo para restaurante de lamen japonês |
 | **Jornal de Receitas** | Sistema completo com cadastro, edição e busca por ingredientes |
 | **Livraria Online** | E-commerce com catálogo, carrinho, chat em tempo real e dashboard admin |
-| **Dona Sucos** | Site institucional para loja de sucos naturais |
 
 ### 🛠️ Ferramentas
 | Projeto | Descrição |
 |---------|-----------|
 | **Dashboard de Vendas** | Gráficos dinâmicos, filtros inteligentes e exportação de relatórios |
-| **CRUD - Formulário** | Sistema completo com Create, Read, Update e Delete |
 | **Organizador de Arquivos** | Ferramenta para mover, copiar, renomear e pesquisar arquivos |
 | **Bloco de Notas** | App completo com LocalStorage, tags, tema escuro e undo/redo |
 | **Meu Painel - CRUD** | Sistema com Angular, Node.js e MySQL com autenticação |
@@ -99,8 +95,6 @@ Este portfólio apresenta **16 projetos** divididos em categorias:
 |---------|-----------|
 | **Projetos Figma** | Protótipos de UI/UX com foco em experiência do usuário |
 | **Dashboards Power BI** | Visualizações interativas de dados com DAX e Power Query |
-
-> 💡 **Ver mais:** [GitHub](https://github.com/matheusabib)
 
 ---
 
