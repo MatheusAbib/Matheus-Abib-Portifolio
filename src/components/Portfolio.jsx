@@ -130,6 +130,23 @@ const Portfolio = () => {
       priority: 1,
       featured: true
     },
+
+      {
+        id: 5,
+        title: "E-Commerce - Livros Online",
+        title_key: "project_livros",
+        description_key: "project_livros_desc",
+        category: "Site",
+        filter: "web",
+        stack: "angular-badge",
+        image: "/assets/img/portfolio/Livraria-Online.png",
+        github: "https://github.com/MatheusAbib/e-commerce-livraria",
+        live: "https://livraria-online-gold.vercel.app/",
+        tags: ["Angular", "TypeScript", "Java", "SpringBoot", "MySQL"],
+        priority: 1,
+        featured: true
+      },
+
         {
       id: 3,
       title: "Jornal de Receitas",
@@ -160,20 +177,7 @@ const Portfolio = () => {
     },
 
 
-    {
-      id: 5,
-      title: "E-Commerce - Livros Online",
-      title_key: "project_livros",
-      description_key: "project_livros_desc",
-      category: "Site",
-      filter: "web",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Livraria-Online.png",
-      github: "https://github.com/MatheusAbib/e-commerce-livraria",
-      live: "https://tinyurl.com/livrariaonline",
-      tags: ["Java", "SpringBoot", "Node.Js", "Express", "MySQL"],
-      priority: 1
-    },
+
     {
       id: 8,
       title: "Meu Painel",
@@ -185,7 +189,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Pagina-de-Login.png",
       github: "https://github.com/MatheusAbib/Pagina-de-Login",
       live: "https://pagina-de-login-rho.vercel.app/login",
-      tags: ["Angular", "TypeScript", "SCSS", "JavaScript"],
+      tags: ["Angular", "TypeScript", "SCSS", "JavaScript", "MySQL"],
       priority: 1
     },
     {
