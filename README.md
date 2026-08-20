@@ -102,15 +102,15 @@ Este portfólio apresenta **16 projetos** divididos em categorias:
 
 ## 📜 Certificados
 
-| Certificação | Instituição | Habilidades |
-|--------------|-------------|-------------|
-| **Desenvolvimento Web** | - | HTML5, CSS3, JavaScript, Bootstrap, AJAX |
-| **Microsoft Power BI** | - | DAX, Power Query, Modelagem de Dados, Dashboards |
-| **React com JavaScript** | - | Componentes, Hooks, Consumo de API REST |
-| **Banco de Dados SQL** | - | Modelagem, Consultas Avançadas, Otimização |
-| **Lógica de Programação** | GFT Start #6 | Algoritmos, Estruturas de Dados com JavaScript |
-| **Inteligência Artificial** | - | Machine Learning, Python, Redes Neurais, NLP |
-| **Java & Spring Boot** | - | APIs RESTful, Boas Práticas, Padrões de Projeto |
+| Certificação | Instituição | Habilidades | Ano |
+|--------------|-------------|-------------|-----|
+| **Desenvolvimento Web** | Coursera - Johns Hopkins University | CSS, HTML, JavaScript, Bootstrap, AJAX | 2024 |
+| **Microsoft Power BI** | Data Science Academy | Microsoft Power BI, Microsoft Excel, Dashboards, Data Analysis, Spreadsheet Management | 2024 |
+| **Banco de Dados SQL** | IFSul - Plataforma Mundi | Database, SQL, Spreadsheet Management, Data Analysis | 2024 |
+| **Lógica de Programação** | DIO - Digital Innovation One | JavaScript, Git, GitHub, Logic | 2024 |
+| **React com JavaScript** | Cursa | React, API Rest, JavaScript | 2026 |
+| **Inteligência Artificial** | Alura + Google | Python, Machine Learning, Deep Learning, Redes Neurais, Data Analysis | 2024 |
+| **Java & Spring Boot** | Rocketseat | Java, Spring Boot, API Rest, Database, Lombok | 2025 |
 
 ---
 
