@@ -727,10 +727,6 @@
   .portfolio-content h3 {
     font-size: 1rem;
   }
-  .portfolio-content p {
-    font-size: 0.8rem;
-    -webkit-line-clamp: 4;
-  }
   .tech-tags .tag {
     padding: 0.15rem 0.5rem;
     font-size: 0.55rem;
@@ -744,9 +740,9 @@
     padding: 0.15rem 0.5rem;
   }
   .portfolio-actions a {
-    width: 40px;
-    height: 40px;
-    font-size: 1.15rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
   }
   .scroll-hint {
     margin-top: 1rem;
@@ -814,7 +810,7 @@
     font-size: 0.85rem;
   }
     .portfolio-content p{
-    font-size: 0.7rem;
+    display: none;
   }
   .portfolio-content h3{
     font-size: 1rem ;

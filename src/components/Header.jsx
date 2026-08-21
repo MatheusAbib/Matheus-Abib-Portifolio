@@ -14,7 +14,7 @@ const navItems = [
   { href: '#sobre-mim-02', textKey: 'menu_about', id: 'sobre-mim-02' },
   { href: '#jornada', textKey: 'menu_methodologies', id: 'jornada' },
   { href: '#skills', textKey: 'menu_skills', id: 'skills' },
-  { href: '#service-details', textKey: 'menu_certificates', id: 'service-details' },
+  { href: '#service-details', className: 'certificado-details', textKey: 'menu_certificates', id: 'service-details' },
   { href: '#portfolio', textKey: 'menu_projects', id: 'portfolio' },
   { href: '#form-section', textKey: 'menu_contact', id: 'form-section' },
 ];
@@ -148,20 +148,20 @@ const navItems = [
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <a 
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item.id);
-                      scrollToSection(item.id);
-                    }}
-                    className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''}`}
-                  >
-                    {activeSection === item.id && (
-                      <span className="active-dot me-2"></span>
-                    )}
-                    <span data-translate={item.textKey}>{t(item.textKey)}</span>
-                  </a>
+<a 
+  href={item.href}
+  onClick={(e) => {
+    e.preventDefault();
+    handleNavClick(item.id);
+    scrollToSection(item.id);
+  }}
+  className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''} ${item.className || ''}`}
+>
+  {activeSection === item.id && (
+    <span className="active-dot me-2"></span>
+  )}
+  <span data-translate={item.textKey}>{t(item.textKey)}</span>
+</a>
                 </li>
               ))}
               <li className="d-block d-xl-none mt-3 pt-3 border-top">

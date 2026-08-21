@@ -333,6 +333,9 @@
 }
 
 @media (max-width: 768px) {
+  .feature-grid-02{
+    display: none;
+  }
   .sobre-mim-02 {
     padding: 60px 0;
   }
