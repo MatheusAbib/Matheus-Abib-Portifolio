@@ -110,7 +110,7 @@ const Portfolio = () => {
       stack: "fullstack",
       image: "/assets/img/portfolio/Desfumo.png",
       github: "https://github.com/MatheusAbib/Tabagismo-Saude-Publica",
-      live: "https://tinyurl.com/desfumo",
+      live: "https://desfumo.vercel.app/",
       tags: ["Flutter", "Dart", "Node.js", "Express", "MySQL"],
       priority: 1,
       featured: true
