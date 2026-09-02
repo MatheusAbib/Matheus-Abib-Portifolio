@@ -87,7 +87,7 @@ const Portfolio = () => {
   const projects = [
     {
       id: 0,
-      title: "Imperatore - Sistema de Gestão para Restaurantes",
+      title: "Imperatore - Sistema de Gestão",
       title_key: "project_imperator",
       description_key: "project_imperator_desc",
       category: "Ferramenta",
@@ -102,7 +102,7 @@ const Portfolio = () => {
     },
     {
       id: 1,
-      title: "Desfumo - App de Controle de Consumo ao Tabagismo",
+      title: "Desfumo - Controle de Consumo ao Tabagismo",
       title_key: "project_desfumo",
       description_key: "project_desfumo_desc",
       category: "Site",

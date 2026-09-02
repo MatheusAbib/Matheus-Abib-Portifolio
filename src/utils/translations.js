@@ -107,7 +107,7 @@ exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi da
     project_lamen: "Yummy Lamen - Restaurante de Lamen",
     project_login: "Meu Painel - CRUD",
     project_desfumo: "Desfumo - Controle de Consumo ao Tabagismo",
-    project_imperator: "Imperatore - Sistema de Gestão para Restaurantes, Bares e Cafés",
+    project_imperator: "Imperatore - Sistema de Gestão",
 
     
 project_floricultura_desc: "E-commerce de flores e presentes com carrinho, favoritos, busca, ordenação e pagamento integrado",
