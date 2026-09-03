@@ -1,6 +1,6 @@
 .footer {
   color: var(--default-color);
-  background-color: rgb(37, 37, 35);
+  background-color: #1c1c1aeb;
   font-size: 14px;
   position: relative;
   border-top: 1px solid var(--hairline);
@@ -22,6 +22,72 @@
     var(--green-soft), 
     transparent
   );
+}
+
+.section-glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(167, 170, 99, 0.06) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: radial-gradient(ellipse at 50% 100%, var(--green-deep) 0%, transparent 70%);
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-orbs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.04;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: var(--green-soft);
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  right: -50px;
+  background: var(--yellow-soft);
+}
+
+.orb-3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--red-soft);
 }
 
 .footer-top {
@@ -61,12 +127,12 @@
 
 .footer-bio {
   font-size: 0.85rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--fg-muted);
   margin-bottom: 1.5rem;
   position: relative;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
 }
 
 .footer-bio::before {
@@ -87,14 +153,19 @@
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--hairline);
+  transition: all 0.3s ease;
 }
 
 .contact-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
+}
+
+.contact-item:hover {
+  padding-left: 4px;
 }
 
 .contact-icon {
@@ -134,13 +205,14 @@
   border: 1px solid var(--hairline);
 }
 
-.contact-info span {
+.local-info span,
+.name-info span {
   color: var(--fg-muted);
   font-size: 0.85rem;
   font-weight: 500;
 }
 
-.contact-info a {
+.email-info a {
   color: var(--fg-muted) !important;
   text-decoration: none;
   font-size: 0.85rem;
@@ -148,7 +220,7 @@
   transition: all 0.3s ease;
 }
 
-.contact-info a:hover {
+.email-info a:hover {
   color: var(--accent-color) !important;
 }
 
@@ -178,6 +250,7 @@
   color: var(--contrast-color) !important;
   transform: translateY(-3px);
   border-color: var(--green-deep);
+  box-shadow: 0 4px 15px rgba(167, 170, 99, 0.2);
 }
 
 .footer-section-header {
@@ -261,23 +334,17 @@
 .footer-services ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 0.85rem;
-  padding: 0.6rem;
-  background: var(--surface-2);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-services ul li:hover {
   transform: translateX(5px);
-  border-color: var(--green-soft);
-  background: var(--surface-1);
 }
 
 .footer-services .service-icon {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   background: var(--green-deep);
   border-radius: var(--radius-md);
   display: flex;
@@ -285,11 +352,21 @@
   justify-content: center;
   margin-right: 12px;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-services ul li:hover .service-icon {
+  background: var(--green-soft);
+}
+
+.footer-services ul li:hover .service-icon i {
+  color: var(--contrast-color);
 }
 
 .footer-services .service-icon i {
   color: var(--green-soft);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
 }
 
 .footer-services ul li span {
@@ -300,18 +377,23 @@
 
 .footer-newsletter {
   background: var(--surface-2);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   border: 1px solid var(--hairline);
+  transition: all 0.3s ease;
+}
+
+.footer-newsletter:hover {
+  border-color: var(--green-soft);
 }
 
 .newsletter-text {
   color: var(--fg-muted);
   font-size: 0.8rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
 }
 
 .cta-card {
@@ -321,16 +403,21 @@
 .cta-icon {
   width: 50px;
   height: 50px;
-  background: var(--green-deep);
+  background: var(--accent-color);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover .cta-icon {
+  transform: scale(1.05);
 }
 
 .cta-icon i {
-  color: var(--green-soft);
+  color: var(--fg);
   font-size: 1.3rem;
 }
 
@@ -346,8 +433,8 @@
   font-size: 0.75rem;
   margin-bottom: 1.25rem;
   line-height: 1.5;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
 }
 
 .cta-button {
@@ -369,8 +456,17 @@
 
 .cta-button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(167, 170, 99, 0.25);
   filter: brightness(1.05);
   color: var(--contrast-color) !important;
+}
+
+.cta-button i {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+  transform: translateX(4px);
 }
 
 .footer-bottom {
@@ -389,8 +485,8 @@
   color: var(--fg-muted);
   font-size: 0.75rem;
   margin: 0;
-    font-family: var(--heading-font);
-    letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
 }
 
 .copyright-text .highlight {
@@ -411,9 +507,19 @@
   .footer-top {
     padding-bottom: 40px;
   }
+
+  .section-glow,
+  .section-waves,
+  .section-orbs {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .footer-bio{
+    display: none;
+  }
   .footer {
     padding: 40px 0 0;
   }
@@ -432,13 +538,7 @@
     font-size: 1.5rem;
   }
 
-  .footer-services {
-    display: none;
-  }
 
-  .footer-newsletter {
-    padding: 1.25rem;
-  }
 
   .cta-button {
     padding: 0.6rem 1rem;

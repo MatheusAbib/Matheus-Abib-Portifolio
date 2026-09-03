@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Home from './pages/Home';
-import ScrollTop from './components/ScrollTop'; 
+
+import ScrollTop from './services/ScrollTop'; 
 import { TranslationProvider } from './hooks/useTranslation';
 import { LenisProvider } from './hooks/useLenis';
 import MediaQueriesManager from './components/MediaQueriesManager'; 

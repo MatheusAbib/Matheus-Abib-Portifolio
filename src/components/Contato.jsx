@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import SectionLabel from './SectionLabel';
-
+import SectionLabel from '../services/SectionLabel';
 
 const ContactForm = () => {
   const { t } = useTranslation();

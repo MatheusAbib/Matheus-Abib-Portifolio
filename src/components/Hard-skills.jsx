@@ -1,13 +1,13 @@
 import React from 'react';
-import SectionLabel from './SectionLabel';
+import SectionLabel from '../services/SectionLabel';
 
 const TechStack = () => {
 const frontend = [
   { icon: "fab fa-html5", name: "HTML", color: "#E34F26" },
-  { icon: "fab fa-css3-alt", name: "CSS", color: "#1572B6" },
+  { icon: "fab fa-css3-alt", name: "CSS", color: "#2983c4ff" },
   { icon: "devicon-sass-original", name: "SCSS", color: "#CC6699" },
   { icon: "fab fa-js-square", name: "JavaScript", color: "#F7DF1E" },
-  { icon: "devicon-typescript-plain", name: "TypeScript", color: "#3178C6" }
+  { icon: "devicon-typescript-plain", name: "TypeScript", color: "#4085cfff" }
 ];
 
 const frameworks = [
@@ -21,17 +21,16 @@ const frameworks = [
 
 const backend = [
   { icon: "fab fa-node", name: "Node.js", color: "#4CA54C" },
-  { name: "MySQL", isIconify: true, iconifyIcon: "logos:mysql" }
+  { name: "MySQL", isIconify: true, iconifyIcon: "simple-icons:mysql", color: "#ffffff" }
 ];
 
 const tools = [
   { icon: "fab fa-git-alt", name: "Git", color: "#F05032" },
   { icon: "fab fa-github", name: "GitHub", color: "#ffffff" },
   { icon: "fab fa-figma", name: "Figma", color: "#F24E1E" },
-  { icon: "bi-kanban", name: "Trello", color: "#0079BF" },
+  { icon: "bi-kanban", name: "Trello", color: "#3390c5ff" },
   { icon: "bi-graph-up", name: "Power BI", color: "#F2C811" }
 ];
-
 
   return (
     <section id="testimonials" className="testimonials section">
@@ -50,9 +49,9 @@ const tools = [
           <h2 data-translate="tech_title">Hard Skills</h2>
         </div>
       </div>
-      
+
       <div className="container">
-        <div className="tech-row">
+        <div className="tech-grid-wrapper">
           <div className="tech-category">
             <div className="category-header">
               <div className="category-icon-wrapper">
@@ -64,11 +63,7 @@ const tools = [
               {frontend.map((tech, index) => (
                 <div key={`front-${index}`} className="tech-card">
                   <div className="tech-icon-wrapper">
-                    {tech.isIconify ? (
-                      <iconify-icon icon={tech.iconifyIcon} width="48" height="48"></iconify-icon>
-                    ) : (
-                      <i className={tech.icon} style={{ color: tech.color }}></i>
-                    )}
+                    <i className={tech.icon} style={{ color: tech.color, fontSize: '28px' }}></i>
                   </div>
                   <span className="tech-name">{tech.name}</span>
                 </div>
@@ -88,9 +83,9 @@ const tools = [
                 <div key={`back-${index}`} className="tech-card">
                   <div className="tech-icon-wrapper">
                     {tech.isIconify ? (
-                      <iconify-icon icon={tech.iconifyIcon} width="48" height="48"></iconify-icon>
+                      <iconify-icon icon={tech.iconifyIcon} width="28" height="28" style={{ fontSize: '28px' }}></iconify-icon>
                     ) : (
-                      <i className={tech.icon} style={{ color: tech.color }}></i>
+                      <i className={tech.icon} style={{ color: tech.color, fontSize: '28px' }}></i>
                     )}
                   </div>
                   <span className="tech-name">{tech.name}</span>
@@ -98,9 +93,7 @@ const tools = [
               ))}
             </div>
           </div>
-        </div>
 
-        <div className="tech-row">
           <div className="tech-category">
             <div className="category-header">
               <div className="category-icon-wrapper">
@@ -113,9 +106,9 @@ const tools = [
                 <div key={`fw-${index}`} className="tech-card">
                   <div className="tech-icon-wrapper">
                     {tech.isIconify ? (
-                      <iconify-icon icon={tech.iconifyIcon} width="48" height="48"></iconify-icon>
+                      <iconify-icon icon={tech.iconifyIcon} width="28" height="28" style={{ fontSize: '28px' }}></iconify-icon>
                     ) : (
-                      <i className={tech.icon} style={{ color: tech.color }}></i>
+                      <i className={tech.icon} style={{ color: tech.color, fontSize: '28px' }}></i>
                     )}
                   </div>
                   <span className="tech-name">{tech.name}</span>
@@ -135,7 +128,7 @@ const tools = [
               {tools.map((tech, index) => (
                 <div key={`tool-${index}`} className="tech-card">
                   <div className="tech-icon-wrapper">
-                    <i className={tech.icon} style={{ color: tech.color }}></i>
+                    <i className={tech.icon} style={{ color: tech.color, fontSize: '28px' }}></i>
                   </div>
                   <span className="tech-name">{tech.name}</span>
                 </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import SectionLabel from './SectionLabel';
+import SectionLabel from '../services/SectionLabel';
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -13,6 +13,7 @@ const Portfolio = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const [showAllTags, setShowAllTags] = useState({});
+  const [loadedImages, setLoadedImages] = useState({});
 
   useEffect(() => {
     let velocity = 0;
@@ -82,6 +83,10 @@ const Portfolio = () => {
     if (scrollWrapperRef.current) {
       scrollWrapperRef.current.scrollBy({ left: amount, behavior: 'smooth' });
     }
+  };
+
+  const handleImageLoad = (projectId) => {
+    setLoadedImages(prev => ({ ...prev, [projectId]: true }));
   };
 
   const projects = [
@@ -478,11 +483,17 @@ const Portfolio = () => {
                       </span>
                     )}
                     <div className="portfolio-image">
+                      {!loadedImages[project.id] && (
+                        <div className="image-loader">
+                          <div className="loader-spinner"></div>
+                        </div>
+                      )}
                       <img 
                         src={project.image} 
-                        className="img-fluid" 
+                        className={`img-fluid ${loadedImages[project.id] ? 'loaded' : 'loading'}`}
                         alt={project.title} 
-                        loading="lazy" 
+                        loading="lazy"
+                        onLoad={() => handleImageLoad(project.id)}
                       />
                       <div className="portfolio-overlay">
                         <div className="portfolio-actions">

@@ -1,13 +1,13 @@
 @import './variables.css';
 @import './components/common.css';
 @import './components/header.css';
+@import './components/inicio.css';
 @import './components/sobre-mim.css';
-@import './components/sobre-mim-02.css';
-@import './components/portfolio.css';
-@import './components/tech-stack.css';
-@import './components/certificates.css';
+@import './components/projetos.css';
+@import './components/hard-skills.css';
+@import './components/certificados.css';
 @import './components/tragetoria.css';
-@import './components/contact-form.css';
+@import './components/contato.css';
 @import './components/footer.css';
 
 a {
@@ -31,9 +31,7 @@ body {
 }
 .footer-about .logo .sitename{
     font-family: var(--heading-font);
-
 }
-
 
 section, .section {
   scroll-margin-top: 98px;
@@ -81,6 +79,9 @@ section, .section {
   bottom: 0;
   margin: auto;
 }
+
+
+
 
 .container,
 .hero-content-left {
@@ -169,7 +170,6 @@ section, .section {
 }
 
 .scroll-top:hover {
-  background-color: var(--green-deep);
   transform: translateY(-3px);
 }
 
