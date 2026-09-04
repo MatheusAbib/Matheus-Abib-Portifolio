@@ -54,11 +54,6 @@
   gap: 0.5rem;
   padding-top: 40px;
 }
-
-.hero-info {
-  margin-bottom: 3rem;
-}
-
 .hero-greeting {
   font-size: 1rem;
   margin-left: 5px;
@@ -76,11 +71,16 @@
 .hero-prefix {
   font-size: 4.5rem;
   font-weight: 800;
-  background: var(--green-soft);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--green-soft);
   line-height: 1.1;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-prefix[data-aos="fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero-name {
@@ -92,6 +92,34 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-name[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  background: var(--cream);
+  margin-left: 2px;
+  animation: blink 0.8s step-end infinite;
+  vertical-align: text-bottom;
+  border-radius: 1px;
+}
+
+.hero-cursor.hidden {
+  display: none;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-role {
@@ -108,6 +136,7 @@
   display: flex;
   gap: 0.6rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .hero-tags span {
@@ -117,6 +146,32 @@
   padding: 0.4rem 0.9rem;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(167, 170, 99, 0.3);
+}
+
+
+.hero-availability {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.hero-availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1rem;
+  background: var(--surface-1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  transition: all 0.3s ease;
+}
+
+.hero-availability-badge i {
+  color: var(--green-soft);
+  font-size: 0.7rem;
 }
 
 .hero-description-tagline {
@@ -135,7 +190,7 @@
     font-size: 3.5rem;
   }
   .hero-name {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .hero-role {
     font-size: 1.1rem;
@@ -153,7 +208,7 @@
     font-size: 3rem;
   }
   .hero-name {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
   .hero-role {
     font-size: 1rem;
@@ -164,6 +219,13 @@
 }
 
 @media (max-width: 768px) {
+  .hero-availability-badge{
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+  }
+  .hero {
+    min-height: 96vh;
+  }
   .hero-content-left {
     padding: 0 5% 2rem 5%;
   }
@@ -190,6 +252,12 @@
   .hero-description-tagline {
     font-size: 0.85rem;
   }
+
+  .hero-social a {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -209,13 +277,38 @@
   }
   .hero-tags {
     gap: 0.5rem;
-    flex-wrap: wrap;
   }
   .hero-tags span {
     font-size: 0.6rem;
-    padding: 0.15rem 0.5rem;
+    padding: 0.3rem 0.6rem;
   }
   .hero-description-tagline {
     font-size: 0.75rem;
+  }
+  .hero-social a {
+    width: 34px;
+    height: 34px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-prefix {
+    font-size: 1.5rem;
+  }
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  .hero-role {
+    font-size: 0.7rem;
+  }
+  .hero-tags span {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.4rem;
+  }
+  .hero-social a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
   }
 }

@@ -6,14 +6,14 @@ const ScrollTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      const projetosSection = document.getElementById('service-details');
-      
-      if (projetosSection) {
-        const projetosTop = projetosSection.offsetTop;
+      const sobreSection = document.querySelector('.how-we-work');
+
+      if (sobreSection) {
+        const sobreTop = sobreSection.offsetTop;
         const scrollPosition = window.pageYOffset;
-        const projetosVisible = scrollPosition >= projetosTop - 200;
+        const sobreVisible = scrollPosition >= sobreTop - 200;
         
-        setIsVisible(projetosVisible);
+        setIsVisible(sobreVisible);
       }
     };
 

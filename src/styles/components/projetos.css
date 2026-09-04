@@ -1,13 +1,9 @@
-#portfolio {
-  background-color: #1c1c1ae8;
+.portfolio-section {
+  background-color: var(--background-color);
   position: relative;
 }
 
-#portfolio .section-title {
-  margin-bottom: 2rem !important;
-}
-
-#portfolio::before {
+.portfolio-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -86,24 +82,34 @@
   background: var(--red-soft);
 }
 
-.portfolio-filters-container {
-  position: relative;
-  z-index: 2;
+.portfolio-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.portfolio-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .portfolio-filters {
   display: flex;
-  justify-content: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0;
   list-style: none;
 }
 
 .portfolio-filters li {
-  padding: 0.6rem 1.8rem;
-  font-size: 0.85rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   border-radius: var(--radius-pill);
@@ -125,7 +131,57 @@
   background: var(--green-soft);
   color: var(--contrast-color);
   border-color: transparent;
-  box-shadow: 0 4px 20px rgba(167, 170, 99, 0.25);
+}
+
+.projects-count {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--fg-faint);
+  padding: 0.1rem 0.4rem;
+  border: none;
+  white-space: nowrap;
+  background: transparent;
+  font-family: var(--heading-font);
+  letter-spacing: 0.3px;
+}
+
+.github-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem 0.35rem 0.8rem;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.github-badge i {
+  font-size: 0.95rem;
+}
+
+.github-badge .bi-arrow-right {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.github-badge:hover {
+  border-color: var(--green-soft);
+  background: var(--surface-2);
+  color: var(--accent-color) !important;
+  transform: translateY(-2px);
+}
+
+.github-badge:hover .bi-arrow-right {
+  transform: translateX(4px);
+  opacity: 1;
 }
 
 .portfolio-scroll-container {
@@ -169,7 +225,6 @@
   background: var(--green-soft);
   color: var(--contrast-color);
   transform: translateY(-50%) scale(1.05);
-  box-shadow: 0 4px 20px rgba(167, 170, 99, 0.2);
 }
 
 .scroll-arrow-left {
@@ -213,7 +268,8 @@
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  border-color: var(--green-soft);
 }
 
 .portfolio-image {
@@ -228,6 +284,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  width: 100%;
 }
 
 .image-loader {
@@ -298,16 +355,16 @@
 }
 
 .portfolio-actions a {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   backdrop-filter: blur(10px);
-  border: 1px solid var(--hairline);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  color: var(--fg-muted) !important;
+  font-size: 1.2rem;
+  color: var(--fg) !important;
   transition: all 0.2s ease;
 }
 
@@ -315,7 +372,6 @@
   transform: translateY(-3px) !important;
   background: var(--green-soft);
   color: var(--contrast-color) !important;
-  box-shadow: 0 4px 15px rgba(167, 170, 99, 0.3);
 }
 
 .portfolio-card:hover .portfolio-actions a {
@@ -324,7 +380,6 @@
 
 .portfolio-actions a:nth-child(1) { transition-delay: 0.05s; }
 .portfolio-actions a:nth-child(2) { transition-delay: 0.1s; }
-.portfolio-actions a:nth-child(3) { transition-delay: 0.15s; }
 
 .portfolio-content {
   padding: 1.25rem;
@@ -337,52 +392,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .portfolio-content .category {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--accent-color);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   background: var(--surface-2);
-  padding: 0.2rem 0.8rem;
+  padding: 0.15rem 0.7rem;
   border-radius: var(--radius-pill);
+  border: 1px solid var(--hairline);
 }
 
 .portfolio-content .category .category-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
 }
 
-.category-dot.web {
+.category-dot.web,.category-dot.motion,.category-dot.brand,.category-dot.links {
   background: var(--green-soft);
-}
-
-.category-dot.motion {
-  background: var(--yellow-soft);
-}
-
-.category-dot.brand {
-  background: var(--red-soft);
-}
-
-.category-dot.links {
-  background: var(--cream);
 }
 
 .stack-simple {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
   font-size: 0.65rem;
   font-weight: 500;
   color: var(--fg-muted);
@@ -392,17 +436,13 @@
 }
 
 .stack-simple i {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--accent-color);
 }
 
-.stack-simple span {
-  color: var(--fg-muted);
-}
-
 .portfolio-content h3 {
-  font-size: 1.2rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
   font-weight: 700;
   color: var(--fg);
   transition: color 0.3s ease;
@@ -413,12 +453,12 @@
 }
 
 .portfolio-content p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--fg-muted);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
   line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: var(--heading-font);
@@ -428,8 +468,8 @@
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
   align-items: center;
 }
 
@@ -437,8 +477,8 @@
   background: var(--surface-2);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
-  padding: 0.25rem 0.9rem;
-  font-size: 0.65rem;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.6rem;
   font-weight: 500;
   color: var(--fg-muted);
   cursor: pointer;
@@ -453,7 +493,7 @@
 }
 
 .tech-tags .tag {
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.75rem;
   border-radius: var(--radius-sm);
   font-size: 0.6rem;
   font-weight: 500;
@@ -596,35 +636,27 @@
   border: 1px solid rgba(167, 170, 99, 0.25);
 }
 
-.stack-indicator {
-  margin-top: auto;
+.featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--yellow-glow);
+  color: var(--ink);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 9px;
+  font-weight: 700;
+  z-index: 10;
   display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.stack-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.65rem;
-  font-weight: 600;
+  align-items: center;
+  gap: 5px;
   letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
 
-.stack-badge.fullstack {
-  background: var(--green-soft);
-  color: var(--contrast-color);
-}
-
-.stack-badge.frontend-only {
-  background: var(--green-deep);
-  color: var(--contrast-color);
-}
-
-.stack-badge.angular-badge {
-  background: var(--red-soft);
-  color: var(--contrast-color);
+.featured-badge i {
+  font-size: 10px;
+  color: var(--ink);
 }
 
 .scroll-hint {
@@ -634,15 +666,15 @@
   gap: 0.8rem;
   margin-top: 2rem;
   color: var(--fg-muted);
-  font-size: 0.75rem;
-  opacity: 0.6;
+  font-size: 0.7rem;
+  opacity: 0.5;
   transition: opacity 0.3s ease;
   font-family: var(--heading-font);
   letter-spacing: 0.02em;
 }
 
 .scroll-hint i {
-  font-size: 1rem;
+  font-size: 0.9rem;
   animation: bounceHorizontal 1.5s ease-in-out infinite;
 }
 
@@ -651,104 +683,11 @@
   50% { transform: translateX(8px); }
 }
 
-.section-title .title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.featured-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--yellow-glow);
-  color: var(--ink);
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
-  font-size: 10px;
-  font-weight: 700;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  box-shadow: 0 2px 16px rgba(139, 122, 43, 0.25);
-}
-
-.featured-badge i {
-  font-size: 11px;
-  color: var(--ink);
-}
-
-.featured-badge:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-
-.section-title .title-badges {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    justify-content: center;
-}
-
-.projects-count {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--cream);
-  background: var(--green-deep);
-  padding: 0.3rem 1.2rem;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  margin-top: 0;
-}
-
-.github-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.3rem 1rem 0.3rem 0.8rem;
-  background: var(--surface-1);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-pill);
-  color: var(--fg-muted);
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.github-badge i {
-  font-size: 1rem;
-}
-
-.github-badge .bi-arrow-right {
-  font-size: 0.9rem;
-  transition: transform 0.3s ease;
-  opacity: 0.8;
-}
-
-.github-badge:hover {
-  border-color: var(--fg);
-  background: var(--surface-2);
-  color: var(--fg) !important;
-  transform: translateY(-2px);
-}
-
-.github-badge:hover .bi-arrow-right {
-  transform: translateX(4px);
-  opacity: 1;
-}
-
 @media (max-width: 992px) {
-  #portfolio {
+  .portfolio-section {
     padding: 60px 0;
   }
+
   .scroll-arrow-left {
     left: -10px;
   }
@@ -760,8 +699,8 @@
     height: 36px;
   }
   .portfolio-filters li {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
   }
   .section-glow,
   .section-waves,
@@ -771,19 +710,36 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-controls {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 0rem;
+  }
+
+  .portfolio-controls-left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .github-badge {
+    display: none;
+  }
+
   .portfolio-overlay {
     opacity: 1;
     visibility: visible;
-    padding: 0 0 0.75rem 0.75rem;
+    padding: 0 0 0.5rem 0.5rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
   }
+
   .portfolio-filters {
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.4rem;
+    justify-content: center;
   }
   .portfolio-filters li {
-    padding: 0.4rem 1rem;
-    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
   }
   .category-wrapper {
     gap: 0.3rem;
@@ -791,30 +747,15 @@
   .tech-tags {
     gap: 0.3rem;
   }
-  .section-title .title-wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .section-title .title-badges {
+  .portfolio-content p {
     display: none;
+  }
+  .portfolio-content h3 {
+    font-size: 0.95rem;
   }
   .projects-count {
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem;
-  }
-  .github-badge {
     font-size: 0.7rem;
-    padding: 0.25rem 0.8rem 0.25rem 0.6rem;
-  }
-  .github-badge i {
-    font-size: 0.85rem;
-  }
-  .portfolio-content p{
-    display: none;
-  }
-  .portfolio-content h3{
-    font-size: 1rem ;
+    padding: 0.2rem 0.7rem;
   }
 }
 
@@ -859,12 +800,12 @@
     padding: 1rem 0;
   }
   .portfolio-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .portfolio-actions a {
-    width: 56px;
-    height: 56px;
-    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
   }
 }
 
@@ -877,7 +818,7 @@
     height: 340px;
   }
   .portfolio-horizontal-grid {
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem 0;
   }
 }
@@ -910,57 +851,45 @@
 @media (max-width: 575px) {
   .portfolio-horizontal-grid {
     gap: 1rem;
-    padding: 0.75rem 0;
+    padding: 0rem 0;
   }
   .portfolio-item {
     flex: 0 0 87vw;
     max-width: 87vw;
   }
   .portfolio-image {
-    height: 207px;
+    height: 180px;
   }
   .portfolio-content {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   .portfolio-content h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .tech-tags .tag {
-    padding: 0.15rem 0.5rem;
-    font-size: 0.55rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.6rem;
   }
   .show-more-tags {
-    padding: 0.2rem 0.6rem;
-    font-size: 0.6rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.55rem;
   }
   .stack-simple {
-    font-size: 0.6rem;
-    padding: 0.15rem 0.5rem;
+    font-size: 0.55rem;
+    padding: 0.1rem 0.4rem;
   }
   .portfolio-actions a {
-    width: 48px;
-    height: 48px;
-    font-size: 1.25rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
   }
   .scroll-hint {
-    margin-top: 1rem;
-    font-size: 0.7rem;
-  }
-  .section-title .title-wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.6rem;
   }
   .projects-count {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.8rem;
-  }
-  .github-badge {
     font-size: 0.65rem;
-    padding: 0.2rem 0.6rem 0.2rem 0.5rem;
-    gap: 0.3rem;
-  }
-  .github-badge i {
-    font-size: 0.75rem;
+    padding: 0.15rem 0.6rem;
+    margin: 10px;
   }
 }

@@ -7,7 +7,7 @@ const translations = {
     menu_projects: "Projetos",
     menu_contact: "Contato",
     btn_translate: "PT/EN",
-    cv_button: "Baixar CV",
+    cv_button: "Download CV",
 
     sticky_about: "Sobre mim",
     sticky_trajectory: "Trajetória",
@@ -19,13 +19,25 @@ const translations = {
     hero_title: "Bem-vindo!",
     hero_prefix: "Eu sou",
     hero_name: "Matheus Abib",
-    hero_badge: "Inovação & Tecnologia",
-    hero_desc_1: "Sou um <strong>desenvolvedor de software</strong> brasileiro de 21 anos, com cerca de quatro anos de atuação na área de tecnologia, focado no desenvolvimento de aplicações <strong>front-end e back-end</strong> em projetos que vão desde sistemas para a Prefeitura de Mogi das Cruzes até aplicações próprias que publiquei e usei para aprender na prática.",
+    hero_available: "Disponível para projetos",
+
+    hero_tag_frontend: "Front-end",
+    hero_tag_backend: "Back-end",
+    hero_tag_agile: "Métodos Ágeis",
+    hero_tag_uiux: "UI/UX",
+
+    hero_role: "Desenvolvedor de software",
+
+    hero_desc_1: "Sou um <strong>desenvolvedor de software</strong> com cerca de quatro anos de atuação na área de tecnologia, focado no desenvolvimento de aplicações <strong>front-end e back-end</strong> em projetos que vão desde sistemas para a Prefeitura de Mogi das Cruzes até aplicações próprias que uso para aprender na prática.",
     hero_desc_2: "Sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela Fatec de Mogi das Cruzes (2023–2026), onde construí minha base como desenvolvedor. Atualmente curso <strong>Engenharia de Software</strong> na Universidade de Mogi das Cruzes, aprofundando conhecimentos em arquitetura de software e desenvolvimento de sistemas.",
     hero_desc_3: "Tenho experiência com <strong>Scrum e Kanban</strong> (sprints, boards, papéis do time), <strong>levantamento de requisitos</strong> (regras de negócio, BPMN, documentação) e <strong>controle de qualidade</strong>.",
     hero_desc_4: "Neste portfólio, <strong>desenvolvido em React</strong>, você encontrará meus projetos, experiências e um pouco da minha evolução como programador.",
-    hero_role: "Desenvolvedor de software",
-    hero_tagline: "Crio softwares completos, dos requisitos à entrega, unindo minhas habilidades em tecnologia, design e tomada de decisão.",
+    
+    hero_desc_mobile_1: "Sou um desenvolvedor de software focado no desenvolvimento de aplicações <strong>front-end e back-end</strong> em projetos que vão desde sistemas para a Prefeitura de Mogi das Cruzes até aplicações próprias que uso para aprender na prática.",
+    hero_desc_mobile_2: "Sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela Fatec de Mogi das Cruzes e atualmente curso <strong>Engenharia de Software</strong> na Universidade de Mogi das Cruzes.",
+    hero_desc_mobile_3: "Tenho experiência com <strong>Scrum e Kanban</strong> (sprints, boards, papéis do time), <strong>levantamento de requisitos</strong> (regras de negócio, BPMN, documentação) e <strong>controle de qualidade</strong>.",
+    hero_desc_mobile_4: "Neste portfólio, <strong>desenvolvido em React</strong>, você encontrará mais da minha evolução como programador.",
+        
 
     cv_portuguese: "Português",
     cv_english: "Inglês",
@@ -49,7 +61,8 @@ const translations = {
     exp_2_title: "Prefeitura de Mogi das Cruzes",
     exp_2_role: "Estágio em Desenvolvimento de Software",
     exp_2_period: "2025 - Presente",
-    exp_2_text: "<ul><li>Desenvolvimento de aplicações para secretarias de Mogi das Cruzes, automatizando fluxos de trabalho e melhorando a eficiência operacional.</li><li>Uso de Angular, TypeScript e Spring Boot no desenvolvimento de sistemas.</li><li>Criação de interfaces com foco em UX e levantamento de requisitos com os setores internos.</li><li>Atuação em projetos com metodologia ágil Scrum.</li></ul>",
+    exp_2_text: "<ul><li>Desenvolvo aplicações para secretarias de Mogi das Cruzes, automatizando fluxos de trabalho e melhorando eficiência operacional.</li><li>Angular, TypeScript e Spring Boot.</li><li>Criação de interfaces com foco em UX e levantamento de requisitos com os setores internos.</li><li>Atuação em projetos com metodologia ágil Scrum.</li></ul>",
+    email_copied: "Email copiado para a área de transferência!",
 
     tech_title: "Hard Skills",
     frontend_title: "Front-end",
@@ -203,13 +216,23 @@ const translations = {
     hero_title: "Welcome!",
     hero_prefix: "I'm",
     hero_name: "Matheus Abib",
-    hero_badge: "Innovation & Technology",
+    hero_available: "Available for projects",
+
+    hero_tag_frontend: "Front-end",
+    hero_tag_backend: "Back-end",
+    hero_tag_agile: "Agile Methods",
+    hero_tag_uiux: "UI/UX",
+    
+    hero_role: "Software developer",
     hero_desc_1: "I'm a 21-year-old <strong>software developer</strong> from Brazil, with about 4 years of experience in the technology field, focused on developing applications using <strong>front-end and back-end</strong> technologies in projects ranging from systems for the Mogi das Cruzes City Hall to personal applications that I published and used to learn by doing.",
     hero_desc_2: "Graduated in <strong>Systems Analysis and Development</strong> from Fatec Mogi das Cruzes (2023–2026), where I built my foundation as a developer. I'm currently studying <strong>Software Engineering</strong> at the University of Mogi das Cruzes, deepening my knowledge in software architecture and system development.",
     hero_desc_3: "I also have experience with <strong>Scrum and Kanban</strong> (sprints, boards, team roles), <strong>requirements gathering</strong> (business rules, BPMN, documentation), and <strong>quality control</strong>.",
     hero_desc_4: "Here in this portfolio, <strong>developed with React</strong>, you will find my projects, experiences, and a little more about my evolution as a developer.",
-    hero_role: "Software developer",
-    hero_tagline: "I create complete software, from requirements to delivery, combining technology, design and decision making.",
+    
+    hero_desc_mobile_1: "I'm a 21-year-old Brazilian software developer focused on <strong>full-stack</strong> application development, working on projects ranging from systems for the Mogi das Cruzes City Hall to personal applications I use to learn by doing.",
+    hero_desc_mobile_2: "I hold a degree in <strong>Systems Analysis and Development</strong> from Fatec Mogi das Cruzes and am currently pursuing a degree in <strong>Software Engineering</strong> at the University of Mogi das Cruzes.",
+    hero_desc_mobile_3: "I have experience with <strong>Scrum and Kanban</strong> (sprints, boards, team roles), <strong>requirements gathering</strong> (business rules, BPMN, documentation), and <strong>quality control</strong>.",
+    hero_desc_mobile_4: "In this portfolio, <strong>developed with React</strong>, you will find more about my evolution as a programmer.",
 
     cv_portuguese: "Portuguese",
     cv_english: "English",
@@ -234,7 +257,8 @@ const translations = {
     exp_2_role: "Software Development Intern",
     exp_2_period: "2025 - Present",
     exp_2_text: "<ul><li>Development of applications for Mogi das Cruzes municipal departments, automating workflows and improving operational efficiency.</li><li>Use of Angular, TypeScript, and Spring Boot in system development.</li><li>Interface design focused on UX and requirements gathering with internal departments.</li><li>Work on projects using the Scrum agile methodology.</li></ul>",
-
+    email_copied: "Email copied to clipboard!",
+    
     tech_title: "Hard Skills",
     frontend_title: "Front-end",
     frameworks_title: "Frameworks",

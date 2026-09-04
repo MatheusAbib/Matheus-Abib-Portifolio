@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
+  const [showNotification, setShowNotification] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('matheus.abib.ma@gmail.com');
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 5000);
+  };
 
   return (
     <footer id="footer" className="footer">
@@ -26,22 +33,7 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className="footer-bio mb-4">
-                <p data-translate="footer_bio">{t('footer_bio')}</p>
-              </div>
-
               <div className="footer-contact">
-                <div className="contact-item d-flex align-items-center mb-3">
-                  <div className="contact-icon">
-                    <i className="bi bi-envelope"></i>
-                  </div>
-                  <div className="email-info">
-                    <a href="mailto:matheus.abib.ma@gmail.com">
-                      matheus.abib.ma@gmail.com
-                    </a>
-                  </div>
-                </div>
-
                 <div className="contact-item d-flex align-items-center">
                   <div className="contact-icon">
                     <i className="bi bi-person-circle"></i>
@@ -52,15 +44,32 @@ const Footer = () => {
                 </div>
               </div>
 
+              <div className="footer-bio mb-4">
+                <p data-translate="footer_bio">{t('footer_bio')}</p>
+              </div>
+
+
+
               <div className="social-links d-flex mt-4">
-                <a href="https://wa.me/11975072008" target="_blank" rel="noopener noreferrer" className="social-btn">
+                <a href="https://wa.me/11975072008" target="_blank" rel="noopener noreferrer" className="social-btn" data-tooltip="(11) 97507-2008">
                   <i className="bi bi-whatsapp"></i>
                 </a>
-                <a href="https://github.com/MatheusAbib" target="_blank" rel="noopener noreferrer" className="social-btn">
+                <a href="https://github.com/MatheusAbib" target="_blank" rel="noopener noreferrer" className="social-btn" data-tooltip="/MatheusAbib">
                   <i className="bi bi-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/matheusabib/" target="_blank" rel="noopener noreferrer" className="social-btn">
+                <a href="https://www.linkedin.com/in/matheusabib/" target="_blank" rel="noopener noreferrer" className="social-btn" data-tooltip="/in/matheusabib">
                   <i className="bi bi-linkedin"></i>
+                </a>
+                <a 
+                  className="social-btn" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    copyEmail();
+                  }}
+                  style={{ cursor: 'pointer' }}
+                  data-tooltip="matheus.abib.ma@gmail.com"
+                >
+                  <i className="bi bi-google"></i>
                 </a>
               </div>
             </div>
@@ -71,10 +80,10 @@ const Footer = () => {
                 <div className="header-line"></div>
               </div>
               <ul>
-                <li><a href="#sobre-mim-02"><span data-translate="menu_about">{t('menu_about')}</span></a></li>
-                <li><a href="#jornada"><span data-translate="menu_methodologies">{t('menu_methodologies')}</span></a></li>
+                <li><a href="#sobre-mim"><span data-translate="menu_about">{t('menu_about')}</span></a></li>
+                <li><a href="#journey"><span data-translate="menu_methodologies">{t('menu_methodologies')}</span></a></li>
                 <li><a href="#skills"><span data-translate="menu_skills">{t('menu_skills')}</span></a></li>
-                <li><a href="#service-details"><span data-translate="menu_certificates">{t('menu_certificates')}</span></a></li>
+                <li><a href="#certificates"><span data-translate="menu_certificates">{t('menu_certificates')}</span></a></li>
                 <li><a href="#portfolio"><span data-translate="menu_projects">{t('menu_projects')}</span></a></li>
                 <li><a href="#form-section"><span data-translate="menu_contact">{t('menu_contact')}</span></a></li>
               </ul>
@@ -146,6 +155,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {showNotification && (
+        <div className="email-notification show">
+          <i className="bi bi-check-circle-fill"></i>
+          <span data-translate="email_copied">{t('email_copied')}</span>
+        </div>
+      )}
     </footer>
   );
 };

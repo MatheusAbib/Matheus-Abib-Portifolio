@@ -4,11 +4,11 @@ import SectionLabel from '../services/SectionLabel';
 
 const Certificates = () => {
   const { t } = useTranslation();
-  const [activeCert, setActiveCert] = useState('webdev');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [loadedImages, setLoadedImages] = useState({});
   const [modalImageLoaded, setModalImageLoaded] = useState(false);
+  const [expandedItems, setExpandedItems] = useState({});
 
   const certificates = [
     {
@@ -48,15 +48,6 @@ const Certificates = () => {
       image: 'assets/img/services/Logica-de-Programacao.jpg'
     },
     {
-      id: 'react',
-      title_key: 'certificate_react_title',
-      institution: 'Cursa',
-      description_key: 'certificate_react_desc',
-      skills: ['React', 'API Rest', 'JavaScript'],
-      date: '2026',
-      image: 'assets/img/services/react.png'
-    },
-    {
       id: 'ia',
       title_key: 'certificate_ia_title',
       institution: 'Alura + Google',
@@ -73,20 +64,34 @@ const Certificates = () => {
       skills: ['Java', 'Spring Boot', 'API Rest', 'Database', 'Lombok'],
       date: '2025',
       image: 'assets/img/services/Java.png'
-    }
+    },
+    {
+      id: 'react',
+      title_key: 'certificate_react_title',
+      institution: 'Cursa',
+      description_key: 'certificate_react_desc',
+      skills: ['React', 'API Rest', 'JavaScript'],
+      date: '2026',
+      image: 'assets/img/services/react.png'
+    },
   ];
 
-  const currentCert = certificates.find(cert => cert.id === activeCert);
+  const toggleAccordion = (id) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
-  const openImageSidebar = (img) => {
+  const openModal = (img) => {
     setCurrentImage(img);
     setModalImageLoaded(false);
-    setIsSidebarOpen(true);
+    setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
   };
 
-  const closeImageSidebar = () => {
-    setIsSidebarOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
     setCurrentImage(null);
     setModalImageLoaded(false);
     document.body.style.overflow = '';
@@ -101,7 +106,7 @@ const Certificates = () => {
   };
 
   return (
-    <section id="service-details" className="service-details section">
+    <section id="certificates" className="certificates-section">
       <div className="section-glow"></div>
       <div className="section-waves"></div>
       <div className="section-orbs">
@@ -111,134 +116,77 @@ const Certificates = () => {
       </div>
 
       <div className="container">
-        <SectionLabel sectionId="service-details" />
+        <SectionLabel sectionId="certificates" />
         <div className="section-title" data-aos="fade-up">
           <h2 data-translate="menu_certificates">Certificados</h2>
         </div>
       </div>
 
       <div className="container">
-        <div className="certificates-sidebar-layout" data-aos="fade-up">
-          <div className="certificates-sidebar-list" data-aos="fade-right" data-aos-delay="100">
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'webdev' ? 'active' : ''}`}
-              onClick={() => setActiveCert('webdev')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_webdev_title">Desenvolvimento Web</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'powerbi' ? 'active' : ''}`}
-              onClick={() => setActiveCert('powerbi')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_powerbi_title">Microsoft Power BI</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'database' ? 'active' : ''}`}
-              onClick={() => setActiveCert('database')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_database_title">Banco de Dados SQL</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'logic' ? 'active' : ''}`}
-              onClick={() => setActiveCert('logic')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_logic_title">Lógica de Programação</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'react' ? 'active' : ''}`}
-              onClick={() => setActiveCert('react')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_react_title">React com JavaScript</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'ia' ? 'active' : ''}`}
-              onClick={() => setActiveCert('ia')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_ia_title">Inteligência Artificial</span>
-            </button>
-            <button
-              className={`certificate-sidebar-item ${activeCert === 'java' ? 'active' : ''}`}
-              onClick={() => setActiveCert('java')}
-            >
-              <span className="cert-dot"></span>
-              <span data-translate="certificate_java_title">Java & Spring Boot</span>
-            </button>
-          </div>
-
-          <div className="certificates-sidebar-content" data-aos="fade-left" data-aos-delay="200">
-            <div className="cert-info">
-              <div className="cert-info-header">
-                <div className="cert-header-top">
-                  <div className="cert-header-top-content">
-                    <div className="cert-header-left">
-                      <span className="cert-date">{currentCert.date}</span>
-                      <h3 className="cert-info-title" data-translate={currentCert.title_key}>
-                        {t(currentCert.title_key)}
-                      </h3>
-                      <p className="cert-info-institution">{currentCert.institution}</p>
-                      <div className="cert-info-skills">
-                        <span className="skills-label">{t('certificate_skills_developed')}</span>
-                        <div className="skills-list">
-                          {currentCert.skills.map((skill, idx) => (
-                            <span key={idx} className="skill-pill" data-skill={skill}>
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="cert-preview-card" onClick={() => openImageSidebar(currentCert.image)}>
-                      {!loadedImages[currentCert.id] && (
-                        <div className="cert-loader">
-                          <div className="loader-spinner"></div>
-                        </div>
-                      )}
-                      <div className="cert-preview-thumb">
-                        <img 
-                          src={currentCert.image} 
-                          alt="preview" 
-                          onLoad={() => handleImageLoad(currentCert.id)}
-                          className={loadedImages[currentCert.id] ? 'loaded' : 'loading'}
-                        />
-                      </div>
-                      <div className="cert-preview-overlay">
+        <div className="certificates-accordion" data-aos="fade-up">
+          {certificates.map((cert, index) => {
+            const isExpanded = expandedItems[cert.id] !== undefined ? expandedItems[cert.id] : index === 0;
+            
+            return (
+              <div key={cert.id} className={`cert-accordion-item ${isExpanded ? 'expanded' : ''}`}>
+                <button
+                  className="cert-accordion-header"
+                  onClick={() => toggleAccordion(cert.id)}
+                >
+                  <div className="cert-accordion-header-left">
+                    <span className="cert-accordion-date">{cert.date}</span>
+                    <span className="cert-accordion-title" data-translate={cert.title_key}>
+                      {t(cert.title_key)}
+                    </span>
+                  </div>
+                  <div className="cert-accordion-header-right">
+                    <i className={`bi bi-chevron-${isExpanded ? 'up' : 'down'}`}></i>
+                  </div>
+                </button>
+                
+                <div className="cert-accordion-body">
+                  <div className="cert-accordion-content">
+                    <div className="cert-accordion-institution-wrapper">
+                      <p className="cert-accordion-institution">{cert.institution}</p>
+                      <button 
+                        className="cert-accordion-view-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openModal(cert.image);
+                        }}
+                      >
                         <i className="bi bi-eye"></i>
                         <span>{t('cert_view')}</span>
+                      </button>
+                    </div>
+                    
+                    <div className="cert-accordion-skills">
+                      <span className="skills-label">{t('certificate_skills_developed')}</span>
+                      <div className="skills-list">
+                        {cert.skills.map((skill, idx) => (
+                          <span key={idx} className="skill-pill" data-skill={skill}>
+                            {skill}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <button 
-                      className="cert-view-btn-mobile" 
-                      onClick={() => openImageSidebar(currentCert.image)}
-                    >
-                      <i className="bi bi-eye"></i>
-                      <span>{t('cert_view')}</span>
-                    </button>
                   </div>
-                  <p className="cert-info-description" data-translate={currentCert.description_key}>
-                    {t(currentCert.description_key)}
-                  </p>
                 </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
 
-      <div className={`image-sidebar-overlay ${isSidebarOpen ? 'active' : ''}`} onClick={closeImageSidebar}></div>
-      <div className={`image-sidebar ${isSidebarOpen ? 'active' : ''}`}>
-        <div className="image-sidebar-header">
-          <h3>{t('certificate_modal_title')}</h3>
-          <button className="image-sidebar-close" onClick={closeImageSidebar}>
+      <div className={`cert-modal-overlay ${isModalOpen ? 'active' : ''}`} onClick={closeModal}></div>
+      <div className={`cert-modal ${isModalOpen ? 'active' : ''}`}>
+        <div className="cert-modal-header">
+          <h3>Certificado</h3>
+          <button className="cert-modal-close" onClick={closeModal}>
             <i className="bi bi-x-lg"></i>
           </button>
         </div>
-        <div className="image-sidebar-content">
+        <div className="cert-modal-content">
           {currentImage && (
             <>
               {!modalImageLoaded && (

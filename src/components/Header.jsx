@@ -11,10 +11,10 @@ const Header = () => {
   const { t, toggleLanguage, currentLanguage } = useTranslation();
 
 const navItems = [
-  { href: '#sobre-mim-02', textKey: 'menu_about', id: 'sobre-mim-02' },
-  { href: '#jornada', textKey: 'menu_methodologies', id: 'jornada' },
+  { href: '#sobre-mim', textKey: 'menu_about', id: 'sobre-mim' },
+  { href: '#journey', textKey: 'menu_methodologies', id: 'journey' },
   { href: '#skills', textKey: 'menu_skills', id: 'skills' },
-  { href: '#service-details', className: 'certificado-details', textKey: 'menu_certificates', id: 'service-details' },
+  { href: '#certificates', textKey: 'menu_certificates', id: 'certificates' },
   { href: '#portfolio', textKey: 'menu_projects', id: 'portfolio' },
   { href: '#form-section', textKey: 'menu_contact', id: 'form-section' },
 ];
@@ -164,7 +164,7 @@ const navItems = [
 </a>
                 </li>
               ))}
-              <li className="d-block d-xl-none mt-3 pt-3 border-top">
+              <li className="d-lg-none mt-3 pt-3 border-top">
                 <button 
                   className="btn-translate w-100 d-flex justify-content-center align-items-center" 
                   onClick={() => {

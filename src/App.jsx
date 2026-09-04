@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import ScrollTop from './services/ScrollTop'; 
 import { TranslationProvider } from './hooks/useTranslation';
 import { LenisProvider } from './hooks/useLenis';
-import MediaQueriesManager from './components/MediaQueriesManager'; 
 import './styles/main.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -65,7 +64,6 @@ function App() {
   return (
     <TranslationProvider>
       <LenisProvider> 
-        <MediaQueriesManager /> 
         <div className="App">
           <Home />
           <ScrollTop />

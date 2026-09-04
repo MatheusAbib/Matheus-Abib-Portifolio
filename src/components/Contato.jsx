@@ -21,6 +21,13 @@ const ContactForm = () => {
     message: ''
   });
   const [isFormValid, setIsFormValid] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('matheus.abib.ma@gmail.com');
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 5000);
+  };
 
   const validateField = (name, value) => {
     let error = '';
@@ -221,8 +228,15 @@ const ContactForm = () => {
                   <strong>(11) 97507-2008</strong>
                 </div>
               </a>
-              <a href="mailto:matheus.abib.ma@gmail.com" className="contact-link">
-                <i className="bi bi-envelope-fill"></i>
+              <a 
+                className="contact-link" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyEmail();
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                <i className="bi bi-google"></i>
                 <div>
                   <span>Email</span>
                   <strong>matheus.abib.ma@gmail.com</strong>
@@ -252,7 +266,7 @@ const ContactForm = () => {
               name="contact"
               method="POST"
               onSubmit={handleSubmit}
-              netlify
+              netlify="true"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -413,6 +427,13 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+
+      {showNotification && (
+        <div className="email-notification show">
+          <i className="bi bi-check-circle-fill"></i>
+          <span data-translate="email_copied">{t('email_copied')}</span>
+        </div>
+      )}
     </section>
   );
 };

@@ -1,9 +1,9 @@
-.how-we-work {
-  background-color: #242421f0;
+.journey-section {
+  background-color: var(--background-color);
   position: relative;
 }
 
-.how-we-work::before {
+.journey-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -15,6 +15,7 @@
   z-index: 0;
   pointer-events: none;
 }
+
 .section-waves-enhanced {
   position: absolute;
   top: 0;
@@ -26,6 +27,7 @@
   opacity: 0.6;
   overflow: hidden;
 }
+
 .section-waves-enhanced::before {
   content: '';
   position: absolute;
@@ -53,18 +55,18 @@
   }
 }
 
-.how-we-work .container,
-.how-we-work .section-title {
+.journey-section .container,
+.journey-section .section-title {
   position: relative;
   z-index: 2;
 }
 
-.how-we-work .process-container {
+.journey-container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.how-we-work .process-item {
+.journey-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,11 +74,11 @@
   padding-bottom: 1.5rem;
 }
 
-.how-we-work .process-item:last-child {
+.journey-item:last-child {
   padding-bottom: 0;
 }
 
-.how-we-work .process-item .content {
+.journey-card {
   width: 100%;
   position: relative;
   background: var(--surface-1);
@@ -87,18 +89,20 @@
   overflow: visible;
 }
 
-.how-we-work .process-item .content:hover::before {
-  transform: translateX(100%);
+.journey-card:hover {
+  transform: translateX(12px);
+  border-color: var(--green-soft);
+  box-shadow: 0 8px 30px rgba(167, 170, 99, 0.08);
 }
 
-.how-we-work .process-item .step-number {
+.journey-number {
   position: absolute;
   left: -35px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4rem;
   font-weight: 800;
-  background:  var(--fg);
+  background: var(--fg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,25 +114,25 @@
   pointer-events: none;
 }
 
-.how-we-work .process-item .content:hover .step-number {
+.journey-card:hover .journey-number {
   transform: translateY(-50%) translateX(-8px);
   opacity: 0.7;
   font-size: 4.2rem;
 }
 
-.how-we-work .process-item .card-body {
+.journey-body {
   padding: 2rem;
   display: flex;
   align-items: flex-start;
   gap: 2rem;
   position: relative;
   z-index: 2;
-    background: var(--surface-1);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius-lg);
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
 }
 
-.how-we-work .process-item .step-icon {
+.journey-icon {
   flex-shrink: 0;
   width: 70px;
   height: 70px;
@@ -138,49 +142,68 @@
   display: grid;
   place-items: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
-.how-we-work .process-item .step-icon i {
-  font-size: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.how-we-work .process-item .content:hover .step-icon {
+.journey-card:hover .journey-icon {
   transform: rotate(10deg) scale(1.05);
   background-color: var(--accent-color);
 }
 
-.how-we-work .process-item .content:hover .step-icon i {
+.journey-icon i {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.journey-card:hover .journey-icon i {
   transform: scale(1.1);
 }
 
-.how-we-work .process-item .step-content h3 {
+.journey-content {
+  flex: 1;
+}
+
+.journey-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.journey-content h3 {
   color: var(--fg);
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 0;
   transition: color 0.3s ease;
   font-family: var(--heading-font);
 }
 
-.how-we-work .process-item .content:hover .step-content h3 {
+.journey-card:hover .journey-content h3 {
   color: var(--accent-color);
 }
 
-
-
-
-.how-we-work .process-item .step-content p {
-  color: var(--fg-muted);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  font-family: var(--heading-font);
-  letter-spacing: 0.02em;
-  margin: 0;
+.journey-period-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-.how-we-work .process-item .step-content .role-badge {
+.journey-period {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  background: var(--surface-2);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.3px;
+  font-family: monospace;
+}
+
+.journey-role {
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 500;
@@ -196,32 +219,36 @@
   font-weight: 600;
 }
 
-.how-we-work .process-item .step-content .period-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.how-we-work .process-item .step-content .period {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 500;
+.journey-content p {
   color: var(--fg-muted);
-  background: var(--surface-2);
-  padding: 0.2rem 0.7rem;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.3px;
-  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
+  margin: 0;
 }
 
-.how-we-work .process-item .step-content .title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 0.6rem;
+.journey-content p ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+.journey-content p li {
+  margin-bottom: 0.3rem;
+}
+
+.journey-content p li:last-child {
+  margin-bottom: 0;
+}
+
+.journey-active-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--green-soft);
+  box-shadow: 0 0 6px var(--green-soft);
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -242,103 +269,140 @@
   }
 }
 
-.how-we-work .process-item .step-content .active-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--green-soft);
-  box-shadow: 0 0 6px var(--green-soft);
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@media (min-width: 992px) and (hover: hover) and (pointer: fine) {
-  .how-we-work .process-item .content:hover {
-    transform: translateX(12px);
-  }
-}
-
 @media (max-width: 992px) {
-  .how-we-work {
+  .journey-section {
     padding: 60px 0;
   }
 
-  .how-we-work .process-item .card-body {
+  .journey-body {
     padding: 1.5rem;
     gap: 1.5rem;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
-  .how-we-work .process-item .step-number {
+  .journey-number {
     left: -20px;
     font-size: 3rem;
   }
 
-  .how-we-work .process-item .step-icon {
+  .journey-icon {
     width: 60px;
     height: 60px;
   }
 
-  .how-we-work .process-item .step-icon i {
+  .journey-icon i {
     font-size: 1.6rem;
   }
 
-  .how-we-work .process-item .step-content h3 {
+  .journey-content h3 {
     font-size: 1.2rem;
+  }
+
+  .journey-header {
+    justify-content: center;
+  }
+
+  .journey-role {
+    display: inline-block;
+  }
+
+  .journey-content p {
+    text-align: left;
+  }
+
+  .section-waves-enhanced {
+    opacity: 0.3;
   }
 }
 
 @media (max-width: 768px) {
-  .how-we-work .process-item .step-content .title-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .how-we-work .process-item .step-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .how-we-work .process-item .step-content .period {
-    font-size: 0.65rem;
-  }
-
-  .how-we-work .process-item .step-content .active-dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .how-we-work .process-item .step-content .role-badge {
-    font-size: 0.6rem;
-    padding: 0.15rem 0.6rem;
-  }
-
-  .how-we-work .process-item .step-content p {
-    font-size: 0.8rem;
-  }
-  .how-we-work {
+  .journey-section {
     padding: 40px 0;
   }
 
-  .how-we-work .process-item .card-body {
+  .journey-body {
     padding: 1.25rem;
+    gap: 1rem;
   }
 
-  .how-we-work .process-item .step-number {
+  .journey-number {
     display: none;
   }
 
-  .how-we-work .process-item .step-icon {
+  .journey-icon {
     width: 55px;
     height: 55px;
   }
 
-  .how-we-work .process-item .step-icon i {
+  .journey-icon i {
     font-size: 1.4rem;
   }
 
+  .journey-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .journey-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .journey-period {
+    font-size: 0.65rem;
+  }
+
+  .journey-role {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.6rem;
+  }
+
+  .journey-content p {
+    font-size: 0.8rem;
+  }
+
+  .journey-active-dot {
+    width: 8px;
+    height: 8px;
+  }
 
   .section-waves-enhanced {
     opacity: 0.05;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-body {
+    padding: 1.25rem;
+  }
+
+  .journey-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .journey-icon i {
+    font-size: 1.2rem;
+  }
+
+  .journey-content h3 {
+    font-size: 1rem;
+  }
+
+  .journey-period {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .journey-role {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .journey-content p {
+    font-size: 0.75rem;
   }
 }

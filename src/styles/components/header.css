@@ -3,7 +3,6 @@
   color: var(--fg) !important;
   background: var(--surface-1) !important;
   backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
   padding: 12px 0 !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 997 !important;
@@ -69,7 +68,6 @@
   --background-color: var(--surface-2) !important;
   background: var(--surface-2) !important;
   backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 1px solid var(--hairline) !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
@@ -283,9 +281,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(28, 28, 26, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   z-index: 800;
   opacity: 0;
   visibility: hidden;
@@ -353,7 +349,6 @@ body.mobile-nav-active {
   height: 100vh;
   background: var(--ink);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-left: 1px solid var(--hairline);
   z-index: 999;
   padding: 60px 30px 30px;
@@ -471,7 +466,7 @@ body.mobile-nav-active {
   transition: all 0.3s ease;
   width: 44px;
   height: 44px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -532,10 +527,21 @@ body.mobile-nav-active .d-none.d-xl-flex {
 }
 
 
-
 @media (max-width: 1199px) {
   .d-none.d-xl-flex {
     display: none !important;
+  }
+  
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+  
+  .navmenu ul {
+    display: none;
+  }
+  
+  .navmenu.mobile-nav-active ul {
+    display: flex;
   }
 }
 

@@ -120,8 +120,8 @@ const Portfolio = () => {
       priority: 1,
       featured: true
     },
-        {
-      id: 4,
+    {
+      id: 2,
       title: "Organizador de Arquivos",
       title_key: "project_arquivos",
       description_key: "project_arquivos_desc",
@@ -135,25 +135,23 @@ const Portfolio = () => {
       priority: 1,
       featured: true
     },
-
-      {
-        id: 5,
-        title: "E-Commerce - Livros Online",
-        title_key: "project_livros",
-        description_key: "project_livros_desc",
-        category: "Site",
-        filter: "web",
-        stack: "angular-badge",
-        image: "/assets/img/portfolio/Livraria-Online.png",
-        github: "https://github.com/MatheusAbib/e-commerce-livraria",
-        live: "https://livraria-online-gold.vercel.app/",
-        tags: ["Angular", "TypeScript", "Java", "SpringBoot", "MySQL"],
-        priority: 1,
-        featured: true
-      },
-
-        {
+    {
       id: 3,
+      title: "E-Commerce - Livros Online",
+      title_key: "project_livros",
+      description_key: "project_livros_desc",
+      category: "Site",
+      filter: "web",
+      stack: "angular-badge",
+      image: "/assets/img/portfolio/Livraria-Online.png",
+      github: "https://github.com/MatheusAbib/e-commerce-livraria",
+      live: "https://livraria-online-gold.vercel.app/",
+      tags: ["Angular", "TypeScript", "Java", "SpringBoot", "MySQL"],
+      priority: 1,
+      featured: true
+    },
+    {
+      id: 4,
       title: "Jornal de Receitas",
       title_key: "project_receitas",
       description_key: "project_receitas_desc",
@@ -167,7 +165,7 @@ const Portfolio = () => {
       priority: 1
     },
     {
-      id: 2,
+      id: 5,
       title: "Dashboard de Vendas",
       title_key: "project_dashboard",
       description_key: "project_dashboard_desc",
@@ -180,11 +178,8 @@ const Portfolio = () => {
       tags: ["Node.Js", "Express", "Java", "MySQL", "Charts"],
       priority: 1
     },
-
-
-
     {
-      id: 8,
+      id: 6,
       title: "Meu Painel",
       title_key: "project_login",
       description_key: "project_login_desc",
@@ -198,7 +193,7 @@ const Portfolio = () => {
       priority: 1
     },
     {
-      id: 10,
+      id: 7,
       title: "Floricultura Web",
       title_key: "project_floricultura",
       description_key: "project_floricultura_desc",
@@ -211,8 +206,8 @@ const Portfolio = () => {
       tags: ["React", "HTML", "SCSS", "JavaScript"],
       priority: 2
     },
-        {
-      id: 11,
+    {
+      id: 8,
       title: "Bloco de Notas",
       title_key: "project_notas",
       description_key: "project_notas_desc",
@@ -226,7 +221,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 12,
+      id: 9,
       title: "Yummy Lamen - Restaurante de Lamen",
       title_key: "project_lamen",
       description_key: "project_lamen_desc",
@@ -240,7 +235,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 13,
+      id: 10,
       title: "Calendário",
       title_key: "project_calendario",
       description_key: "project_calendario_desc",
@@ -254,7 +249,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 17,
+      id: 11,
       title: "UNO",
       title_key: "project_uno",
       description_key: "project_uno_desc",
@@ -267,9 +262,9 @@ const Portfolio = () => {
       tags: ["Angular", "TypeScript", "HTML", "CSS"],
       priority: 2
     },
-        {
-      id: 19,
-      title: "A Forca",
+    {
+      id: 12,
+      title: "Jogo da Forca",
       title_key: "project_forca",
       description_key: "project_forca_desc",
       category: "Diversão",
@@ -282,7 +277,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 18,
+      id: 13,
       title: "Tocador de Música",
       title_key: "project_musica",
       description_key: "project_musica_desc",
@@ -295,9 +290,8 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
       priority: 2
     },
-
     {
-      id: 20,
+      id: 14,
       title: "Figma & Power BI",
       title_key: "project_links",
       description_key: "project_links_desc",
@@ -368,12 +362,6 @@ const Portfolio = () => {
     scrollWrapperRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  const getStackBadgeClass = (stack) => {
-    if (stack.includes('angular-badge')) return 'stack-badge angular-badge';
-    if (stack.includes('fullstack')) return 'stack-badge fullstack';
-    return 'stack-badge frontend-only';
-  };
-
   const getTagClass = (tag) => {
     const tagClasses = {
       'HTML': 'html-tag',
@@ -409,7 +397,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="portfolio section">
+    <section id="portfolio" className="portfolio-section">
       <div className="section-glow"></div>
       <div className="section-waves"></div>
       <div className="section-orbs">
@@ -420,38 +408,36 @@ const Portfolio = () => {
 
       <div className="container">
         <SectionLabel sectionId="portfolio" />
+
         <div className="section-title" data-aos="fade-up">
           <h2 data-translate="portfolio_title">{t('portfolio_title')}</h2>
-          <div className="title-badges">
-            <span className="projects-count">{filteredProjects.length} {t('projects_count')}</span>
-            <a 
-              href="https://github.com/MatheusAbib" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="github-badge"
-              title="Ver todos os projetos no GitHub"
-            >
-              <i className="bi bi-github"></i>
-              <span>{t('see_more_github')}</span>
-              <i className="bi bi-arrow-right"></i>
-            </a>
-          </div>
         </div>
-      </div>
 
-      <div className="container">
-        <div className="portfolio-filters-container">
-          <ul className="portfolio-filters">
-            {filters.map((filter) => (
-              <li
-                key={filter.key}
-                className={activeFilter === filter.key ? 'filter-active' : ''}
-                onClick={() => handleFilterClick(filter.key)}
-              >
-                <span data-translate={filter.label}>{t(filter.label)}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="portfolio-controls" data-aos="fade-up" data-aos-delay="100">
+          <div className="portfolio-controls-left">
+            <ul className="portfolio-filters">
+              {filters.map((filter) => (
+                <li
+                  key={filter.key}
+                  className={activeFilter === filter.key ? 'filter-active' : ''}
+                  onClick={() => handleFilterClick(filter.key)}
+                >
+                  <span data-translate={filter.label}>{t(filter.label)}</span>
+                </li>
+              ))}
+            </ul>
+            <span className="projects-count">{filteredProjects.length} {t('projects_count')}</span>
+          </div>
+          <a 
+            href="https://github.com/MatheusAbib" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-badge"
+          >
+            <i className="bi bi-github"></i>
+            <span>{t('see_more_github')}</span>
+            <i className="bi bi-arrow-right"></i>
+          </a>
         </div>
 
         <div className="portfolio-scroll-container">
@@ -520,14 +506,14 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio-content">
                       <div className="category-wrapper">
-                        <span className="category">
-                          <span className={`category-dot ${project.filter}`}></span>
-                          {project.category === "Site" && t('category_site')}
-                          {project.category === "Ferramenta" && t('category_ferramenta')}
-                          {project.category === "Diversão" && t('category_diversao')}
-                          {project.category === "Links" && t('category_links')}
-                          {project.category === "Sistema" && t('category_system')}
-                        </span>
+<span className={`category category-${project.category.toLowerCase()}`}>
+  <span className={`category-dot ${project.filter}`}></span>
+  {project.category === "Site" && t('category_site')}
+  {project.category === "Ferramenta" && t('category_ferramenta')}
+  {project.category === "Diversão" && t('category_diversao')}
+  {project.category === "Links" && t('category_links')}
+  {project.category === "Sistema" && t('category_system')}
+</span>
                         <div className="stack-simple">
                           <i className="bi bi-code-slash"></i>
                           <span>
