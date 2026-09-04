@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Inicio = () => {
   const { t } = useTranslation();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <section id="hero" className="hero">
-      <div className="hero-background-image"></div>
+      <div className="hero-background-image-wrapper">
+        {!imageLoaded && (
+          <div className="hero-image-loader">
+            <div className="loader-spinner"></div>
+          </div>
+        )}
+        <div 
+          className="hero-background-image"
+          style={{ 
+            backgroundImage: `url('https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg')`,
+            opacity: imageLoaded ? 1 : 0
+          }}
+        >
+          <img 
+            src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg" 
+            alt="Background" 
+            onLoad={() => setImageLoaded(true)}
+            style={{ display: 'none' }}
+          />
+        </div>
+      </div>
       <div className="hero-overlay"></div>
 
       <div className="hero-content-left" data-aos="fade-up">
@@ -31,12 +52,13 @@ const Inicio = () => {
             <span data-translate="hero_tag_uiux">{t('hero_tag_uiux')}</span>
           </div>
         </div>
-<div className="hero-availability-badge">
-  <i className="bi bi-check-circle-fill"></i>
-  <span data-translate="hero_available">{t('hero_available')}</span>
-</div>
+        <div className="hero-availability-badge">
+          <i className="bi bi-check-circle-fill"></i>
+          <span data-translate="hero_available">{t('hero_available')}</span>
+        </div>
       </div>
     </section>
   );
 };
+
 export default Inicio;

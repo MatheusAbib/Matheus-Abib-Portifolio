@@ -1,0 +1,98 @@
+[33m14e57033[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: pull origin main --rebase (start): checkout 14e570333ea286e4989bc9ab7d5b3587de526b79
+[33m7c7575be[m[33m ([m[1;32mmain[m[33m)[m HEAD@{1}: commit: feat: redesign completo da identidade visual e seção de portfólio
+[33m2b858ae0[m HEAD@{2}: commit: feat: ajuste na responsividade para telas de celulares
+[33m7d02ff63[m HEAD@{3}: commit: feat: ajuste na responsividade para telas de celulares
+[33m71266367[m HEAD@{4}: commit: feat: redesign visual completo do portfólio com novas cores e elegância
+[33me5e330d5[m HEAD@{5}: commit: Novas Alterações nos projetos
+[33mddcbd4be[m HEAD@{6}: commit: Novas Alterações nos projetos
+[33m3437b57f[m HEAD@{7}: commit: Novas Alterações nos projetos
+[33m0ff96f6e[m HEAD@{8}: commit: Novas Alterações nos projetos
+[33m2241bb9d[m HEAD@{9}: commit: Novas Alterações nos projetos
+[33m811dc553[m HEAD@{10}: commit: Novas Alterações nos projetos
+[33m39cbe0f1[m HEAD@{11}: commit: feat: ajuste em link de projetos
+[33m4a73b7c1[m HEAD@{12}: commit: feat: ajuste nos certificados na seção de certificados
+[33m300b61aa[m HEAD@{13}: commit: feat: melhorias visuais nos botões do site
+[33m462b77cc[m HEAD@{14}: commit: Novos projetos destacadaos, e projetos menos relevantes retirados
+[33m94816a6c[m HEAD@{15}: commit: Melhorias visuais relacionadas a tamanhos, espaçamentos em todas as seções
+[33m19171b16[m HEAD@{16}: commit: Melhorias visuais relacionadas a tamanhos, espaçamentos em todas as seções
+[33m1bb4c676[m HEAD@{17}: commit: Melhorias visuais relacionadas a tamanhos, espaçamentos em todas as seções
+[33m641dbe23[m HEAD@{18}: commit: Melhorias visuais relacionadas a tamanhos, espaçamentos em todas as seções
+[33mf4c36ec0[m HEAD@{19}: commit: Atualizado os currículos
+[33m9116d0a3[m HEAD@{20}: commit: boas práticas de mobile first incluídas
+[33mb178b101[m HEAD@{21}: commit: boas práticas de mobile first incluídas
+[33m8508d5cc[m HEAD@{22}: commit: boas práticas de mobile first incluídas
+[33mdf8d4bf8[m HEAD@{23}: commit: Melhores animações visuais
+[33ma4c12b17[m HEAD@{24}: commit: boas práticas de mobile first incluídas
+[33m574a7f41[m HEAD@{25}: commit: Melhorias visuais na seção de certificados
+[33me306ec2c[m HEAD@{26}: commit: Melhorias visuais na seção de certificados
+[33mef48a1e6[m HEAD@{27}: commit: Novo certificado do meu curso online de React
+[33mf15c57cd[m HEAD@{28}: commit: Melhorias visuais nos textos e descrições do site
+[33m84a35312[m HEAD@{29}: commit: Nova animação de hover na seção de softskills
+[33mb3f03216[m HEAD@{30}: commit: Novo botão de fechar para a sidebar mobile
+[33m24a207c2[m HEAD@{31}: commit: Pequenos ajustes no tamanho dos textos
+[33m7f2abf27[m HEAD@{32}: commit: Nova mensagem de aviso no formulário e spinner de 1.5 segundos
+[33m9233ef31[m HEAD@{33}: commit: Nova mensagem de aviso no formulário e spinner de 1.5 segundos
+[33m54136989[m HEAD@{34}: commit: Css componentizado
+[33m9013cb7b[m HEAD@{35}: commit: Corrige imagens dos certificados e problemas de build
+[33m011eda6f[m HEAD@{36}: commit: Configura yarn para build no Netlify
+[33m8adee6c2[m HEAD@{37}: commit: Usa npx para contornar problema de permissão
+[33m5b8b53b2[m HEAD@{38}: commit: Configura netlify.toml e atualiza .gitignore
+[33ma1950be3[m HEAD@{39}: commit: Remove node_modules do repositório
+[33mca9edefb[m HEAD@{40}: commit: Fix build for Netlify
+[33mf4df5e3a[m HEAD@{41}: commit: Remove node_modules do repositório
+[33me9b81718[m HEAD@{42}: Branch: renamed refs/heads/main to refs/heads/main
+[33me9b81718[m HEAD@{44}: commit: Primeiro commit - portfolio react
+[33me14abdff[m HEAD@{45}: commit: Pequenos ajustes no css
+[33m35a70ca0[m HEAD@{46}: commit: Novo link para o projeto 'Dashboard-Vendas'
+[33mfe158b5d[m HEAD@{47}: commit: Novo background na seção de projetos
+[33m3818555e[m HEAD@{48}: commit: Melhoria visual na seção de certificados
+[33m416e9396[m HEAD@{49}: commit: Melhoria visual na seção de certificados
+[33m2bc61e28[m HEAD@{50}: commit: Novo footer moderno
+[33m0e4097f6[m HEAD@{51}: commit: Ajustes adicionais nos cards
+[33m233554e8[m HEAD@{52}: commit: Ajustes adicionais nos cards
+[33m6afd8eb6[m HEAD@{53}: commit: Ajustes adicionais nos cards
+[33m6abdf949[m HEAD@{54}: commit: Ajuste no scroll da seção de projetos com a biblioteca lenis
+[33m79ab11a7[m HEAD@{55}: commit: Ajuste no scroll da seção de projetos com a biblioteca lenis
+[33m95b0f692[m HEAD@{56}: commit: Ajustei a tradução da seção de certificados
+[33mf18306ac[m HEAD@{57}: commit: Aprimorei todas as seções. Novos Backgrounds, cores e animações
+[33md2c93fc3[m HEAD@{58}: commit: Aprimorei todas as seções. Novos Backgrounds, cores e animações
+[33mf4529d15[m HEAD@{59}: commit: Aprimorei todas as seções. Novos Backgrounds, cores e animações
+[33m3c199f02[m HEAD@{60}: commit: Modernizei o formulário de envio de mensagem
+[33m1bb4d0d5[m HEAD@{61}: commit: Modernizei o formulário de envio de mensagem
+[33md3089e72[m HEAD@{62}: commit: Modernizei o formulário de envio de mensagem
+[33m704ea6cb[m HEAD@{63}: commit: Modernizei o formulário de envio de mensagem
+[33m83c5817b[m HEAD@{64}: commit: Modernizei o formulário de envio de mensagem
+[33m07316b77[m HEAD@{65}: commit: Modernizei o formulário de envio de mensagem
+[33mcba4061c[m HEAD@{66}: commit: Ajuste no tamanho das seções do site
+[33ma48091ec[m HEAD@{67}: commit: Ajuste na tradução para inglês em algumas partes do código
+[33m5f631089[m HEAD@{68}: commit: Novos modais para designer, engenharia de software e power bi na seção de serviços
+[33m9a66b714[m HEAD@{69}: commit: Scroll suavizado no site. Novo modal de informações para serviços e melhor formatação dos textos
+[33m6963a6fa[m HEAD@{70}: commit: Scroll suavizado no site. Novo modal de informações para serviços e melhor formatação dos textos
+[33ma8b99610[m HEAD@{71}: commit: Melhorias visuais no formulário
+[33mfed3c92d[m HEAD@{72}: commit: Adiciona confirmação inline para formulário
+[33m27448db4[m HEAD@{73}: commit: Adiciona confirmação inline para formulário
+[33m8a8074b7[m HEAD@{74}: commit: Adiciona campo hidden obrigatório do Netlify
+[33ma2f6a417[m HEAD@{75}: commit: Adiciona página de sucesso para formulário
+[33mbf78e8cf[m HEAD@{76}: commit: Adiciona .nojekyll para corrigir erro Jekyll
+[33m780eff0d[m HEAD@{77}: commit: Adiciona formulário Netlify Forms
+[33me73c2ece[m HEAD@{78}: commit: Ajuste no dropdown do CV
+[33m71314a45[m HEAD@{79}: commit: Ajuste no tamanho das imagens dos projetos
+[33m8307f811[m HEAD@{80}: commit: Ajuste no tamanho das imagens dos projetos
+[33m8b9d3999[m HEAD@{81}: commit: Ajuste no tamanho das imagens dos projetos
+[33m015569d8[m HEAD@{82}: commit: Ajuste na minha foto de perfil
+[33m82cab131[m HEAD@{83}: commit: Ajuste no SVG da seção de metodologias
+[33mbdbf2d2a[m HEAD@{84}: commit: Ajuste nas cores da seção de metodologias
+[33mba496927[m HEAD@{85}: commit: Ajuste no link do projeto 'Jornal de Receitas'
+[33m4d659500[m HEAD@{86}: commit: Ajuste no link do projeto 'CRUD-Formulario de cadastro'
+[33m8d34d31b[m HEAD@{87}: commit: Ajuste no link do projeto 'dashboard-vendas'
+[33m96c235cc[m HEAD@{88}: commit: Scrollbar personalizado para o site
+[33mb7bca7d1[m HEAD@{89}: commit: Scrollbar personalizado para o site
+[33m77ae1c83[m HEAD@{90}: commit: SVG animado na seção de metodologias
+[33mfa8b6953[m HEAD@{91}: commit: Ajustes na resposnsividade so SVG em celulares
+[33ma5f430e1[m HEAD@{92}: commit: Ajustes na resposnsividade so SVG em celulares
+[33m45528e0f[m HEAD@{93}: commit: SVG animado na seção de metodologias
+[33m04e7a56c[m HEAD@{94}: commit: Aprimorando o css na seção de contato
+[33m87586501[m HEAD@{95}: commit: Aprimorando o css na seção de softskills
+[33mde2576cc[m HEAD@{96}: commit: Ajustando a responsividade dos novos visuais
+[33md0d6a73f[m HEAD@{97}: commit: Atualizado completamente a seção sobre mim
+[33m9e62f4da[m HEAD@{98}: commit: Atualizado completam
