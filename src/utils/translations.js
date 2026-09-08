@@ -112,22 +112,21 @@ const translations = {
     project_desfumo_desc: "Aplicativo para controle de consumo de tabaco com registro diário, metas de redução, acesso a unidades de saúde (UPAS) e recursos de apoio psicológico.",
 
     project_arquivos: "Organizador de Arquivos",
-    project_arquivos_desc: "Ferramenta de organização de arquivos com funcionalidades de mover, copiar, renomear e pesquisar em pastas.",
+    project_arquivos_desc: "Plataforma web para gerenciamento de arquivos com suporte a mais de 50 formatos. Permite organização em pastas, compartilhamento com níveis de permissão, sistema de favoritos, comentários em arquivos e busca avançada com filtros por tipo.",
 
     project_livros: "Livraria Online - E-Commerce",
     project_livros_desc: "E-commerce de livros com catálogo interativo, carrinho, checkout, avaliações, favoritos, cupons, chat em tempo real, rastreamento de pedidos, devoluções, dashboard administrativo e gestão de estoque.",
 
     project_receitas: "Jornal de Receitas",
-    project_receitas_desc: "Aplicação completa de receitas com cadastro, edição, busca por ingredientes e categorias organizadas.",
+    project_receitas_desc: "Sistema completo para gerenciamento e compartilhamento de receitas culinárias com design inspirado em jornais. Permite CRUD completo, upload de imagens, favoritos, filtros avançados, busca inteligente e painel administrativo.",
 
     project_dashboard: "Dashboard de Vendas",
-    project_dashboard_desc: "Dashboard de vendas com gráficos dinâmicos, filtros inteligentes, mapa interativo e exportação de relatórios.",
-
+    project_dashboard_desc: "Dashboard completo para monitoramento de vendas com métricas em tempo real, filtros inteligentes, gráficos interativos, mapa geográfico e exportação de relatórios em Excel e PDF.",
     project_login: "Meu Painel - CRUD",
     project_login_desc: "Sistema completo de autenticação e gerenciamento com Angular, Node.js e MySQL, incluindo login, cadastro, CRUD de endereços e cartões, foto de perfil e logo dinâmica.",
 
     project_floricultura: "Floricultura Web",
-    project_floricultura_desc: "E-commerce de flores e presentes com carrinho, favoritos, busca, ordenação e pagamento integrado",
+    project_floricultura_desc: "E-commerce de flores com carrinho de compras, favoritos, perfil de usuário, busca, filtro e ordenação de produtos em tempo real, pagamento com PIX e Cartão de Crédito, modal de produtos e design responsivo.",
 
     project_notas: "Bloco de Notas",
     project_notas_desc: "Bloco de notas completo com LocalStorage, formatação avançada, tags, arquivamento, imagens, anexos, busca, tema escuro, modo foco, undo/redo e muito mais.",
@@ -136,13 +135,13 @@ const translations = {
     project_lamen_desc: "Site responsivo para restaurante de lamen japonês com cardápio digital, horário de funcionamento e localização.",
 
     project_calendario: "Calendário",
-    project_calendario_desc: "Calendário interativo com navegação mensal e anual, suporte para eventos e datas comemorativas.",
+    project_calendario_desc: "Calendário interativo com gerenciamento de compromissos, feriados nacionais, eventos recorrentes (diário, semanal, mensal, anual), navegação mensal/anual e relógio em tempo real.",
 
     project_uno: "UNO Arcade",
-    project_uno_desc: "Versão digital do clássico jogo de cartas UNO com visual neon retro, efeitos especiais e bots inteligentes.",
+    project_uno_desc: "Versão digital do clássico jogo UNO com visual neon retro, bots inteligentes, cartas especiais, sistema de torneio com 6 rodadas eliminatórias, ranking de vitórias, chat de ações em tempo real e design responsivo.",
 
     project_forca: "Jogo da Forca",
-    project_forca_desc: "Jogo da forca com 6 categorias, 3 dificuldades, dicas, ranking local, efeitos de fogo e sons imersivos.",
+    project_forca_desc: "Jogo da forca com mais de 350 palavras em 6 categorias, 3 níveis de dificuldade, sistema de dicas e ranking local com localStorage.",
 
     project_musica: "Tocador de Música",
     project_musica_desc: "Player de música funcional com lista de reprodução, controles de play/pause, próximo/anterior e visualização da faixa atual.",
@@ -307,22 +306,22 @@ const translations = {
     project_desfumo_desc: "App for smoking consumption control with daily logging, reduction goals, access to health units (UPAS) and psychological support resources.",
 
     project_arquivos: "File Organizer",
-    project_arquivos_desc: "Complete file organization tool with move, copy, rename and search functionalities.",
+    project_arquivos_desc: "Web platform for file management with support for over 50 formats. Features folder organization, permission-based sharing, favorites system, file comments, and advanced search with type filters.",
 
     project_livros: "Online Bookstore - E-commerce",
     project_livros_desc: "E-commerce for books with interactive catalog, shopping cart, checkout, reviews, favorites, coupons, real-time chat, order tracking, returns, admin dashboard and inventory management.",
 
     project_receitas: "Recipe Journal",
-    project_receitas_desc: "Complete system with recipe registration, search and organized categories.",
+    project_receitas_desc: "Complete system for managing and sharing culinary recipes with a newspaper-inspired design. Features full CRUD, image upload, favorites, advanced filters, smart search, and admin dashboard.",
 
     project_dashboard: "Sales Dashboard",
-    project_dashboard_desc: "Sales dashboard with dynamic charts, smart filters, interactive map, and report export functionality.",
+    project_dashboard_desc: "Complete dashboard for sales monitoring with real-time metrics, smart filters, interactive charts, geographic map, and report export in Excel and PDF.",
 
     project_login: "My Dashboard - CRUD",
     project_login_desc: "Complete authentication and management system with Angular, Node.js and MySQL, including login, registration, CRUD for addresses and cards, profile photo and dynamic logo.",
 
     project_floricultura: "Floriculture Website",
-    project_floricultura_desc: "Responsive florist website with shopping cart and filters",
+    project_floricultura_desc: "Flower e-commerce with shopping cart, favorites, user profile, real-time product search, filtering and sorting, PIX and Credit Card payment, product modal, and responsive design.",
 
     project_notas: "Notepad",
     project_notas_desc: "Full-featured notes app with LocalStorage, advanced formatting, tags, archiving, images, attachments, search, dark mode, focus mode, undo/redo and much more.",
@@ -331,13 +330,13 @@ const translations = {
     project_lamen_desc: "Responsive website for Japanese ramen restaurant with digital menu, opening hours and location.",
 
     project_calendario: "Calendar",
-    project_calendario_desc: "Interactive calendar with month and year navigation, support for events and holidays.",
+    project_calendario_desc: "Interactive calendar with appointment management, national holidays, recurring events (daily, weekly, monthly, yearly), monthly/yearly navigation and real-time clock.",
 
     project_uno: "UNO Arcade",
-    project_uno_desc: "Digital version of the classic UNO card game with neon retro visuals, special effects and intelligent bots.",
+   project_uno_desc: "Digital version of the classic UNO card game with neon retro visuals, intelligent bots, special cards, 6-round elimination tournament system, win ranking, real-time action chat, and responsive design.",
 
     project_forca: "Hangman Game",
-    project_forca_desc: "Hangman game with 6 categories, 3 difficulty levels, hints, local ranking, fire effects and immersive sounds.",
+    project_forca_desc: "Hangman game with over 350 words in 6 categories, 3 difficulty levels, hint system and local ranking with localStorage.",
 
     project_musica: "Music Player",
     project_musica_desc: "Music player with playlist, play/pause controls, next/previous and current track visualization.",
