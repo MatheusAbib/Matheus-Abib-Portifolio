@@ -720,6 +720,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
+    flex-direction: column-reverse;
   }
 
   .github-badge {
@@ -736,10 +737,11 @@
   .portfolio-filters {
     gap: 0.4rem;
     justify-content: center;
+    margin-bottom: 20px;
   }
   .portfolio-filters li {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.7rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
   }
   .category-wrapper {
     gap: 0.3rem;
@@ -756,6 +758,10 @@
   .projects-count {
     font-size: 0.7rem;
     padding: 0.2rem 0.7rem;
+            margin-bottom: 5px
+  }
+  .scroll-hint {
+    opacity: 0.8;
   }
 }
 
@@ -875,8 +881,8 @@
     font-size: 0.55rem;
   }
   .stack-simple {
-    font-size: 0.55rem;
-    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
   }
   .portfolio-actions a {
     width: 42px;
@@ -885,11 +891,6 @@
   }
   .scroll-hint {
     margin-top: 0.75rem;
-    font-size: 0.6rem;
-  }
-  .projects-count {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.6rem;
-    margin: 10px;
+    font-size: 0.7rem;
   }
 }

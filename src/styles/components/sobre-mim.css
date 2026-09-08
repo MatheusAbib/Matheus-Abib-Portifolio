@@ -576,3 +576,89 @@
     font-size: 0.7rem;
   }
 }
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0 4% !important;
+  }
+  
+  .sobre-mim {
+    padding: 40px 0;
+  }
+
+  .sobre-mim-content {
+    padding: 0 0;
+  }
+
+  .sobre-mim-left {
+    padding: 0;
+  }
+
+  .sobre-mim-title {
+    font-size: 1.8rem;
+  }
+
+  .sobre-mim-texto p {
+    font-size: 0.85rem;
+  }
+
+  .feature-card {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .feature-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .feature-icon i {
+    font-size: 0.95rem;
+  }
+
+  .feature-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .feature-card .feature-text p {
+    font-size: 0.7rem;
+  }
+
+  .social-icon-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .sobre-mim-footer {
+    gap: 0.75rem;
+  }
+
+  .sobre-mim-actions-left {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sobre-mim-actions-left .btn-primary,
+  .sobre-mim-actions-left .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sobre-mim-actions-left .dropdown {
+    width: 100%;
+  }
+
+  .sobre-mim-actions-left .dropdown .btn-primary {
+    width: 100%;
+  }
+
+  .sobre-mim-social {
+    justify-content: center;
+  }
+}

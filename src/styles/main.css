@@ -407,6 +407,13 @@ section,
   }
 }
 
+@media (max-width: 420px) {
+  .container,
+  .hero-content-left {
+    padding: 0 4% !important;
+  }
+}
+
 @media (hover: none) and (pointer: coarse) {
   [class*="hover"] {
     transform: none !important;
@@ -414,7 +421,7 @@ section,
   }
 
   .tech-card:hover,
-  .feature-card-02:hover,
+  .feature-card:hover,
   .portfolio-card:hover,
   .cert-preview-card:hover,
   .contact-link:hover,
@@ -430,7 +437,28 @@ section,
   .image-sidebar-close:hover,
   .show-more-tags:hover,
   .cta-button:hover,
-  .submit-btn:hover:not(:disabled) {
+  .submit-btn:hover:not(:disabled),
+  .social-icon-btn:hover,
+  .btn-glass:hover,
+  .glass-card:hover,
+  .feature-card-02:hover,
+  .btn-cv:hover,
+  .btn-translate:hover,
+  .mobile-nav-toggle:hover,
+  .mobile-nav-close:hover,
+  .cert-accordion-header:hover,
+  .cert-accordion-view-btn:hover,
+  .feature-card:hover .feature-icon,
+  .skill-item:hover,
+  .journey-card:hover,
+  .github-badge:hover,
+  .portfolio-filters li:hover,
+  .scroll-top:hover,
+  .cert-image-overlay-btn:hover,
+  .cert-preview-card:hover .cert-preview-overlay,
+  .contact-link-mini:hover,
+  .dropdown-item:hover,
+  .dropdown-item-cv:hover {
     transform: none !important;
     box-shadow: none !important;
     background: none !important;
@@ -438,36 +466,83 @@ section,
     color: var(--fg-muted) !important;
   }
 
-  .tech-category:hover {
-    border-color: var(--hairline) !important;
+  .social-icon-btn:hover {
+    background: var(--surface-2) !important;
+    color: var(--fg-muted) !important;
     transform: none !important;
+    border-color: var(--hairline) !important;
+  }
+
+  .feature-card:hover .feature-icon {
+    background: var(--surface-2) !important;
+    transform: none !important;
+  }
+
+  .feature-card:hover .feature-icon i {
+    color: var(--green-soft) !important;
+  }
+
+  .journey-card:hover {
+    transform: none !important;
+    border-color: var(--hairline) !important;
     box-shadow: none !important;
   }
 
-  .tech-category:hover .category-icon-wrapper {
-    background: var(--surface-2) !important;
+  .journey-card:hover .journey-icon {
+    transform: none !important;
+    background: var(--green-soft) !important;
+  }
+
+  .journey-card:hover .journey-content h3 {
+    color: var(--fg) !important;
+  }
+
+  .journey-card:hover .journey-number {
+    transform: translateY(-50%) !important;
+    opacity: 0.3 !important;
+    font-size: 4rem !important;
+  }
+
+  .skill-item:hover {
+    transform: none !important;
     border-color: var(--hairline) !important;
+    box-shadow: none !important;
   }
 
-  .tech-category:hover .category-icon-wrapper i {
-    color: var(--accent-color) !important;
-  }
-
-  .tech-card:hover::before {
-    opacity: 0 !important;
-  }
-
-  .tech-card:hover .tech-icon-wrapper i,
-  .tech-card:hover .tech-icon-wrapper iconify-icon {
+  .skill-item:hover .skill-icon i,
+  .skill-item:hover .skill-icon iconify-icon {
     transform: none !important;
   }
 
-  .tech-card:hover .tech-name {
+  .skill-item:hover .skill-name {
     color: var(--fg-muted) !important;
+  }
+
+  .skill-item:hover .skill-level-value {
+    color: var(--fg-faint) !important;
+  }
+
+  .skill-item:hover::after {
+    opacity: 0 !important;
+  }
+
+  .skill-item:hover::before {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .portfolio-card:hover {
+    transform: none !important;
+    border-color: var(--hairline) !important;
+    box-shadow: none !important;
   }
 
   .portfolio-card:hover .portfolio-image img {
     transform: none !important;
+  }
+
+  .portfolio-card:hover .portfolio-content h3 {
+    color: var(--fg) !important;
   }
 
   .portfolio-card:hover .portfolio-overlay {
@@ -475,51 +550,91 @@ section,
     visibility: visible !important;
   }
 
-  .portfolio-card:hover {
+  .portfolio-actions a:hover {
     transform: none !important;
+    background: var(--surface-2) !important;
+    color: var(--fg-muted) !important;
     box-shadow: none !important;
+  }
+
+  .cert-accordion-header:hover {
+    background: transparent !important;
+  }
+
+  .cert-accordion-view-btn:hover {
+    transform: none !important;
+    background: var(--accent-color) !important;
+    color: var(--contrast-color) !important;
+  }
+
+  .github-badge:hover {
+    transform: none !important;
+    border-color: var(--hairline) !important;
+    background: var(--surface-1) !important;
+    color: var(--fg-muted) !important;
+  }
+
+  .github-badge:hover .bi-arrow-right {
+    transform: none !important;
+  }
+
+  .portfolio-filters li:hover {
+    transform: none !important;
+    background: var(--surface-1) !important;
+    color: var(--fg-muted) !important;
     border-color: var(--hairline) !important;
   }
 
-  .cert-preview-card:hover {
+  .scroll-top:hover {
     transform: none !important;
-    border-color: var(--hairline) !important;
   }
 
   .cert-preview-card:hover .cert-preview-overlay {
     opacity: 1 !important;
   }
 
-  .feature-card-02:hover {
-    transform: none !important;
-    background: var(--surface-1) !important;
-    border-color: var(--hairline) !important;
-  }
-
-  .contact-link:hover {
+  .contact-link-mini:hover {
     transform: none !important;
     border-color: var(--hairline) !important;
     background: var(--surface-2) !important;
-    box-shadow: none !important;
   }
 
-  .contact-link:hover i {
-    background: var(--surface-1) !important;
-    color: var(--accent-color) !important;
+  .dropdown-item:hover,
+  .dropdown-item-cv:hover {
     transform: none !important;
-    border-color: var(--hairline) !important;
+    background: var(--surface-2) !important;
+    color: var(--ink) !important;
   }
 
-  .contact-link:hover strong {
+  .btn-cv:hover,
+  .btn-translate:hover {
+    transform: none !important;
+    background: var(--surface-2) !important;
     color: var(--fg-muted) !important;
   }
 
-  .social-btn:hover {
+  .mobile-nav-toggle:hover {
     transform: none !important;
-    background: var(--surface-2) !important;
-    color: var(--accent-color) !important;
+    background: var(--surface-1) !important;
     border-color: var(--hairline) !important;
-    box-shadow: none !important;
+  }
+
+  .mobile-nav-close:hover {
+    transform: none !important;
+    background: var(--surface-1) !important;
+    border-color: var(--hairline) !important;
+  }
+
+  .glass-card:hover {
+    transform: none !important;
+    background: var(--surface-1) !important;
+    border-color: var(--hairline) !important;
+  }
+
+  .btn-glass:hover {
+    transform: none !important;
+    background: var(--surface-1) !important;
+    border-color: var(--hairline) !important;
   }
 
   .btn-primary:hover,
@@ -530,37 +645,11 @@ section,
     border-color: var(--hairline) !important;
   }
 
-  .certificate-sidebar-item:hover {
+  .cta-button:hover {
     transform: none !important;
-    background: var(--surface-2) !important;
-    color: var(--fg-muted) !important;
-  }
-
-  .certificate-sidebar-item:hover .cert-dot {
-    background: var(--hairline) !important;
-    transform: none !important;
-  }
-
-  .skill-pill:hover {
-    transform: none !important;
-    border-color: var(--hairline) !important;
-    color: var(--fg-muted) !important;
-  }
-
-  .cert-view-btn-mobile:hover,
-  .cert-view-btn:hover {
-    transform: none !important;
-    background: var(--surface-2) !important;
-    color: var(--fg-muted) !important;
-    border-color: var(--hairline) !important;
+    background: var(--green-soft) !important;
+    color: var(--contrast-color) !important;
     box-shadow: none !important;
-  }
-
-  .show-more-tags:hover {
-    transform: none !important;
-    background: var(--surface-2) !important;
-    color: var(--fg-muted) !important;
-    border-color: var(--hairline) !important;
   }
 
   .submit-btn:hover:not(:disabled) {

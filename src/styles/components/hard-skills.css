@@ -428,7 +428,7 @@
 @media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
+    gap: 0.4rem;
   }
 
   .skill-category {
@@ -437,7 +437,7 @@
 
   .skill-items {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.4rem;
+    gap: 0.3rem;
   }
 
   .skill-item {
@@ -458,13 +458,13 @@
   }
 
   .skill-name {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
 
   .category-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .category-icon i {
@@ -472,11 +472,11 @@
   }
 
   .category-name {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   .category-badge {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     padding: 0.1rem 0.4rem;
   }
 }
