@@ -234,22 +234,22 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       priority: 2
     },
+    // {
+    //   id: 10,
+    //   title: "Calendário",
+    //   title_key: "project_calendario",
+    //   description_key: "project_calendario_desc",
+    //   category: "Ferramenta",
+    //   filter: "motion",
+    //   stack: "frontend-only",
+    //   image: "/assets/img/portfolio/Calendario.png",
+    //   github: "https://github.com/MatheusAbib/Calendario",
+    //   live: "https://matheusabib.github.io/Calendario/",
+    //   tags: ["HTML", "CSS", "JavaScript", "Date API"],
+    //   priority: 2
+    // },
     {
       id: 10,
-      title: "Calendário",
-      title_key: "project_calendario",
-      description_key: "project_calendario_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Calendario.png",
-      github: "https://github.com/MatheusAbib/Calendario",
-      live: "https://matheusabib.github.io/Calendario/",
-      tags: ["HTML", "CSS", "JavaScript", "Date API"],
-      priority: 2
-    },
-    {
-      id: 11,
       title: "UNO",
       title_key: "project_uno",
       description_key: "project_uno_desc",
@@ -263,7 +263,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 12,
+      id: 11,
       title: "Jogo da Forca",
       title_key: "project_forca",
       description_key: "project_forca_desc",
@@ -277,7 +277,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 13,
+      id: 12,
       title: "Tocador de Música",
       title_key: "project_musica",
       description_key: "project_musica_desc",
@@ -291,7 +291,7 @@ const Portfolio = () => {
       priority: 2
     },
     {
-      id: 14,
+      id: 13,
       title: "Figma & Power BI",
       title_key: "project_links",
       description_key: "project_links_desc",
