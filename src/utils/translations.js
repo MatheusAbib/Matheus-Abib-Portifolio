@@ -118,7 +118,8 @@ const translations = {
     project_livros_desc: "E-commerce de livros com catálogo interativo, carrinho, checkout, avaliações, favoritos, cupons, chat em tempo real, rastreamento de pedidos, devoluções, dashboard administrativo e gestão de estoque.",
 
     project_receitas: "Jornal de Receitas",
-    project_receitas_desc: "Sistema completo para gerenciamento e compartilhamento de receitas culinárias com design inspirado em jornais. Permite CRUD completo, upload de imagens, favoritos, filtros avançados, busca inteligente e painel administrativo.",
+project_receitas_desc: "Plataforma completa para gerenciamento e compartilhamento de receitas, com autenticação de usuários, envio e aprovação de receitas, favoritos, upload de imagens, notificações e painel administrativo para gerenciamento de conteúdo.",
+
 
     project_dashboard: "Dashboard de Vendas",
     project_dashboard_desc: "Dashboard completo para monitoramento de vendas com métricas em tempo real, filtros inteligentes, gráficos interativos, mapa geográfico e exportação de relatórios em Excel e PDF.",
@@ -312,7 +313,8 @@ const translations = {
     project_livros_desc: "E-commerce for books with interactive catalog, shopping cart, checkout, reviews, favorites, coupons, real-time chat, order tracking, returns, admin dashboard and inventory management.",
 
     project_receitas: "Recipe Journal",
-    project_receitas_desc: "Complete system for managing and sharing culinary recipes with a newspaper-inspired design. Features full CRUD, image upload, favorites, advanced filters, smart search, and admin dashboard.",
+    project_receitas_desc: "Complete platform for managing and sharing recipes, featuring user authentication, recipe submission and approval, favorites, notifications, image uploads, and an administrative dashboard for content management.",
+
 
     project_dashboard: "Sales Dashboard",
     project_dashboard_desc: "Complete dashboard for sales monitoring with real-time metrics, smart filters, interactive charts, geographic map, and report export in Excel and PDF.",
