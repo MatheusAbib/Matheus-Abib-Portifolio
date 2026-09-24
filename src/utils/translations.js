@@ -118,7 +118,7 @@ const translations = {
     project_livros_desc: "E-commerce de livros com catálogo interativo, carrinho, checkout, avaliações, favoritos, cupons, chat em tempo real, rastreamento de pedidos, devoluções, dashboard administrativo e gestão de estoque.",
 
     project_receitas: "Jornal de Receitas",
-project_receitas_desc: "Plataforma completa para gerenciamento e compartilhamento de receitas, com autenticação de usuários, envio e aprovação de receitas, favoritos, upload de imagens, notificações e painel administrativo para gerenciamento de conteúdo.",
+    project_receitas_desc: "Plataforma completa para gerenciamento e compartilhamento de receitas. Conta com autenticação, envio e aprovação de receitas, favoritos, notificações em tempo real, busca dinâmica por ingredientes entre favoritas e painel administrativo completo",
 
 
     project_dashboard: "Dashboard de Vendas",

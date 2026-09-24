@@ -161,7 +161,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Jornal-de-Receitas.png",
       github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
       live: "https://jornal-de-receitas-b6ti.onrender.com",
-      tags: ["Java", "SpringBoot", "JavaScript", "MySQL"],
+      tags: ["Java", "React", "SpringBoot", "JavaScript", "MySQL"],
       priority: 1
     },
     {
