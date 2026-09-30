@@ -6,7 +6,7 @@
 .sobre-mim-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 3rem;
+  gap: 2.5rem;
   position: relative;
   z-index: 2;
   align-items: start;
@@ -63,7 +63,7 @@
 .feature-card {
   background: var(--surface-1);
   backdrop-filter: blur(10px);
-  padding: 1.25rem 1.5rem;
+  padding: 1.3rem;
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
   border: 1px solid var(--hairline);
