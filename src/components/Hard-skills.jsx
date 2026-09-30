@@ -15,7 +15,7 @@ const HardSkills = () => {
     { icon: "fab fa-angular", name: "Angular", color: "#DD0031", level: 80 },
     { name: "Spring Boot", isIconify: true, iconifyIcon: "logos:spring-icon", level: 100 },
     { name: "Express", isIconify: true, iconifyIcon: "simple-icons:express", level: 75 },
-    { name: "Flutter", isIconify: true, iconifyIcon: "logos:flutter", level: 75 },
+    { name: "Flutter", isIconify: true, iconifyIcon: "simple-icons:flutter", level: 90 },
     { name: "Dart", isIconify: true, iconifyIcon: "logos:dart", level: 75 }
   ];
 
@@ -51,13 +51,13 @@ const HardSkills = () => {
       <div className="container">
         <SectionLabel sectionId="skills" />
 
-        <div className="section-title" data-aos="fade-up">
+        <div className="section-title">
           <h2 data-translate="tech_title">Hard Skills</h2>
         </div>
       </div>
 
       <div className="container">
-        <div className="skills-grid" data-aos="fade-up">
+        <div className="skills-grid">
           {categories.map((cat) => (
             <div key={cat.key} className="skill-category">
               <div className="category-head">
@@ -76,24 +76,15 @@ const HardSkills = () => {
                       {tech.isIconify ? (
                         <iconify-icon 
                           icon={tech.iconifyIcon} 
-                          width="32" 
-                          height="32"
-                          style={{ fontSize: '32px' }}
+                          width={tech.fontSize || 32} 
+                          height={tech.fontSize || 32}
+                          style={{ fontSize: `${tech.fontSize || 32}px` }}
                         ></iconify-icon>
                       ) : (
                         <i className={tech.icon} style={{ color: tech.color }}></i>
                       )}
                     </div>
                     <span className="skill-name">{tech.name}</span>
-                    <div className="skill-level">
-                      <div className="skill-level-track">
-                        <div 
-                          className="skill-level-fill" 
-                          style={{ width: `${tech.level}%` }}
-                        ></div>
-                      </div>
-                      <span className="skill-level-value">{tech.level}%</span>
-                    </div>
                   </div>
                 ))}
               </div>

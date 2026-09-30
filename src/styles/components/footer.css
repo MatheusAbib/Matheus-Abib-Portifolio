@@ -222,7 +222,6 @@
 .social-btn:hover {
   background: var(--green-soft);
   color: var(--contrast-color) !important;
-  transform: translateY(-3px);
   border-color: var(--green-deep);
 }
 
@@ -467,8 +466,6 @@
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(167, 170, 99, 0.25);
   filter: brightness(1.05);
   color: var(--contrast-color) !important;
 }

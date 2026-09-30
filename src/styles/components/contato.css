@@ -86,7 +86,7 @@
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
+  gap: 1.5rem;
   position: relative;
   z-index: 2;
 }
@@ -97,7 +97,6 @@
   border-radius: var(--radius-lg);
   padding: 2rem;
   border: 1px solid var(--hairline);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .contact-info-header {
@@ -159,7 +158,6 @@
   transform: translateX(5px);
   border-color: var(--green-soft);
   background: var(--surface-1);
-  box-shadow: 0 4px 15px rgba(167, 170, 99, 0.1);
 }
 
 .contact-link i {
@@ -213,7 +211,6 @@
   border-radius: var(--radius-lg);
   padding: 2rem;
   border: 1px solid var(--hairline);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form {
@@ -277,7 +274,7 @@
   background: var(--surface-2);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--fg);
   transition: all 0.3s ease;
   font-family: var(--heading-font);
@@ -293,7 +290,6 @@
   outline: none;
   border-color: var(--green-soft);
   background: var(--surface-1);
-  box-shadow: 0 0 0 3px rgba(167, 170, 99, 0.1);
 }
 
 .form-input:focus ~ .input-icon {
@@ -369,7 +365,6 @@ textarea.form-input {
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(167, 170, 99, 0.3);
   filter: brightness(1.05);
 }
 

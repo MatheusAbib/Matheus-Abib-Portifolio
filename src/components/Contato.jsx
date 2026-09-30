@@ -205,14 +205,14 @@ const ContactForm = () => {
 
       <div className="container">
         <SectionLabel sectionId="form-section" />
-        <div className="section-title" data-aos="fade-up">
+        <div className="section-title">
           <h2 data-translate="contact_form_title">{t('contact_form_title')}</h2>
         </div>
       </div>
 
       <div className="container">
         <div className="contact-wrapper">
-          <div className="contact-info" data-aos="fade-right">
+          <div className="contact-info">
             <div className="contact-info-header">
               <div className="contact-info-icon">
                 <i className="bi bi-chat-dots-fill"></i>
@@ -259,7 +259,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="contact-form-container" data-aos="fade-left">
+          <div className="contact-form-container">
             <form 
               id="emailForm" 
               className="contact-form"

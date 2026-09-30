@@ -93,7 +93,6 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--hairline);
   padding: 2.5rem;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
 .cert-accordion-item {
@@ -228,12 +227,6 @@
   font-size: 0.68rem;
   color: var(--fg-muted);
   transition: all 0.3s ease;
-}
-
-.skill-pill:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-color);
-  color: var(--fg);
 }
 
 .skill-pill[data-skill="HTML"],
@@ -397,7 +390,6 @@
 .cert-accordion-view-btn:hover {
   background: var(--surface-2);
   color: var(--fg-muted);
-  transform: translateY(-2px);
 }
 
 .cert-modal-overlay {
@@ -432,7 +424,6 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: var(--radius-lg);
   border: 1px solid var(--hairline);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
   display: flex;
@@ -509,7 +500,6 @@
   max-height: 65vh;
   height: auto;
   border-radius: var(--radius-md);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   object-fit: contain;
   transition: opacity 0.4s ease;
 }

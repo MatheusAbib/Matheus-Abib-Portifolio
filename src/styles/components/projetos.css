@@ -124,7 +124,6 @@
   background: var(--surface-2);
   color: var(--accent-color);
   border-color: var(--green-soft);
-  transform: translateY(-2px);
 }
 
 .portfolio-filters li.filter-active {
@@ -176,7 +175,6 @@
   border-color: var(--green-soft);
   background: var(--surface-2);
   color: var(--accent-color) !important;
-  transform: translateY(-2px);
 }
 
 .github-badge:hover .bi-arrow-right {
@@ -268,7 +266,6 @@
 }
 
 .portfolio-card:hover {
-  transform: translateY(-6px);
   border-color: var(--green-soft);
 }
 
@@ -369,7 +366,6 @@
 }
 
 .portfolio-actions a:hover {
-  transform: translateY(-3px) !important;
   background: var(--green-soft);
   color: var(--contrast-color) !important;
 }
@@ -597,7 +593,6 @@
   background: var(--accent-color);
   color: var(--contrast-color);
   border-color: var(--accent-color);
-  transform: translateY(-2px);
 }
 
 .portfolio-content p {

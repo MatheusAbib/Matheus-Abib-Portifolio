@@ -177,11 +177,7 @@ const navItems = [
                 </button>
               </li>
             </ul>
-            <i 
-              className="mobile-nav-close bi bi-x d-xl-none"
-              onClick={closeMobileNav}
-              aria-label="Close navigation"
-            ></i>
+
           </nav>
 
           <div className="d-none d-xl-flex align-items-center gap-2">
