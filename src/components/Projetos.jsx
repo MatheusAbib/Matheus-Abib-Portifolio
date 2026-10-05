@@ -142,7 +142,7 @@ const Portfolio = () => {
       description_key: "project_livros_desc",
       category: "Site",
       filter: "web",
-      stack: "angular-badge",
+      stack: "fullstack",
       image: "/assets/img/portfolio/Livraria-Online.png",
       github: "https://github.com/MatheusAbib/e-commerce-livraria",
       live: "https://livraria-online-gold.vercel.app/",
@@ -185,7 +185,7 @@ const Portfolio = () => {
       description_key: "project_login_desc",
       category: "Ferramenta",
       filter: "motion",
-      stack: "angular-badge",
+      stack: "fullstack",
       image: "/assets/img/portfolio/Pagina-de-Login.png",
       github: "https://github.com/MatheusAbib/Pagina-de-Login",
       live: "https://pagina-de-login-rho.vercel.app/login",
@@ -234,20 +234,6 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       priority: 2
     },
-    // {
-    //   id: 10,
-    //   title: "Calendário",
-    //   title_key: "project_calendario",
-    //   description_key: "project_calendario_desc",
-    //   category: "Ferramenta",
-    //   filter: "motion",
-    //   stack: "frontend-only",
-    //   image: "/assets/img/portfolio/Calendario.png",
-    //   github: "https://github.com/MatheusAbib/Calendario",
-    //   live: "https://matheusabib.github.io/Calendario/",
-    //   tags: ["HTML", "CSS", "JavaScript", "Date API"],
-    //   priority: 2
-    // },
     {
       id: 10,
       title: "UNO",
@@ -255,7 +241,7 @@ const Portfolio = () => {
       description_key: "project_uno_desc",
       category: "Diversão",
       filter: "brand",
-      stack: "angular-badge",
+      stack: "frontend-only",
       image: "/assets/img/portfolio/UNO.png",
       github: "https://github.com/MatheusAbib/UNO",
       live: "https://matheusabib.github.io/UNO/",
@@ -506,14 +492,14 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio-content">
                       <div className="category-wrapper">
-<span className={`category category-${project.category.toLowerCase()}`}>
-  <span className={`category-dot ${project.filter}`}></span>
-  {project.category === "Site" && t('category_site')}
-  {project.category === "Ferramenta" && t('category_ferramenta')}
-  {project.category === "Diversão" && t('category_diversao')}
-  {project.category === "Links" && t('category_links')}
-  {project.category === "Sistema" && t('category_system')}
-</span>
+                      <span className={`category category-${project.category.toLowerCase()}`}>
+                        <span className={`category-dot ${project.filter}`}></span>
+                        {project.category === "Site" && t('category_site')}
+                        {project.category === "Ferramenta" && t('category_ferramenta')}
+                        {project.category === "Diversão" && t('category_diversao')}
+                        {project.category === "Links" && t('category_links')}
+                        {project.category === "Sistema" && t('category_system')}
+                      </span>
                         <div className="stack-simple">
                           <i className="bi bi-code-slash"></i>
                           <span>

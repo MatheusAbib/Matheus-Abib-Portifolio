@@ -155,7 +155,6 @@
 }
 
 .contact-link:hover {
-  transform: translateX(5px);
   border-color: var(--green-soft);
   background: var(--surface-1);
 }
@@ -177,9 +176,8 @@
 
 .contact-link:hover i {
   background: var(--green-soft);
-  color: var(--contrast-color);
+  color: var(--fg);
   border-color: var(--green-deep);
-  transform: scale(1.05);
 }
 
 .contact-link div {
@@ -202,7 +200,7 @@
 }
 
 .contact-link:hover strong {
-  color: var(--accent-color);
+  color: var(--fg);
 }
 
 .contact-form-container {

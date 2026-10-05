@@ -96,11 +96,10 @@
 
 .feature-card:hover .feature-icon {
   background: var(--green-soft);
-  transform: scale(1.05);
 }
 
 .feature-card:hover .feature-icon i {
-  color: var(--contrast-color);
+  color: var(--fg);
 }
 .feature-icon i {
   font-size: 1.3rem;
@@ -233,7 +232,7 @@
 
 .social-icon-btn:hover {
   background: var(--green-soft);
-  color: var(--contrast-color) !important;
+  color: var(--fg) !important;
   border-color: var(--green-deep);
 }
 
@@ -322,14 +321,14 @@
 
 .btn-primary:hover {
   background: var(--accent-color) !important;
-  color: var(--contrast-color) !important;
+  color: var(--fg) !important;
   border-color: var(--accent-color) !important;
 }
 
 .btn-secondary:hover {
   background: var(--surface-2) !important;
-  border-color: var(--green-soft) !important;
-  color: var(--accent-color) !important;
+  border-color: var(--hairline) !important;
+  color: var(--fg) !important;
 }
 
 .dropdown-menu {

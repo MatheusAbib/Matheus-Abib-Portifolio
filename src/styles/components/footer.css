@@ -221,7 +221,7 @@
 
 .social-btn:hover {
   background: var(--green-soft);
-  color: var(--contrast-color) !important;
+  color: var(--fg) !important;
   border-color: var(--green-deep);
 }
 
@@ -371,7 +371,7 @@
 }
 
 .footer-services ul li:hover .service-icon i {
-  color: var(--contrast-color);
+  color: var(--fg);
 }
 
 .footer-services .service-icon i {

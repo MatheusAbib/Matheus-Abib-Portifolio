@@ -423,17 +423,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--fg-muted);
   background: var(--surface-2);
-  padding: 0.2rem 0.7rem;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
-}
-
-.stack-simple i {
-  font-size: 0.65rem;
-  color: var(--accent-color);
 }
 
 .portfolio-content h3 {

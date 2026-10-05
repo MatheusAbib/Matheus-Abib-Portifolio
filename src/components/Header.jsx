@@ -157,9 +157,6 @@ const navItems = [
   }}
   className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''} ${item.className || ''}`}
 >
-  {activeSection === item.id && (
-    <span className="active-dot me-2"></span>
-  )}
   <span data-translate={item.textKey}>{t(item.textKey)}</span>
 </a>
                 </li>

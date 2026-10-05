@@ -131,12 +131,11 @@
 }
 
 .skill-category:hover .category-icon i {
-  color: var(--contrast-color);
+  color: var(--fg);
 }
 
 .category-icon i {
   font-size: 1.2rem;
-  color: var(--accent-color);
   transition: all 0.3s ease;
 }
 
@@ -150,11 +149,11 @@
 }
 
 .category-badge {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--fg-muted);
   background: var(--surface-2);
-  padding: 0.15rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: var(--radius-pill);
 }
 

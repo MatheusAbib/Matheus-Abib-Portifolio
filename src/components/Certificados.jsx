@@ -107,13 +107,7 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="certificates-section">
-      <div className="section-glow"></div>
-      <div className="section-waves"></div>
-      <div className="section-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-      </div>
+      <div className="certificates-veil" aria-hidden="true"></div>
 
       <div className="container">
         <SectionLabel sectionId="certificates" />
@@ -126,7 +120,7 @@ const Certificates = () => {
         <div className="certificates-accordion" data-aos="fade-up">
           {certificates.map((cert, index) => {
             const isExpanded = expandedItems[cert.id] !== undefined ? expandedItems[cert.id] : index === 0;
-            
+
             return (
               <div key={cert.id} className={`cert-accordion-item ${isExpanded ? 'expanded' : ''}`}>
                 <button
@@ -143,12 +137,12 @@ const Certificates = () => {
                     <i className={`bi bi-chevron-${isExpanded ? 'up' : 'down'}`}></i>
                   </div>
                 </button>
-                
+
                 <div className="cert-accordion-body">
                   <div className="cert-accordion-content">
                     <div className="cert-accordion-institution-wrapper">
                       <p className="cert-accordion-institution">{cert.institution}</p>
-                      <button 
+                      <button
                         className="cert-accordion-view-btn"
                         onClick={(e) => {
                           e.stopPropagation();
@@ -159,7 +153,7 @@ const Certificates = () => {
                         <span>{t('cert_view')}</span>
                       </button>
                     </div>
-                    
+
                     <div className="cert-accordion-skills">
                       <span className="skills-label">{t('certificate_skills_developed')}</span>
                       <div className="skills-list">
@@ -194,9 +188,9 @@ const Certificates = () => {
                   <div className="loader-spinner"></div>
                 </div>
               )}
-              <img 
-                src={currentImage} 
-                alt="Certificado" 
+              <img
+                src={currentImage}
+                alt="Certificado"
                 onLoad={handleModalImageLoad}
                 className={modalImageLoaded ? 'loaded' : 'loading'}
               />

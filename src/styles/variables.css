@@ -1,6 +1,4 @@
 :root {
-  --ink: #1c1c1a;
-  --cream: #f5f3ee;
   --green-deep: #505039;
   --green-soft: #a7aa63;
   --red-deep: #551d21;
@@ -8,18 +6,14 @@
   --yellow-deep: #8b7a2b;
   --yellow-soft: #d4b84c;
   --yellow-glow: #f5d742;
-  --fg: #f5f3ee;
-  --fg-muted: #f5f3ee9e;
-  --fg-faint: #f5f3ee66;
-  --surface-1: #f5f3ee12;
-   --surface-2: #f5f3ee1f;
-  --hairline: #f5f3ee2e;
+
   --radius-none: 0px;
   --radius-xs: 2px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-pill: 9999px;
+
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -34,11 +28,27 @@
   --default-font: "Poppins", system-ui, -apple-system, sans-serif;
   --heading-font: "Poppins", sans-serif;
   --nav-font: "Poppins", sans-serif;
-  
+
+  scroll-behavior: smooth;
+}
+
+:root,
+[data-theme="dark"] {
+  --ink: #1c1c1a;
+  --cream: #f5f3ee;
+  --fg: #f5f3ee;
+  --fg-muted: #f5f3ee9e;
+  --fg-muted-2: #f5f3eecb;
+  --fg-faint: #f5f3ee66;
+  --surface-1: #f5f3ee12;
+  --surface-2: #f5f3ee1f;
+  --hairline: #f5f3ee2e;
+
   --background-color: var(--ink);
   --default-color: var(--fg-muted);
   --heading-color: var(--fg);
   --accent-color: var(--green-soft);
+  --accent-strong: var(--green-soft);
   --surface-color: var(--ink);
   --contrast-color: var(--ink);
   --nav-color: var(--fg-muted);
@@ -47,8 +57,41 @@
   --nav-dropdown-background-color: var(--surface-1);
   --nav-dropdown-color: var(--fg-muted);
   --nav-dropdown-hover-color: var(--green-soft);
+
+  --overlay-color: rgba(28, 28, 26, 0.75);
+  --overlay-color-strong: rgba(28, 28, 26, 0.92);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --shadow-color-soft: rgba(0, 0, 0, 0.15);
 }
 
-:root {
-  scroll-behavior: smooth;
+[data-theme="light"] {
+  --ink: #faf8f3;
+  --cream: #1c1c1a;
+  --fg: #1c1c1a;
+  --fg-muted: #1c1c1aa8;
+  --fg-muted-2: #1c1c1acb;
+  --fg-faint: #1c1c1a66;
+
+  --surface-1: #ffffffcc;
+  --surface-2: #ffffff99;
+  --hairline: #1c1c1a1a;
+
+  --background-color: var(--ink);
+  --default-color: var(--fg-muted);
+  --heading-color: var(--fg);
+  --accent-color: #8a8d4f;
+  --accent-strong: #6b6e3d;
+  --surface-color: var(--ink);
+  --contrast-color: #f5f3ee;
+  --nav-color: var(--fg-muted);
+  --nav-hover-color: #6b6e3d;
+  --nav-mobile-background-color: var(--ink);
+  --nav-dropdown-background-color: var(--surface-2);
+  --nav-dropdown-color: var(--fg-muted);
+  --nav-dropdown-hover-color: #6b6e3d;
+
+  --overlay-color: rgba(28, 28, 26, 0.5);
+  --overlay-color-strong: rgba(28, 28, 26, 0.75);
+  --shadow-color: rgba(28, 28, 26, 0.1);
+  --shadow-color-soft: rgba(28, 28, 26, 0.05);
 }

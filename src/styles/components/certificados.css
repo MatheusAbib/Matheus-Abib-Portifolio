@@ -1,5 +1,5 @@
 .certificates-section {
-  background-color: #1c1c1af1;
+  background-color: #1c1c1aeb;
   position: relative;
 }
 
@@ -16,71 +16,7 @@
   pointer-events: none;
 }
 
-.section-glow {
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(167, 170, 99, 0.08) 0%, transparent 70%);
-  z-index: 0;
-  pointer-events: none;
-}
 
-.section-waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  background: radial-gradient(ellipse at 50% 100%, var(--green-deep) 0%, transparent 70%);
-  opacity: 0.04;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.section-orbs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.06;
-}
-
-.orb-1 {
-  width: 400px;
-  height: 400px;
-  top: -100px;
-  left: -100px;
-  background: var(--green-soft);
-}
-
-.orb-2 {
-  width: 300px;
-  height: 300px;
-  bottom: -50px;
-  right: -50px;
-  background: var(--yellow-soft);
-}
-
-.orb-3 {
-  width: 200px;
-  height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--red-soft);
-}
 
 .certificates-accordion {
   display: flex;
@@ -383,13 +319,10 @@
   color: var(--contrast-color);
 }
 
-.cert-accordion-view-btn i {
-  font-size: 0.65rem;
-}
-
 .cert-accordion-view-btn:hover {
   background: var(--surface-2);
-  color: var(--fg-muted);
+  color: var(--fg);
+  border: 1px solid var(--hairline);
 }
 
 .cert-modal-overlay {
