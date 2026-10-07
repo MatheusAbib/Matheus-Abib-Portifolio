@@ -84,6 +84,7 @@ const Footer = () => {
                 <li><a href="#journey"><span data-translate="menu_methodologies">{t('menu_methodologies')}</span></a></li>
                 <li><a href="#skills"><span data-translate="menu_skills">{t('menu_skills')}</span></a></li>
                 <li><a href="#certificates"><span data-translate="menu_certificates">{t('menu_certificates')}</span></a></li>
+                <li><a href="#publicacao"><span data-translate="menu_publicacao">{t('menu_publicacao')}</span></a></li>
                 <li><a href="#portfolio"><span data-translate="menu_projects">{t('menu_projects')}</span></a></li>
                 <li><a href="#form-section"><span data-translate="menu_contact">{t('menu_contact')}</span></a></li>
               </ul>

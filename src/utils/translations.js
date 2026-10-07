@@ -3,6 +3,7 @@ const translations = {
     menu_about: "Sobre mim",
     menu_methodologies: "Tragetória",
     menu_certificates: "Certificados",
+    menu_publicacao: "Publicação",
     menu_skills: "Skills",
     menu_projects: "Projetos",
     menu_contact: "Contato",
@@ -94,6 +95,23 @@ const translations = {
 
     cert_view: "Visualizar Certificado",
     certificate_skills_developed: "Habilidades desenvolvidas",
+
+
+    publicacao_title: "Publicação Acadêmica",
+    publicacao_badge: "Aceito em Revista",
+    publicacao_card_title: "Entre a tecnologia e o cuidado: análise comparativa estruturada de chatbots na saúde digital",
+    publicacao_card_desc: "Análise comparativa de precisão diagnóstica, conformidade com LGPD, acessibilidade e experiência de usuário em três assistentes de saúde digital: Ada Health, Molly (Sensely) e Symptomate.",
+    publicacao_btn_site: "Ler o site",
+    publicacao_btn_pdf: "Baixar PDF",
+    publicacao_btn_revista: "Ver na revista",
+    publicacao_btn_carta: "Carta de Aceite",
+    publicacao_meta: "Revista Perspectiva · FATEC Itapetininga · 2025",
+    publicacao_preview_placeholder: "Pré-visualização do artigo",
+
+    publicacao_tag_1: "Saúde Digital",
+    publicacao_tag_2: "Chatbots",
+    publicacao_tag_3: "LGPD",
+    publicacao_tag_4: "Análise Comparativa",
 
     portfolio_title: "Projetos Principais",
     filter_all: "Todos",
@@ -200,6 +218,7 @@ const translations = {
     menu_about: "About Me",
     menu_methodologies: "Trajectory",
     menu_certificates: "Certificates",
+    menu_publicacao: "Publication",
     menu_skills: "Skills",
     menu_projects: "Projects",
     menu_contact: "Contact",
@@ -286,6 +305,22 @@ const translations = {
 
     certificate_java_title: "Java & Spring Boot",
     certificate_java_desc: "Specialized mini-course in Java and Spring Boot, covering from language fundamentals to RESTful API development with best practices and design patterns.",
+
+    publicacao_title: "Academic Publication",
+    publicacao_badge: "Accepted in Journal",
+    publicacao_card_title: "Between technology and care: structured comparative analysis of chatbots in digital health",
+    publicacao_card_desc: "Comparative analysis of diagnostic accuracy, LGPD compliance, accessibility, and user experience in three digital health assistants: Ada Health, Molly (Sensely), and Symptomate.",
+    publicacao_btn_site: "Read the site",
+    publicacao_btn_pdf: "Download PDF",
+    publicacao_btn_revista: "View in journal",
+    publicacao_meta: "Perspectiva Journal · FATEC Itapetininga · 2025",
+    publicacao_preview_placeholder: "Article preview",
+    publicacao_btn_carta: "Acceptance Letter",
+
+    publicacao_tag_1: "Digital Health",
+    publicacao_tag_2: "Chatbots",
+    publicacao_tag_3: "LGPD",
+    publicacao_tag_4: "Comparative Analysis",
 
     cert_view: "View Certificate",
     certificate_skills_developed: "Developed Skills",

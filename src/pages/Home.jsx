@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import SobreMim from '../components/Sobre-mim';
 import Tragetoria from '../components/Tragetoria';
 import Inicio from '../components/Inicio';
+import Publicacao from '../components/Publicacao';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           <HardSkills />
         </div>
         <Certificates />
+        <Publicacao />
         <Portfolio />
         <ContactForm />
       </main>

@@ -10,14 +10,15 @@ const Header = () => {
   const [isCvDropdownOpen, setIsCvDropdownOpen] = useState(false);
   const { t, toggleLanguage, currentLanguage } = useTranslation();
 
-const navItems = [
-  { href: '#sobre-mim', textKey: 'menu_about', id: 'sobre-mim' },
-  { href: '#journey', textKey: 'menu_methodologies', id: 'journey' },
-  { href: '#skills', textKey: 'menu_skills', id: 'skills' },
-  { href: '#certificates', textKey: 'menu_certificates', id: 'certificates' },
-  { href: '#portfolio', textKey: 'menu_projects', id: 'portfolio' },
-  { href: '#form-section', textKey: 'menu_contact', id: 'form-section' },
-];
+  const navItems = [
+    { href: '#sobre-mim', textKey: 'menu_about', id: 'sobre-mim' },
+    { href: '#journey', textKey: 'menu_methodologies', id: 'journey' },
+    { href: '#skills', textKey: 'menu_skills', id: 'skills' },
+    { href: '#certificates', textKey: 'menu_certificates', id: 'certificates' },
+    { href: '#publicacao', textKey: 'menu_publicacao', id: 'publicacao' },
+    { href: '#portfolio', textKey: 'menu_projects', id: 'portfolio' },
+    { href: '#form-section', textKey: 'menu_contact', id: 'form-section' },
+  ];
 
   useEffect(() => {
     if (mobileNavActive) {
@@ -52,18 +53,6 @@ const navItems = [
         }
       }
       
-      if (!current) {
-        const testimonialsElement = document.getElementById('testimonials');
-        if (testimonialsElement) {
-          const offsetTop = testimonialsElement.offsetTop;
-          const offsetHeight = testimonialsElement.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            current = 'services-alt';
-          }
-        }
-      }
-      
       setActiveSection(current);
     };
 
@@ -75,7 +64,7 @@ const navItems = [
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isCvDropdownOpen && !event.target.closest('.cv-dropdown')) {
+      if (isCvDropdownOpen && !event.target.closest('.cv-dropdown') && !event.target.closest('.cv-dropdown-mobile')) {
         setIsCvDropdownOpen(false);
       }
     };
@@ -145,25 +134,34 @@ const navItems = [
           </div>
 
           <nav id="navmenu" className={`navmenu ${mobileNavActive ? 'mobile-nav-active' : ''} ${mobileNavClosing ? 'mobile-nav-closing' : ''}`}>
+            {mobileNavActive && (
+              <button 
+                className="mobile-nav-close-btn"
+                onClick={closeMobileNav}
+                aria-label="Fechar menu"
+              >
+                <i className="bi bi-x-lg"></i>
+              </button>
+            )}
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>
-<a 
-  href={item.href}
-  onClick={(e) => {
-    e.preventDefault();
-    handleNavClick(item.id);
-    scrollToSection(item.id);
-  }}
-  className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''} ${item.className || ''}`}
->
-  <span data-translate={item.textKey}>{t(item.textKey)}</span>
-</a>
+                  <a 
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.id);
+                      scrollToSection(item.id);
+                    }}
+                    className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''} ${item.className || ''}`}
+                  >
+                    <span data-translate={item.textKey}>{t(item.textKey)}</span>
+                  </a>
                 </li>
               ))}
-              <li className="d-lg-none mt-3 pt-3 border-top">
-                <button 
-                  className="btn-translate w-100 d-flex justify-content-center align-items-center" 
+<li className="d-xl-none mt-3 pt-3 border-top">
+  <button 
+    className="btn-secondary w-100 d-flex justify-content-center align-items-center mb-2" 
                   onClick={() => {
                     toggleLanguage();
                     handleNavClick(activeSection);
@@ -172,9 +170,47 @@ const navItems = [
                   <i className="bi bi-translate me-2"></i>
                   <span data-translate="btn_translate">{t('btn_translate')}</span>
                 </button>
+                <div className="cv-dropdown-mobile w-100">
+<button 
+  className="btn-primary w-100 d-flex justify-content-center align-items-center" 
+                    type="button"
+                    onClick={() => setIsCvDropdownOpen(!isCvDropdownOpen)}
+                  >
+                    <i className="bi bi-download me-2"></i>
+                    <span>CV</span>
+                    <i className={`bi bi-chevron-${isCvDropdownOpen ? 'up' : 'down'} ms-2`}></i>
+                  </button>
+                  {isCvDropdownOpen && (
+                    <ul className="dropdown-menu-cv-mobile">
+                      <li>
+                        <a 
+                          className="dropdown-item-cv-mobile" 
+                          href="/assets/CV/matheus_abib_curriculo.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={() => setIsCvDropdownOpen(false)}
+                        >
+                          <i className="bi bi-flag"></i>
+                          <span data-translate="cv_portuguese">{t('cv_portuguese')}</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          className="dropdown-item-cv-mobile" 
+                          href="/assets/CV/matheus_abib_resume.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={() => setIsCvDropdownOpen(false)}
+                        >
+                          <i className="bi bi-flag-fill"></i>
+                          <span data-translate="cv_english">{t('cv_english')}</span>
+                        </a>
+                      </li>
+                    </ul>
+                  )}
+                </div>
               </li>
             </ul>
-
           </nav>
 
           <div className="d-none d-xl-flex align-items-center gap-2">
