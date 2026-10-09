@@ -161,7 +161,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Jornal-de-Receitas.png",
       github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
       live: "https://jornal-de-receitas-b6ti.onrender.com",
-      tags: ["Java", "React", "SpringBoot", "JavaScript", "MySQL"],
+      tags: ["React", "Java", "SpringBoot", "JavaScript", "MySQL"],
       priority: 1
     },
     {
@@ -175,7 +175,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Dashboard.png",
       github: "https://github.com/MatheusAbib/Dashboard-Vendas",
       live: "https://dashboard-vendas-node.netlify.app/",
-      tags: ["Node.Js", "Express", "Java", "MySQL", "Charts"],
+      tags: ["Node.Js", "Express", "MySQL", "Charts"],
       priority: 1
     },
     {
