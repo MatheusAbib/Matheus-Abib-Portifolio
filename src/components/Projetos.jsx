@@ -131,7 +131,7 @@ const Portfolio = () => {
       image: "/assets/img/portfolio/Organizador-Arquivos.png",
       github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
       live: "https://organizador-arquivos.vercel.app/",
-      tags: ["Node.Js", "Express", "MySQL"],
+      tags: ["React", "Typescript","Node.Js", "Express", "MySQL"],
       priority: 1,
       featured: true
     },
