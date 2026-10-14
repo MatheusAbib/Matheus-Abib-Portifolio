@@ -14,6 +14,7 @@ const translations = {
     sticky_trajectory: "Trajetória",
     sticky_hard_skills: "Skills",
     sticky_certificates: "Certificados",
+    sticky_publications: "Publicações",
     sticky_projects: "Projetos",
     sticky_contact: "Contato",
 
@@ -229,6 +230,7 @@ const translations = {
     sticky_trajectory: "Trajectory",
     sticky_hard_skills: "Skills",
     sticky_certificates: "Certificates",
+    sticky_publications: "Publications",
     sticky_projects: "Projects",
     sticky_contact: "Contact",
 

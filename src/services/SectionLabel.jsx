@@ -6,10 +6,11 @@ const SectionLabel = ({ sectionId }) => {
   
   const labels = {
     'hero': '',
-    'sobre-mim-02': t('sticky_about'),
-    'jornada': t('sticky_trajectory'),
+    'sobre-mim': t('sticky_about'),
+    'journey': t('sticky_trajectory'),
     'skills': t('sticky_hard_skills'),
-    'service-details': t('sticky_certificates'),
+    'certificates': t('sticky_certificates'),
+    'publicacao': t('sticky_publications'),
     'portfolio': t('sticky_projects'),
     'form-section': t('sticky_contact')
   };

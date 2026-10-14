@@ -384,13 +384,6 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="portfolio-section">
-      <div className="section-glow"></div>
-      <div className="section-waves"></div>
-      <div className="section-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-      </div>
 
       <div className="container">
         <SectionLabel sectionId="portfolio" />

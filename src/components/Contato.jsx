@@ -195,14 +195,6 @@ const ContactForm = () => {
 
   return (
     <section id="form-section" className="contact-section section">
-      <div className="section-glow"></div>
-      <div className="section-waves"></div>
-      <div className="section-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-      </div>
-
       <div className="container">
         <SectionLabel sectionId="form-section" />
         <div className="section-title">

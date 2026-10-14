@@ -14,14 +14,6 @@ const Footer = () => {
 
   return (
     <footer id="footer" className="footer">
-      <div className="section-glow"></div>
-      <div className="section-waves"></div>
-      <div className="section-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-      </div>
-
       <div className="footer-top">
         <div className="container">
           <div className="footer-grid">
