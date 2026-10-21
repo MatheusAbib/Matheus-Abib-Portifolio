@@ -137,7 +137,7 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "E-Commerce - Livros Online",
+      title: "E-Commerce - Livraria Online",
       title_key: "project_livros",
       description_key: "project_livros_desc",
       category: "Site",
@@ -145,7 +145,7 @@ const Portfolio = () => {
       stack: "fullstack",
       image: "/assets/img/portfolio/Livraria-Online.png",
       github: "https://github.com/MatheusAbib/e-commerce-livraria",
-      live: "https://livraria-online-gold.vercel.app/",
+      live: "https://livrariaonline-gold.vercel.app/",
       tags: ["Angular", "TypeScript", "Java", "SpringBoot", "MySQL"],
       priority: 1,
       featured: true
