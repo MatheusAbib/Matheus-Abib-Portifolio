@@ -135,6 +135,7 @@ const Portfolio = () => {
       priority: 1,
       featured: true
     },
+
     {
       id: 3,
       title: "E-Commerce - Livraria Online",
@@ -150,6 +151,7 @@ const Portfolio = () => {
       priority: 1,
       featured: true
     },
+    
     {
       id: 4,
       title: "Jornal de Receitas",
