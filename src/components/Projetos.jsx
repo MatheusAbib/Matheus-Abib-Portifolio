@@ -162,7 +162,7 @@ const Portfolio = () => {
       stack: "fullstack",
       image: "/assets/img/portfolio/Jornal-de-Receitas.png",
       github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
-      live: "https://jornal-de-receitas.vercel.app/",
+      live: "https://jornaldereceitas.vercel.app/",
       tags: ["React", "Java", "SpringBoot", "JavaScript", "MySQL"],
       priority: 1
     },
