@@ -96,7 +96,7 @@ const Portfolio = () => {
       title_key: "project_imperator",
       description_key: "project_imperator_desc",
       category: "Ferramenta",
-      filter: "web",
+      filter: "motion",
       stack: "fullstack",
       image: "/assets/img/portfolio/imperatore.png",
       github: "https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas",
