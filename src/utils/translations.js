@@ -71,6 +71,7 @@ const translations = {
     frameworks_title: "Frameworks",
     backend_title: "Back-end",
     tools_title: "Ferramentas",
+    tool_ai: "Inteligência Artificial",
 
     certificate_modal_title: "Certificado",
     certificate_webdev_title: "Desenvolvimento Web",
@@ -285,6 +286,7 @@ const translations = {
     frameworks_title: "Frameworks",
     backend_title: "Back-end",
     tools_title: "Tools",
+    tool_ai: "Artificial Intelligence",
 
     certificate_modal_title: "Certificate",
     certificate_webdev_title: "Web Development",

@@ -29,7 +29,8 @@ const HardSkills = () => {
     { icon: "fab fa-figma", name: "Figma", color: "#F24E1E", level: 100 },
     { icon: "bi-kanban", name: "Trello", color: "#3390c5ff", level: 100 },
     { icon: "bi-graph-up", name: "Power BI", color: "#F2C811", level: 85 },
-    { icon: "bi-robot", name: "Inteligência Artificial", color: "#c1cedaff", level: 85 }  ];
+    { icon: "bi-robot", name: "Inteligência Artificial", translateKey: "tool_ai", color: "#c1cedaff", level: 85 }
+  ];
 
   const categories = [
     { key: 'frontend', label: 'Front-end', icon: 'bi-window', techs: frontend },
@@ -83,7 +84,9 @@ const HardSkills = () => {
                       <i className={tech.icon} style={{ color: tech.color }}></i>
                     )}
                   </div>
-                    <span className="skill-name">{tech.name}</span>
+                    <span className="skill-name" data-translate={tech.translateKey || undefined}>
+                      {tech.name}
+                    </span>
                   </div>
                 ))}
               </div>
