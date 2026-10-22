@@ -28,8 +28,8 @@ const HardSkills = () => {
     { icon: "fab fa-git-alt", name: "Git", color: "#F05032", level: 90 },
     { icon: "fab fa-figma", name: "Figma", color: "#F24E1E", level: 100 },
     { icon: "bi-kanban", name: "Trello", color: "#3390c5ff", level: 100 },
-    { icon: "bi-graph-up", name: "Power BI", color: "#F2C811", level: 85 }
-  ];
+    { icon: "bi-graph-up", name: "Power BI", color: "#F2C811", level: 85 },
+    { icon: "bi-robot", name: "Inteligência Artificial", color: "#c1cedaff", level: 85 }  ];
 
   const categories = [
     { key: 'frontend', label: 'Front-end', icon: 'bi-window', techs: frontend },
@@ -64,18 +64,25 @@ const HardSkills = () => {
               <div className="skill-items">
                 {cat.techs.map((tech, index) => (
                   <div key={`${cat.key}-${index}`} className="skill-item" data-tooltip={tech.name}>
-                    <div className="skill-icon">
-                      {tech.isIconify ? (
-                        <iconify-icon 
-                          icon={tech.iconifyIcon} 
-                          width={tech.fontSize || 32} 
-                          height={tech.fontSize || 32}
-                          style={{ fontSize: `${tech.fontSize || 32}px` }}
-                        ></iconify-icon>
-                      ) : (
-                        <i className={tech.icon} style={{ color: tech.color }}></i>
-                      )}
-                    </div>
+                  <div className="skill-icon">
+                    {tech.isIconify ? (
+                      <iconify-icon
+                        icon={tech.iconifyIcon}
+                        width={tech.fontSize || 32}
+                        height={tech.fontSize || 32}
+                        style={{ fontSize: `${tech.fontSize || 32}px` }}
+                      ></iconify-icon>
+                    ) : tech.icon && tech.icon.endsWith('.svg') ? (
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="skill-icon-img"
+                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
+                      />
+                    ) : (
+                      <i className={tech.icon} style={{ color: tech.color }}></i>
+                    )}
+                  </div>
                     <span className="skill-name">{tech.name}</span>
                   </div>
                 ))}
