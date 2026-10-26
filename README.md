@@ -51,7 +51,7 @@ Olá! Eu sou **Matheus Bilitardo Abib**, um desenvolvedor de software brasileiro
 |---------|-----------|-------------|
 | **Floricultura Web** | E-commerce de flores com carrinho, favoritos, busca e pagamento integrado | React, SCSS |
 | **Yummy Lamen** | Site responsivo para restaurante de lamen japonês | HTML, CSS, JS |
-| **Jornal de Receitas** | Sistema completo com cadastro, edição e busca por ingredientes | Java, Spring Boot, MySQL |
+| **Jornal de Receitas** | Sistema completo com cadastro, edição e busca por ingredientes | Java, React, Spring Boot, MySQL |
 | **Livraria Online** | E-commerce com catálogo, carrinho, chat em tempo real e dashboard admin | Angular, Java, Spring Boot, MySQL |
 | **Desfumo** | Aplicativo para controle de consumo de tabaco | Flutter, Dart, Node.js, Express, MySQL |
 
@@ -59,9 +59,8 @@ Olá! Eu sou **Matheus Bilitardo Abib**, um desenvolvedor de software brasileiro
 | Projeto | Descrição | Tecnologias |
 |---------|-----------|-------------|
 | **Dashboard de Vendas** | Gráficos dinâmicos, filtros inteligentes e exportação de relatórios | Node.js, Express, Java, MySQL |
-| **Organizador de Arquivos** | Ferramenta para mover, copiar, renomear e pesquisar arquivos | Node.js, Express, MySQL |
+| **Organizador de Arquivos** | Ferramenta para mover, copiar, renomear e pesquisar arquivos | React, Node.js, Express, MySQL |
 | **Bloco de Notas** | App completo com LocalStorage, tags, tema escuro e undo/redo | HTML, CSS, JS |
-| **Meu Painel - CRUD** | Sistema com autenticação e gerenciamento completo | Angular, Node.js, MySQL |
 | **Imperatore** | Sistema de gestão para restaurantes, bares e cafés | React, Node.js, Express, MySQL |
 
 ### 🎮 Diversão
@@ -105,9 +104,6 @@ Este portfólio foi desenvolvido em **React** com as seguintes características:
 - **CSS Organizado:** Estilos separados por componente
 - **Hooks Customizados:** useLenis, usePortfolioScroll, useTranslation
 
-## 📫 Contato
+## 📫 Redes
 
-- **WhatsApp:** (11) 97507-2008
-- **Email:** matheus.abib.ma@gmail.com
 - **LinkedIn:** [in/matheusabib](https://www.linkedin.com/in/matheusabib/)
-- **GitHub:** [MatheusAbib](https://github.com/MatheusAbib)
