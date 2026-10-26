@@ -181,20 +181,6 @@ const Portfolio = () => {
       priority: 1
     },
     {
-      id: 6,
-      title: "Meu Painel",
-      title_key: "project_login",
-      description_key: "project_login_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Pagina-de-Login.png",
-      github: "https://github.com/MatheusAbib/Pagina-de-Login",
-      live: "https://pagina-de-login-rho.vercel.app/login",
-      tags: ["Angular", "TypeScript", "SCSS", "JavaScript", "MySQL"],
-      priority: 1
-    },
-    {
       id: 7,
       title: "Floricultura Web",
       title_key: "project_floricultura",
