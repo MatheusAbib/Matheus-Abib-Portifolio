@@ -143,10 +143,14 @@ const translations = {
 
     project_dashboard: "Dashboard de Vendas",
     project_dashboard_desc: "Dashboard completo para monitoramento de vendas com métricas em tempo real, filtros inteligentes, gráficos interativos, mapa geográfico e exportação de relatórios em Excel e PDF.",
+
+    project_gataria: "Gataria - Adoção Responsável",
+    project_gataria_desc: "Plataforma frontend de adoção responsável de gatos com catálogo interativo, filtros por perfil, modal de detalhes, formulário de interesse integrado ao WhatsApp e conteúdo educativo sobre comportamento e alimentação felina.",
+
     project_login: "Meu Painel - CRUD",
     project_login_desc: "Sistema completo de autenticação e gerenciamento com Angular, Node.js e MySQL, incluindo login, cadastro, CRUD de endereços e cartões, foto de perfil e logo dinâmica.",
 
-    project_floricultura: "Floricultura Web",
+    project_floricultura: "Floricultura Dama da Noite",
     project_floricultura_desc: "E-commerce de flores com carrinho de compras, favoritos, perfil de usuário, busca, filtro e ordenação de produtos em tempo real, pagamento com PIX e Cartão de Crédito, modal de produtos e design responsivo.",
 
     project_notas: "Bloco de Notas",
@@ -358,10 +362,14 @@ const translations = {
     project_dashboard: "Sales Dashboard",
     project_dashboard_desc: "Complete dashboard for sales monitoring with real-time metrics, smart filters, interactive charts, geographic map, and report export in Excel and PDF.",
 
+    project_gataria: "Gataria - Responsible Adoption",
+    project_gataria_desc: "Frontend plataform for responsible cats adoption with an interactive catalog, profile filters, detail modal, WhatsApp-integrated interest form, and educational content about feline behavior and nutrition.",
+
+
     project_login: "My Dashboard - CRUD",
     project_login_desc: "Complete authentication and management system with Angular, Node.js and MySQL, including login, registration, CRUD for addresses and cards, profile photo and dynamic logo.",
 
-    project_floricultura: "Floriculture Website",
+    project_floricultura: "Floriculture Dama da Noite",
     project_floricultura_desc: "Flower e-commerce with shopping cart, favorites, user profile, real-time product search, filtering and sorting, PIX and Credit Card payment, product modal, and responsive design.",
 
     project_notas: "Notepad",
