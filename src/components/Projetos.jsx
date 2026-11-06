@@ -181,6 +181,20 @@ const Portfolio = () => {
       priority: 1
     },
       {
+      id: 9,
+      title: "Yummy Lamen - Restaurante de Lamen",
+      title_key: "project_lamen",
+      description_key: "project_lamen_desc",
+      category: "Site",
+      filter: "web",
+      stack: "frontend-only",
+      image: "/assets/img/portfolio/Yummy-Lamen.png",
+      github: "https://github.com/MatheusAbib/Restaurante-de-Lamen",
+      live: "https://yummylamen.vercel.app/",
+      tags: ["HTML", "CSS", "JavaScript"],
+      priority: 2
+    },
+      {
       id: 6,
       title: "Gataria - Adoção Responsável",
       title_key: "project_gataria",
@@ -222,20 +236,7 @@ const Portfolio = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       priority: 2
     },
-    {
-      id: 9,
-      title: "Yummy Lamen - Restaurante de Lamen",
-      title_key: "project_lamen",
-      description_key: "project_lamen_desc",
-      category: "Site",
-      filter: "web",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Yummy-Lamen.png",
-      github: "https://github.com/MatheusAbib/Restaurante-de-Lamen",
-      live: "https://matheusabib.github.io/Restaurante-de-Lamen/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 2
-    },
+
     {
       id: 10,
       title: "UNO",
@@ -248,20 +249,6 @@ const Portfolio = () => {
       github: "https://github.com/MatheusAbib/UNO",
       live: "https://matheusabib.github.io/UNO/",
       tags: ["Angular", "TypeScript", "HTML", "CSS"],
-      priority: 2
-    },
-    {
-      id: 11,
-      title: "Jogo da Forca",
-      title_key: "project_forca",
-      description_key: "project_forca_desc",
-      category: "Diversão",
-      filter: "brand",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Jogo-da-Forca.png",
-      github: "https://github.com/MatheusAbib/Jogo-da-Forca",
-      live: "https://matheusabib.github.io/Jogo-da-Forca/",
-      tags: ["HTML", "CSS","JavaScript"],
       priority: 2
     },
     {

@@ -156,8 +156,8 @@ const translations = {
     project_notas: "Bloco de Notas",
     project_notas_desc: "Bloco de notas completo com LocalStorage, formatação avançada, tags, arquivamento, imagens, anexos, busca, tema escuro, modo foco, undo/redo e muito mais.",
 
-    project_lamen: "Yummy Lamen - Restaurante de Lamen",
-    project_lamen_desc: "Site responsivo para restaurante de lamen japonês com cardápio digital, horário de funcionamento e localização.",
+    project_lamen: "Yummy Lamen — 旨いラーメン",
+    project_lamen_desc: "Site de restaurante japonês inspirado na estética retrô da era Shōwa, com design responsivo, cardápio digital interativo, galeria de imagens, eventos e sistema de reservas.",
 
     project_calendario: "Calendário",
     project_calendario_desc: "Calendário interativo com gerenciamento de compromissos, feriados nacionais, eventos recorrentes (diário, semanal, mensal, anual), navegação mensal/anual e relógio em tempo real.",
@@ -375,8 +375,8 @@ const translations = {
     project_notas: "Notepad",
     project_notas_desc: "Full-featured notes app with LocalStorage, advanced formatting, tags, archiving, images, attachments, search, dark mode, focus mode, undo/redo and much more.",
 
-    project_lamen: "Yummy Lamen - Ramen Restaurant",
-    project_lamen_desc: "Responsive website for Japanese ramen restaurant with digital menu, opening hours and location.",
+    project_lamen: "Yummy Lamen — 旨いラーメン",
+    project_lamen_desc: "Japanese ramen restaurant website inspired by the retro aesthetics of the Shōwa era, featuring responsive design, an interactive digital menu, image gallery, events, and a reservation system.",
 
     project_calendario: "Calendar",
     project_calendario_desc: "Interactive calendar with appointment management, national holidays, recurring events (daily, weekly, monthly, yearly), monthly/yearly navigation and real-time clock.",
