@@ -261,7 +261,7 @@ const Portfolio = () => {
       stack: "frontend-only",
       image: "/assets/img/portfolio/Tocador-de-Musica.png",
       github: "https://github.com/MatheusAbib/Tocador-de-Musica",
-      live: "https://matheusabib.github.io/Tocador-de-Musica/",
+      live: "https://vintagemusicplayery2k.vercel.app/",
       tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
       priority: 2
     },
