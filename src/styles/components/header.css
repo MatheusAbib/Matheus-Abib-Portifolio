@@ -37,8 +37,10 @@
 }
 
 #header.header.scrolled .header-shell {
-  background: #f5f3ee1f;
+  background: var(--surface-1);
   border-color: var(--hairline);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(14px);
 }
 
 .header-logo {
@@ -246,13 +248,14 @@
   width: 260px;
   margin: 0;
   padding: 0.5rem;
-  background: var(--surface-1);
+  background: color-mix(in srgb, var(--background-color) 88%, transparent);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-lg);
   list-style: none;
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(120%);
   animation: headerDropdownIn 0.2s ease both;
 }
-
 .dropdown-menu-cv li {
   width: 100%;
   margin: 0;

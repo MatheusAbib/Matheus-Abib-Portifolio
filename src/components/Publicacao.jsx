@@ -47,7 +47,7 @@ const Publicacao = () => {
       <div className="container">
         <SectionLabel sectionId="publicacao" />
 
-        <div className="section-title">
+        <div className="section-title" data-aos="fade-up">
           <h2 data-translate="publicacao_title">
             {t('publicacao_title')}
           </h2>

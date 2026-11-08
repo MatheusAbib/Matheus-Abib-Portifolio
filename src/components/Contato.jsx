@@ -327,12 +327,12 @@ const ContactForm = () => {
   return (
     <section
       id="form-section"
-      className="contact-section section"
+      className="contact-section section" data-aos="fade-up"
     >
       <div className="container">
         <SectionLabel sectionId="form-section" />
 
-        <div className="section-title">
+        <div className="section-title" data-aos="fade-up">
           <h2 data-translate="contact_form_title">
             {t('contact_form_title')}
           </h2>

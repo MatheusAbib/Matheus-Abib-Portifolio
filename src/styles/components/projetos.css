@@ -59,8 +59,9 @@
   justify-content: center;
   min-height: 40px;
   padding: 10px 17px;
-  background: transparent;
-  border: 1px solid transparent;
+  color: var(--fg);
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
   color: var(--fg-muted);
   font-family: var(--default-font);
@@ -76,9 +77,8 @@
 }
 
 .portfolio-filter:hover {
-  color: var(--fg);
-  background: var(--surface-1);
-  border-color: var(--hairline);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .portfolio-filter.filter-active {

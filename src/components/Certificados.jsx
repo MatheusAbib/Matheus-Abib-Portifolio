@@ -155,7 +155,7 @@ const Certificates = () => {
           </h2>
         </div>
 
-        <div className="certificates-accordion" data-aos="fade-up">
+        <div className="certificates-accordion">
           {certificates.map((cert, index) => {
             const isExpanded = Boolean(expandedItems[cert.id]);
             const contentId = `certificate-content-${cert.id}`;
