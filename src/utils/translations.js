@@ -17,11 +17,21 @@ const translations = {
     sticky_publications: "Publicações",
     sticky_projects: "Projetos",
     sticky_contact: "Contato",
+    header_back_to_top: 'Voltar ao topo',
+    header_navigation: 'Navegação',
+    header_open_menu: 'Abrir menu',
+    header_close_menu: 'Fechar menu',
+    header_documents: 'Currículos',
+    header_cv: 'CV',
+    footer_back_to_top: 'Voltar ao topo',
+    footer_social_title: 'Redes sociais',
 
     hero_title: "Bem-vindo!",
-    hero_prefix: "Eu sou",
+    hero_prefix: "Olá! Eu sou",
     hero_name: "Matheus Abib",
     hero_available: "Disponível para projetos",
+    hero_tv_welcome: 'Bem-vindo ao meu portfólio!',
+    hero_tv_restart: 'Reiniciar televisão',
 
     hero_tag_frontend: "Front-end",
     hero_tag_backend: "Back-end",
@@ -71,7 +81,7 @@ const translations = {
     frameworks_title: "Frameworks",
     backend_title: "Back-end",
     tools_title: "Ferramentas",
-    tool_ai: "Inteligência Artificial",
+    tool_ai: "IA",
 
     certificate_modal_title: "Certificado",
     certificate_webdev_title: "Desenvolvimento Web",
@@ -115,6 +125,7 @@ const translations = {
     publicacao_tag_3: "LGPD",
     publicacao_tag_4: "Análise Comparativa",
 
+    portfolio_showcase_eyebrow: 'PORTFÓLIO / PROJETOS SELECIONADOS',
     portfolio_title: "Projetos Principais",
     filter_all: "Todos",
     filter_websites: "Sites",
@@ -238,11 +249,21 @@ const translations = {
     sticky_publications: "Publications",
     sticky_projects: "Projects",
     sticky_contact: "Contact",
+    header_back_to_top: 'Back to top',
+    header_navigation: 'Navigation',
+    header_open_menu: 'Open menu',
+    header_close_menu: 'Close menu',
+    header_documents: 'Resumes',
+    header_cv: 'CV',
+    footer_back_to_top: 'Back to top',
+    footer_social_title: 'Social media',
 
     hero_title: "Welcome!",
-    hero_prefix: "I'm",
+    hero_prefix: "Hi! I'm",
     hero_name: "Matheus Abib",
     hero_available: "Available for projects",
+    hero_tv_welcome: 'Welcome to my portfolio!',
+    hero_tv_restart: 'Restart television',
 
     hero_tag_frontend: "Front-end",
     hero_tag_backend: "Back-end",
@@ -290,7 +311,7 @@ const translations = {
     frameworks_title: "Frameworks",
     backend_title: "Back-end",
     tools_title: "Tools",
-    tool_ai: "Artificial Intelligence",
+    tool_ai: "AI",
 
     certificate_modal_title: "Certificate",
     certificate_webdev_title: "Web Development",
@@ -332,7 +353,8 @@ const translations = {
 
     cert_view: "View Certificate",
     certificate_skills_developed: "Developed Skills",
-
+  
+    portfolio_showcase_eyebrow: 'PORTFOLIO / SELECTED WORK',
     portfolio_title: "Main Projects",
     filter_all: "All",
     filter_websites: "Websites",

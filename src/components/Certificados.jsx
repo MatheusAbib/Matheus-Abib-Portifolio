@@ -1,60 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import SectionLabel from '../services/SectionLabel';
 
 const Certificates = () => {
   const { t } = useTranslation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
-  const [loadedImages, setLoadedImages] = useState({});
-  const [modalImageLoaded, setModalImageLoaded] = useState(false);
+
   const [expandedItems, setExpandedItems] = useState({});
+  const [currentCertificate, setCurrentCertificate] = useState(null);
+  const [modalImageLoaded, setModalImageLoaded] = useState(false);
+  const [modalImageError, setModalImageError] = useState(false);
 
   const certificates = [
     {
-      id: 'webdev',
-      title_key: 'certificate_webdev_title',
-      institution: 'Coursera - Johns Hopkins University',
-      description_key: 'certificate_webdev_desc',
-      skills: ['CSS', 'HTML', 'JavaScript', 'Bootstrap', 'AJAX'],
-      date: '2024',
-      image: 'assets/img/services/Web-Development.jpg'
-    },
-    {
-      id: 'powerbi',
-      title_key: 'certificate_powerbi_title',
-      institution: 'Data Science Academy',
-      description_key: 'certificate_powerbi_desc',
-      skills: ['Microsoft Power BI', 'Microsoft Excel', 'Dashboards', 'Data Analysis', 'Spreadsheet Management'],
-      date: '2024',
-      image: 'assets/img/services/Power-BI.jpg'
-    },
-    {
-      id: 'database',
-      title_key: 'certificate_database_title',
-      institution: 'IFSul - Plataforma Mundi',
-      description_key: 'certificate_database_desc',
-      skills: ['Database', 'SQL', 'Spreadsheet Management', 'Data Analysis'],
-      date: '2024',
-      image: 'assets/img/services/Banco-de-Dados.jpg'
-    },
-    {
-      id: 'logic',
-      title_key: 'certificate_logic_title',
-      institution: 'DIO - Digital Innovation One',
-      description_key: 'certificate_logic_desc',
-      skills: ['JavaScript', 'Git', 'GitHub', 'Logic'],
-      date: '2024',
-      image: 'assets/img/services/Logica-de-Programacao.jpg'
-    },
-    {
-      id: 'ia',
-      title_key: 'certificate_ia_title',
-      institution: 'Alura + Google',
-      description_key: 'certificate_ia_desc',
-      skills: ['Python', 'Machine Learning', 'Deep Learning', 'Redes Neurais', 'Data Analysis'],
-      date: '2024',
-      image: 'assets/img/services/IA.jpg'
+      id: 'react',
+      title_key: 'certificate_react_title',
+      institution: 'Cursa',
+      description_key: 'certificate_react_desc',
+      skills: ['React', 'API Rest', 'JavaScript'],
+      date: '2026',
+      image: 'assets/img/services/react.png',
+      icon: 'bi bi-filetype-js'
     },
     {
       id: 'java',
@@ -63,47 +28,119 @@ const Certificates = () => {
       description_key: 'certificate_java_desc',
       skills: ['Java', 'Spring Boot', 'API Rest', 'Database', 'Lombok'],
       date: '2025',
-      image: 'assets/img/services/Java.png'
+      image: 'assets/img/services/Java.png',
+      icon: 'bi bi-cup-hot'
     },
     {
-      id: 'react',
-      title_key: 'certificate_react_title',
-      institution: 'Cursa',
-      description_key: 'certificate_react_desc',
-      skills: ['React', 'API Rest', 'JavaScript'],
-      date: '2026',
-      image: 'assets/img/services/react.png'
+      id: 'webdev',
+      title_key: 'certificate_webdev_title',
+      institution: 'Coursera - Johns Hopkins University',
+      description_key: 'certificate_webdev_desc',
+      skills: ['CSS', 'HTML', 'JavaScript', 'Bootstrap', 'AJAX'],
+      date: '2024',
+      image: 'assets/img/services/Web-Development.jpg',
+      icon: 'bi bi-code-slash'
     },
+    {
+      id: 'powerbi',
+      title_key: 'certificate_powerbi_title',
+      institution: 'Data Science Academy',
+      description_key: 'certificate_powerbi_desc',
+      skills: [
+        'Microsoft Power BI',
+        'Microsoft Excel',
+        'Dashboards',
+        'Data Analysis',
+        'Spreadsheet Management'
+      ],
+      date: '2024',
+      image: 'assets/img/services/Power-BI.jpg',
+      icon: 'bi bi-bar-chart-line'
+    },
+    {
+      id: 'database',
+      title_key: 'certificate_database_title',
+      institution: 'IFSul - Plataforma Mundi',
+      description_key: 'certificate_database_desc',
+      skills: [
+        'Database',
+        'SQL',
+        'Spreadsheet Management',
+        'Data Analysis'
+      ],
+      date: '2024',
+      image: 'assets/img/services/Banco-de-Dados.jpg',
+      icon: 'bi bi-database'
+    },
+    {
+      id: 'logic',
+      title_key: 'certificate_logic_title',
+      institution: 'DIO - Digital Innovation One',
+      description_key: 'certificate_logic_desc',
+      skills: ['JavaScript', 'Git', 'GitHub', 'Logic'],
+      date: '2024',
+      image: 'assets/img/services/Logica-de-Programacao.jpg',
+      icon: 'bi bi-diagram-3'
+    },
+    {
+      id: 'ia',
+      title_key: 'certificate_ia_title',
+      institution: 'Alura + Google',
+      description_key: 'certificate_ia_desc',
+      skills: [
+        'Python',
+        'Machine Learning',
+        'Deep Learning',
+        'Redes Neurais',
+        'Data Analysis'
+      ],
+      date: '2024',
+      image: 'assets/img/services/IA.jpg',
+      icon: 'bi bi-cpu'
+    }
   ];
 
+  const isModalOpen = currentCertificate !== null;
+
   const toggleAccordion = (id) => {
-    setExpandedItems(prev => ({
+    setExpandedItems((prev) => ({
       ...prev,
       [id]: !prev[id]
     }));
   };
 
-  const openModal = (img) => {
-    setCurrentImage(img);
+  const openModal = (certificate) => {
+    setCurrentCertificate(certificate);
     setModalImageLoaded(false);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    setModalImageError(false);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setCurrentImage(null);
+    setCurrentCertificate(null);
     setModalImageLoaded(false);
-    document.body.style.overflow = '';
+    setModalImageError(false);
   };
 
-  const handleImageLoad = (id) => {
-    setLoadedImages(prev => ({ ...prev, [id]: true }));
-  };
+  useEffect(() => {
+    if (!isModalOpen) return;
 
-  const handleModalImageLoad = () => {
-    setModalImageLoaded(true);
-  };
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen]);
 
   return (
     <section id="certificates" className="certificates-section">
@@ -111,93 +148,227 @@ const Certificates = () => {
 
       <div className="container">
         <SectionLabel sectionId="certificates" />
-        <div className="section-title" data-aos="fade-up">
-          <h2 data-translate="menu_certificates">Certificados</h2>
-        </div>
-      </div>
 
-      <div className="container">
+        <div className="section-title" data-aos="fade-up">
+          <h2 data-translate="menu_certificates">
+            {t('menu_certificates')}
+          </h2>
+        </div>
+
         <div className="certificates-accordion" data-aos="fade-up">
           {certificates.map((cert, index) => {
-            const isExpanded = expandedItems[cert.id] !== undefined ? expandedItems[cert.id] : index === 0;
+            const isExpanded = Boolean(expandedItems[cert.id]);
+            const contentId = `certificate-content-${cert.id}`;
 
             return (
-              <div key={cert.id} className={`cert-accordion-item ${isExpanded ? 'expanded' : ''}`}>
+              <article
+                key={cert.id}
+                className={`cert-accordion-item ${
+                  isExpanded ? 'expanded' : ''
+                }`}
+              >
                 <button
+                  type="button"
                   className="cert-accordion-header"
                   onClick={() => toggleAccordion(cert.id)}
+                  aria-expanded={isExpanded}
+                  aria-controls={contentId}
                 >
                   <div className="cert-accordion-header-left">
-                    <span className="cert-accordion-date">{cert.date}</span>
-                    <span className="cert-accordion-title" data-translate={cert.title_key}>
-                      {t(cert.title_key)}
-                    </span>
+                    <div className="cert-accordion-icon">
+                      <i className={cert.icon} aria-hidden="true"></i>
+                    </div>
+
+                    <div className="cert-accordion-info">
+                      <span
+                        className="cert-accordion-title"
+                        data-translate={cert.title_key}
+                      >
+                        {t(cert.title_key)}
+                      </span>
+
+                      <span className="cert-accordion-institution">
+                        {cert.institution}
+                      </span>
+                    </div>
                   </div>
+
                   <div className="cert-accordion-header-right">
-                    <i className={`bi bi-chevron-${isExpanded ? 'up' : 'down'}`}></i>
+                    <span className="cert-accordion-date">
+                      {cert.date}
+                    </span>
+
+                    <span className="cert-accordion-toggle">
+                      <i
+                        className={`bi bi-chevron-${
+                          isExpanded ? 'up' : 'down'
+                        }`}
+                        aria-hidden="true"
+                      ></i>
+                    </span>
                   </div>
                 </button>
 
-                <div className="cert-accordion-body">
+                <div
+                  id={contentId}
+                  className="cert-accordion-body"
+                  hidden={!isExpanded}
+                >
                   <div className="cert-accordion-content">
-                    <div className="cert-accordion-institution-wrapper">
-                      <p className="cert-accordion-institution">{cert.institution}</p>
-                      <button
-                        className="cert-accordion-view-btn"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          openModal(cert.image);
-                        }}
-                      >
-                        <i className="bi bi-eye"></i>
-                        <span>{t('cert_view')}</span>
-                      </button>
-                    </div>
-
                     <div className="cert-accordion-skills">
-                      <span className="skills-label">{t('certificate_skills_developed')}</span>
+                      <span
+                        className="skills-label"
+                        data-translate="certificate_skills_developed"
+                      >
+                        {t('certificate_skills_developed')}
+                      </span>
+
                       <div className="skills-list">
-                        {cert.skills.map((skill, idx) => (
-                          <span key={idx} className="skill-pill" data-skill={skill}>
+                        {cert.skills.map((skill) => (
+                          <span
+                            key={`${cert.id}-${skill}`}
+                            className="skill-pill"
+                            data-skill={skill}
+                          >
                             {skill}
                           </span>
                         ))}
                       </div>
                     </div>
+
+                    <div className="cert-accordion-footer">
+                      <span className="cert-accordion-index">
+                        {String(index + 1).padStart(2, '0')}
+                        {' / '}
+                        {String(certificates.length).padStart(2, '0')}
+                      </span>
+
+                      <button
+                        type="button"
+                        className="cert-accordion-view-btn"
+                        onClick={() => openModal(cert)}
+                      >
+                        <i
+                          className="bi bi-eye"
+                          aria-hidden="true"
+                        ></i>
+
+                        <span data-translate="cert_view">
+                          {t('cert_view')}
+                        </span>
+
+                        <i
+                          className="bi bi-arrow-up-right"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>
       </div>
 
-      <div className={`cert-modal-overlay ${isModalOpen ? 'active' : ''}`} onClick={closeModal}></div>
-      <div className={`cert-modal ${isModalOpen ? 'active' : ''}`}>
-        <div className="cert-modal-header">
-          <h3>Certificado</h3>
-          <button className="cert-modal-close" onClick={closeModal}>
-            <i className="bi bi-x-lg"></i>
-          </button>
-        </div>
-        <div className="cert-modal-content">
-          {currentImage && (
-            <>
-              {!modalImageLoaded && (
+      {isModalOpen && (
+        <div
+          className="cert-modal-overlay active"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              closeModal();
+            }
+          }}
+        >
+          <div
+            className="cert-modal active"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cert-modal-title"
+          >
+            <div className="cert-modal-header">
+              <div className="cert-modal-heading">
+                <span className="cert-modal-eyebrow">
+                  {currentCertificate.institution}
+                </span>
+
+                <h3 id="cert-modal-title">
+                  {t(currentCertificate.title_key)}
+                </h3>
+              </div>
+
+              <button
+                type="button"
+                className="cert-modal-close"
+                onClick={closeModal}
+                aria-label="Fechar certificado"
+                autoFocus
+              >
+                <i
+                  className="bi bi-x-lg"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+
+            <div className="cert-modal-content">
+              {!modalImageLoaded && !modalImageError && (
                 <div className="modal-loader">
                   <div className="loader-spinner"></div>
                 </div>
               )}
+
+              {modalImageError && (
+                <div className="cert-modal-error">
+                  <i
+                    className="bi bi-image"
+                    aria-hidden="true"
+                  ></i>
+
+                  <span>
+                    Não foi possível carregar a imagem do certificado.
+                  </span>
+                </div>
+              )}
+
               <img
-                src={currentImage}
-                alt="Certificado"
-                onLoad={handleModalImageLoad}
-                className={modalImageLoaded ? 'loaded' : 'loading'}
+                src={currentCertificate.image}
+                alt={t(currentCertificate.title_key)}
+                onLoad={() => setModalImageLoaded(true)}
+                onError={() => setModalImageError(true)}
+                className={
+                  modalImageLoaded && !modalImageError
+                    ? 'loaded'
+                    : 'loading'
+                }
+                style={{
+                  display: modalImageError ? 'none' : undefined
+                }}
               />
-            </>
-          )}
+            </div>
+
+            <div className="cert-modal-footer">
+              <span>{currentCertificate.date}</span>
+
+              <a
+                href={currentCertificate.image}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cert-modal-open-original"
+              >
+                <i
+                  className="bi bi-box-arrow-up-right"
+                  aria-hidden="true"
+                ></i>
+
+                <span>
+                  Abrir imagem original
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

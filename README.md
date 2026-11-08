@@ -49,7 +49,7 @@ Olá! Eu sou **Matheus Bilitardo Abib**, um desenvolvedor de software brasileiro
 ### 🌐 Sites
 | Projeto | Descrição | Tecnologias |
 |---------|-----------|-------------|
-| **Floricultura Web** | E-commerce de flores com carrinho, favoritos, busca e pagamento integrado | React, SCSS |
+| **Dama da Noite - Floricultura** | E-commerce de flores com carrinho, favoritos, busca e pagamento integrado | React, SCSS |
 | **Yummy Lamen** | Site responsivo para restaurante de lamen japonês | HTML, CSS, JS |
 | **Jornal de Receitas** | Sistema completo com cadastro, edição e busca por ingredientes | Java, React, Spring Boot, MySQL |
 | **Livraria Online** | E-commerce com catálogo, carrinho, chat em tempo real e dashboard admin | Angular, Java, Spring Boot, MySQL |
@@ -67,9 +67,7 @@ Olá! Eu sou **Matheus Bilitardo Abib**, um desenvolvedor de software brasileiro
 | Projeto | Descrição | Tecnologias |
 |---------|-----------|-------------|
 | **UNO Arcade** | Versão digital do clássico UNO com visual neon retro e bots inteligentes | Angular, TypeScript |
-| **Jogo da Forca** | 6 categorias, 3 dificuldades, ranking local e efeitos imersivos | HTML, CSS, JS |
 | **Tocador de Música** | Player funcional com lista de reprodução e visualização | HTML, CSS, JS |
-| **Calendário** | Navegação mensal/anual com suporte para eventos | HTML, CSS, JS |
 
 ### 🔗 Figma & Power BI
 | Projeto | Descrição |

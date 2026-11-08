@@ -1,96 +1,198 @@
 import React from 'react';
+import { useTranslation } from '../hooks/useTranslation';
 import SectionLabel from '../services/SectionLabel';
 
 const HardSkills = () => {
+  const { t } = useTranslation();
+
   const frontend = [
-    { icon: "fab fa-html5", name: "HTML", color: "#E34F26", level: 100 },
-    { icon: "fab fa-css3-alt", name: "CSS", color: "#2983c4ff", level: 100 },
-    { icon: "devicon-sass-original", name: "SCSS", color: "#CC6699", level: 80 },
-    { icon: "fab fa-js-square", name: "JavaScript", color: "#F7DF1E", level: 80 },
-    { icon: "devicon-typescript-plain", name: "TypeScript", color: "#4085cfff", level: 70 }
+    { icon: 'fab fa-html5', name: 'HTML', color: '#E34F26' },
+    { icon: 'fab fa-css3-alt', name: 'CSS', color: '#2983c4' },
+    { icon: 'devicon-sass-original', name: 'SCSS', color: '#CC6699' },
+    { icon: 'fab fa-js-square', name: 'JavaScript', color: '#F7DF1E' },
+    { icon: 'devicon-typescript-plain', name: 'TypeScript', color: '#4085cf' }
   ];
 
   const frameworks = [
-    { icon: "fab fa-react", name: "React", color: "#61DAFB", level: 90 },
-    { icon: "fab fa-angular", name: "Angular", color: "#DD0031", level: 80 },
-    { name: "Spring Boot", isIconify: true, iconifyIcon: "logos:spring-icon", level: 100 },
-    { name: "Express", isIconify: true, iconifyIcon: "simple-icons:express", level: 75 },
-    { name: "Flutter", isIconify: true, iconifyIcon: "simple-icons:flutter", level: 90 },
-    { name: "Dart", isIconify: true, iconifyIcon: "logos:dart", level: 75 }
+    { icon: 'fab fa-react', name: 'React', color: '#61DAFB' },
+    { icon: 'fab fa-angular', name: 'Angular', color: '#DD0031' },
+    {
+      name: 'Spring Boot',
+      isIconify: true,
+      iconifyIcon: 'logos:spring-icon'
+    },
+    {
+      name: 'Express',
+      isIconify: true,
+      iconifyIcon: 'simple-icons:express'
+    },
+    {
+      name: 'Flutter',
+      isIconify: true,
+      iconifyIcon: 'simple-icons:flutter'
+    },
+    {
+      name: 'Dart',
+      isIconify: true,
+      iconifyIcon: 'logos:dart'
+    }
   ];
 
   const backend = [
-    { icon: "fab fa-node", name: "Node.js", color: "#4CA54C", level: 85 },
-    { name: "MySQL", isIconify: true, iconifyIcon: "simple-icons:mysql", color: "#ffffff", level: 85 }
+    { icon: 'fab fa-node', name: 'Node.js', color: '#4CA54C' },
+    {
+      name: 'MySQL',
+      isIconify: true,
+      iconifyIcon: 'simple-icons:mysql',
+      color: '#ffffff'
+    }
   ];
 
   const tools = [
-    { icon: "fab fa-git-alt", name: "Git", color: "#F05032", level: 90 },
-    { icon: "fab fa-figma", name: "Figma", color: "#F24E1E", level: 100 },
-    { icon: "bi-kanban", name: "Trello", color: "#3390c5ff", level: 100 },
-    { icon: "bi-graph-up", name: "Power BI", color: "#F2C811", level: 85 },
-    { icon: "bi-robot", name: "Inteligência Artificial", translateKey: "tool_ai", color: "#c1cedaff", level: 85 }
+    { icon: 'fab fa-git-alt', name: 'Git', color: '#F05032' },
+    { icon: 'fab fa-figma', name: 'Figma', color: '#F24E1E' },
+    { icon: 'bi bi-kanban', name: 'Trello', color: '#3390c5' },
+    { icon: 'bi bi-graph-up', name: 'Power BI', color: '#F2C811' },
+    {
+      icon: 'bi bi-robot',
+      name: 'Inteligência Artificial',
+      translateKey: 'tool_ai',
+      color: '#c1ceda'
+    }
   ];
 
   const categories = [
-    { key: 'frontend', label: 'Front-end', icon: 'bi-window', techs: frontend },
-    { key: 'backend', label: 'Back-end', icon: 'bi-server', techs: backend },
-    { key: 'frameworks', label: 'Frameworks', icon: 'bi-grid-3x3-gap-fill', techs: frameworks },
-    { key: 'tools', label: 'Ferramentas', icon: 'bi-tools', techs: tools }
+    {
+      key: 'frontend',
+      label: 'Front-end',
+      icon: 'bi bi-window',
+      techs: frontend
+    },
+    {
+      key: 'backend',
+      label: 'Back-end',
+      icon: 'bi bi-server',
+      techs: backend
+    },
+    {
+      key: 'frameworks',
+      label: 'Frameworks',
+      icon: 'bi bi-grid-3x3-gap-fill',
+      techs: frameworks
+    },
+    {
+      key: 'tools',
+      label: 'Ferramentas',
+      icon: 'bi bi-tools',
+      techs: tools
+    }
   ];
+
+  const renderSkillIcon = (tech) => {
+    if (tech.isIconify) {
+      return (
+        <iconify-icon
+          icon={tech.iconifyIcon}
+          width="32"
+          height="32"
+          style={{
+            color: tech.color || 'inherit'
+          }}
+        ></iconify-icon>
+      );
+    }
+
+    if (tech.icon && tech.icon.endsWith('.svg')) {
+      return (
+        <img
+          src={tech.icon}
+          alt=""
+          className="skill-icon-img"
+        />
+      );
+    }
+
+    return (
+      <i
+        className={tech.icon}
+        style={{ color: tech.color }}
+        aria-hidden="true"
+      ></i>
+    );
+  };
 
   return (
     <section id="skills" className="skills-section">
       <div className="container">
         <SectionLabel sectionId="skills" />
 
-        <div className="section-title">
-          <h2 data-translate="tech_title">Hard Skills</h2>
+        <div className="section-title" data-aos="fade-up">
+          <h2 data-translate="tech_title">
+            {t('tech_title')}
+          </h2>
         </div>
-      </div>
 
-      <div className="container">
         <div className="skills-grid">
-          {categories.map((cat) => (
-            <div key={cat.key} className="skill-category">
+          {categories.map((category, categoryIndex) => (
+            <article
+              key={category.key}
+              className={`skill-category skill-category-${category.key}`}
+              data-aos="fade-up"
+              data-aos-delay={categoryIndex * 100}
+            >
               <div className="category-head">
                 <div className="category-icon">
-                  <i className={cat.icon}></i>
+                  <i
+                    className={category.icon}
+                    aria-hidden="true"
+                  ></i>
                 </div>
-                <h3 className="category-name" data-translate={cat.key + '_title'}>
-                  {cat.label}
-                </h3>
-                <span className="category-badge">{cat.techs.length}</span>
+
+                <div className="category-info">
+                  <h3
+                    className="category-name"
+                    data-translate={`${category.key}_title`}
+                  >
+                    {t(`${category.key}_title`)}
+                  </h3>
+                </div>
+
+                <span
+                  className="category-badge"
+                  aria-label={`${category.techs.length} tecnologias`}
+                >
+                  {String(category.techs.length).padStart(2, '0')}
+                </span>
               </div>
+
               <div className="skill-items">
-                {cat.techs.map((tech, index) => (
-                  <div key={`${cat.key}-${index}`} className="skill-item" data-tooltip={tech.name}>
-                  <div className="skill-icon">
-                    {tech.isIconify ? (
-                      <iconify-icon
-                        icon={tech.iconifyIcon}
-                        width={tech.fontSize || 32}
-                        height={tech.fontSize || 32}
-                        style={{ fontSize: `${tech.fontSize || 32}px` }}
-                      ></iconify-icon>
-                    ) : tech.icon && tech.icon.endsWith('.svg') ? (
-                      <img
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="skill-icon-img"
-                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
-                      />
-                    ) : (
-                      <i className={tech.icon} style={{ color: tech.color }}></i>
-                    )}
-                  </div>
-                    <span className="skill-name" data-translate={tech.translateKey || undefined}>
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
+                {category.techs.map((tech) => {
+                  const skillName = tech.translateKey
+                    ? t(tech.translateKey)
+                    : tech.name;
+
+                  return (
+                    <div
+                      key={`${category.key}-${tech.name}`}
+                      className="skill-item"
+                      data-tooltip={skillName}
+                      title={skillName}
+                    >
+                      <div className="skill-icon">
+                        {renderSkillIcon(tech)}
+                      </div>
+
+                      <span
+                        className="skill-name"
+                        data-translate={tech.translateKey || undefined}
+                      >
+                        {skillName}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

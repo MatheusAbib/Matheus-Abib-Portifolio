@@ -1,529 +1,616 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import SectionLabel from '../services/SectionLabel';
 
+const PROJECTS = [
+  {
+    id: 0,
+    title: 'Imperatore - Sistema de Gestão',
+    title_key: 'project_imperator',
+    description_key: 'project_imperator_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/imperatore.png',
+    github: 'https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas',
+    live: 'https://imperatore-zeta.vercel.app/',
+    tags: ['React', 'Node.js', 'Express', 'MySQL', 'JWT'],
+    priority: 0,
+    featured: true
+  },
+  {
+    id: 1,
+    title: 'Desfumo - Controle de Consumo ao Tabagismo',
+    title_key: 'project_desfumo',
+    description_key: 'project_desfumo_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/Desfumo.png',
+    github: 'https://github.com/MatheusAbib/Tabagismo-Saude-Publica',
+    live: 'https://desfumo.vercel.app/',
+    tags: ['Flutter', 'Dart', 'Node.js', 'Express', 'MySQL'],
+    priority: 1,
+    featured: true
+  },
+  {
+    id: 2,
+    title: 'Organizador de Arquivos',
+    title_key: 'project_arquivos',
+    description_key: 'project_arquivos_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/Organizador-Arquivos.png',
+    github: 'https://github.com/MatheusAbib/Organizador-de-Arquivos',
+    live: 'https://organizadordearquivos.vercel.app/',
+    tags: ['React', 'Typescript', 'Node.Js', 'Express', 'MySQL'],
+    priority: 1,
+    featured: true
+  },
+  {
+    id: 3,
+    title: 'E-Commerce - Livraria Online',
+    title_key: 'project_livros',
+    description_key: 'project_livros_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/Livraria-Online.png',
+    github: 'https://github.com/MatheusAbib/e-commerce-livraria',
+    live: 'https://livrariaonline-gold.vercel.app/',
+    tags: ['Angular', 'TypeScript', 'Java', 'SpringBoot', 'MySQL'],
+    priority: 1,
+    featured: true
+  },
+  {
+    id: 4,
+    title: 'Jornal de Receitas',
+    title_key: 'project_receitas',
+    description_key: 'project_receitas_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/Jornal-de-Receitas.png',
+    github: 'https://github.com/MatheusAbib/Jornal-de-Receitas',
+    live: 'https://jornaldereceitas.vercel.app/',
+    tags: ['React', 'Java', 'SpringBoot', 'JavaScript', 'MySQL'],
+    priority: 1
+  },
+  {
+    id: 5,
+    title: 'Dashboard de Vendas',
+    title_key: 'project_dashboard',
+    description_key: 'project_dashboard_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/Dashboard.png',
+    github: 'https://github.com/MatheusAbib/Dashboard-Vendas',
+    live: 'https://dashboard-vendas-node.netlify.app/',
+    tags: ['Node.Js', 'Express', 'MySQL', 'Charts'],
+    priority: 1
+  },
+  {
+    id: 9,
+    title: 'Yummy Lamen - Restaurante de Lamen',
+    title_key: 'project_lamen',
+    description_key: 'project_lamen_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Yummy-Lamen.png',
+    github: 'https://github.com/MatheusAbib/Restaurante-de-Lamen',
+    live: 'https://yummylamen.vercel.app/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    priority: 2
+  },
+  {
+    id: 6,
+    title: 'Gataria - Adoção Responsável',
+    title_key: 'project_gataria',
+    description_key: 'project_gataria_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Gataria.png',
+    github: 'https://github.com/MatheusAbib/Gataria-adocao-responsavel',
+    live: 'https://gatariaadocao.vercel.app/',
+    tags: ['React', 'JavaScript', 'CSS', 'GSAP'],
+    priority: 1
+  },
+  {
+    id: 7,
+    title: 'Floricultura Dama da Noite',
+    title_key: 'project_floricultura',
+    description_key: 'project_floricultura_desc',
+    category: 'Site',
+    filter: 'web',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Floricultura-Web.png',
+    github: 'https://github.com/MatheusAbib/Floricultura-Dama-da-Noite',
+    live: 'https://matheusabib.github.io/Floricultura-Dama-da-Noite/',
+    tags: ['React', 'HTML', 'SCSS', 'JavaScript'],
+    priority: 2
+  },
+  {
+    id: 8,
+    title: 'Bloco de Notas',
+    title_key: 'project_notas',
+    description_key: 'project_notas_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Bloco-de-Notas.png',
+    github: 'https://github.com/MatheusAbib/Bloco-de-Notas',
+    live: 'https://matheusabib.github.io/Bloco-de-Notas/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    priority: 2
+  },
+  {
+    id: 10,
+    title: 'UNO',
+    title_key: 'project_uno',
+    description_key: 'project_uno_desc',
+    category: 'Diversão',
+    filter: 'brand',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/UNO.png',
+    github: 'https://github.com/MatheusAbib/UNO',
+    live: 'https://matheusabib.github.io/UNO/',
+    tags: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+    priority: 2
+  },
+  {
+    id: 12,
+    title: 'Tocador de Música',
+    title_key: 'project_musica',
+    description_key: 'project_musica_desc',
+    category: 'Diversão',
+    filter: 'brand',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Tocador-de-Musica.png',
+    github: 'https://github.com/MatheusAbib/Tocador-de-Musica',
+    live: 'https://vintagemusicplayery2k.vercel.app/',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Web Audio API'],
+    priority: 2
+  },
+  {
+    id: 13,
+    title: 'Figma & Power BI',
+    title_key: 'project_links',
+    description_key: 'project_links_desc',
+    category: 'Links',
+    filter: 'links',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Projetos_Figma_Powerbi.png',
+    github: 'https://github.com/MatheusAbib/Projetos-Figma-Powerbi',
+    live: 'https://matheusabib.github.io/Projetos-Figma-Powerbi/',
+    tags: ['Figma', 'Power BI', 'UI/UX', 'Data Analytics'],
+    priority: 3
+  }
+];
+
+const FILTERS = [
+  { key: '*', label: 'filter_all' },
+  { key: 'web', label: 'filter_websites' },
+  { key: 'motion', label: 'filter_tools' },
+  { key: 'brand', label: 'filter_fun' },
+  { key: 'links', label: 'filter_links' }
+];
+
+const CATEGORY_KEYS = {
+  Site: 'category_site',
+  Ferramenta: 'category_ferramenta',
+  Diversão: 'category_diversao',
+  Links: 'category_links',
+  Sistema: 'category_system'
+};
+
+const getRelativePosition = (index, activeIndex, length) => {
+  if (length <= 1) return 0;
+
+  let difference = index - activeIndex;
+
+  if (difference > length / 2) {
+    difference -= length;
+  }
+
+  if (difference < -length / 2) {
+    difference += length;
+  }
+
+  return difference;
+};
+
 const Portfolio = () => {
   const { t } = useTranslation();
+
   const [activeFilter, setActiveFilter] = useState('*');
-  const [visibleProjects, setVisibleProjects] = useState([]);
-  const scrollWrapperRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
-  const [showAllTags, setShowAllTags] = useState({});
+  const [activeIndex, setActiveIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState({});
+  const [carouselHeight, setCarouselHeight] = useState(0);
+  const activeSlideRef = useRef(null);
 
+  const touchStartXRef = useRef(null);
+  const touchStartYRef = useRef(null);
+
+  const filteredProjects =
+    activeFilter === '*'
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.filter === activeFilter);
+
+  const totalProjects = filteredProjects.length;
   useEffect(() => {
-    let velocity = 0;
-    let animationId = null;
-    let targetScroll = 0;
-    let isScrolling = false;
+  const activeSlide = activeSlideRef.current;
 
-    const wrapper = scrollWrapperRef.current;
+  if (!activeSlide) return;
 
-    const smoothScroll = () => {
-      if (!wrapper) return;
-      
-      if (Math.abs(velocity) < 0.1 && !isScrolling) {
-        animationId = null;
-        return;
-      }
-      
-      velocity *= 0.92;
-      wrapper.scrollLeft += velocity;
-      
-      animationId = requestAnimationFrame(smoothScroll);
-    };
+  const updateHeight = () => {
+    const height = activeSlide.offsetHeight;
 
-    const handleWheel = (e) => {
-      if (wrapper && wrapper.contains(e.target)) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        velocity += e.deltaY * 0.8;
-        targetScroll = wrapper.scrollLeft + e.deltaY * 2;
-        isScrolling = true;
-        
-        if (animationId) cancelAnimationFrame(animationId);
-        animationId = requestAnimationFrame(smoothScroll);
-        
-        setTimeout(() => {
-          isScrolling = false;
-        }, 150);
-        
-        return false;
-      }
-    };
-
-    const checkArrows = () => {
-      if (wrapper) {
-        setShowLeftArrow(wrapper.scrollLeft > 20);
-        setShowRightArrow(wrapper.scrollLeft < wrapper.scrollWidth - wrapper.clientWidth - 20);
-      }
-    };
-
-    if (wrapper) {
-      wrapper.addEventListener('wheel', handleWheel, { passive: false });
-      wrapper.addEventListener('scroll', checkArrows);
-      setTimeout(checkArrows, 100);
+    if (height > 0) {
+      setCarouselHeight(Math.ceil(height) + 8);
     }
+  };
 
-    return () => {
-      if (wrapper) {
-        wrapper.removeEventListener('wheel', handleWheel);
-        wrapper.removeEventListener('scroll', checkArrows);
-      }
-      if (animationId) cancelAnimationFrame(animationId);
-    };
-  }, []);
+  updateHeight();
 
-  const scrollBy = (amount) => {
-    if (scrollWrapperRef.current) {
-      scrollWrapperRef.current.scrollBy({ left: amount, behavior: 'smooth' });
-    }
+  const observer = new ResizeObserver(updateHeight);
+
+  observer.observe(activeSlide);
+
+  return () => {
+    observer.disconnect();
+  };
+}, [activeIndex, activeFilter]);
+
+  const goToProject = (index) => {
+    if (!totalProjects) return;
+
+    setActiveIndex(
+      ((index % totalProjects) + totalProjects) % totalProjects
+    );
+  };
+
+  const goToPrevious = () => goToProject(activeIndex - 1);
+  const goToNext = () => goToProject(activeIndex + 1);
+
+  const handleFilterClick = (filterKey) => {
+    setActiveFilter(filterKey);
+    setActiveIndex(0);
   };
 
   const handleImageLoad = (projectId) => {
-    setLoadedImages(prev => ({ ...prev, [projectId]: true }));
+    setLoadedImages((previous) => ({
+      ...previous,
+      [projectId]: true
+    }));
   };
 
-  const projects = [
-    {
-      id: 0,
-      title: "Imperatore - Sistema de Gestão",
-      title_key: "project_imperator",
-      description_key: "project_imperator_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/imperatore.png",
-      github: "https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas",
-      live: "https://imperatore-zeta.vercel.app/",
-      tags: ["React", "Node.js", "Express", "MySQL", "JWT"],
-      priority: 0,
-      featured: true
-    },
-    {
-      id: 1,
-      title: "Desfumo - Controle de Consumo ao Tabagismo",
-      title_key: "project_desfumo",
-      description_key: "project_desfumo_desc",
-      category: "Site",
-      filter: "web",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Desfumo.png",
-      github: "https://github.com/MatheusAbib/Tabagismo-Saude-Publica",
-      live: "https://desfumo.vercel.app/",
-      tags: ["Flutter", "Dart", "Node.js", "Express", "MySQL"],
-      priority: 1,
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Organizador de Arquivos",
-      title_key: "project_arquivos",
-      description_key: "project_arquivos_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Organizador-Arquivos.png",
-      github: "https://github.com/MatheusAbib/Organizador-de-Arquivos",
-      live: "https://organizadordearquivos.vercel.app/",
-      tags: ["React", "Typescript","Node.Js", "Express", "MySQL"],
-      priority: 1,
-      featured: true
-    },
+  const openProject = (project) => {
+    if (!project.live) return;
 
-    {
-      id: 3,
-      title: "E-Commerce - Livraria Online",
-      title_key: "project_livros",
-      description_key: "project_livros_desc",
-      category: "Site",
-      filter: "web",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Livraria-Online.png",
-      github: "https://github.com/MatheusAbib/e-commerce-livraria",
-      live: "https://livrariaonline-gold.vercel.app/",
-      tags: ["Angular", "TypeScript", "Java", "SpringBoot", "MySQL"],
-      priority: 1,
-      featured: true
-    },
-    
-    {
-      id: 4,
-      title: "Jornal de Receitas",
-      title_key: "project_receitas",
-      description_key: "project_receitas_desc",
-      category: "Site",
-      filter: "web",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Jornal-de-Receitas.png",
-      github: "https://github.com/MatheusAbib/Jornal-de-Receitas",
-      live: "https://jornaldereceitas.vercel.app/",
-      tags: ["React", "Java", "SpringBoot", "JavaScript", "MySQL"],
-      priority: 1
-    },
-    {
-      id: 5,
-      title: "Dashboard de Vendas",
-      title_key: "project_dashboard",
-      description_key: "project_dashboard_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "fullstack",
-      image: "/assets/img/portfolio/Dashboard.png",
-      github: "https://github.com/MatheusAbib/Dashboard-Vendas",
-      live: "https://dashboard-vendas-node.netlify.app/",
-      tags: ["Node.Js", "Express", "MySQL", "Charts"],
-      priority: 1
-    },
-      {
-      id: 9,
-      title: "Yummy Lamen - Restaurante de Lamen",
-      title_key: "project_lamen",
-      description_key: "project_lamen_desc",
-      category: "Site",
-      filter: "web",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Yummy-Lamen.png",
-      github: "https://github.com/MatheusAbib/Restaurante-de-Lamen",
-      live: "https://yummylamen.vercel.app/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 2
-    },
-      {
-      id: 6,
-      title: "Gataria - Adoção Responsável",
-      title_key: "project_gataria",
-      description_key: "project_gataria_desc",
-      category: "Site",
-      filter: "web",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Gataria.png",
-      github: "https://github.com/MatheusAbib/Gataria-adocao-responsavel",
-      live: "https://gatariaadocao.vercel.app/",
-      tags: ["React", "JavaScript", "CSS", "GSAP"],
-      priority: 1
-    },
-    {
-      id: 7,
-      title: "Floricultura Dama da Noite",
-      title_key: "project_floricultura",
-      description_key: "project_floricultura_desc",
-      category: "Site",
-      filter: "web",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Floricultura-Web.png",
-      github: "https://github.com/MatheusAbib/Floricultura-Dama-da-Noite",
-      live: "https://matheusabib.github.io/Floricultura-Dama-da-Noite/",
-      tags: ["React", "HTML", "SCSS", "JavaScript"],
-      priority: 2
-    },
-    {
-      id: 8,
-      title: "Bloco de Notas",
-      title_key: "project_notas",
-      description_key: "project_notas_desc",
-      category: "Ferramenta",
-      filter: "motion",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Bloco-de-Notas.png",
-      github: "https://github.com/MatheusAbib/Bloco-de-Notas",
-      live: "https://matheusabib.github.io/Bloco-de-Notas/",
-      tags: ["HTML", "CSS", "JavaScript"],
-      priority: 2
-    },
-
-    {
-      id: 10,
-      title: "UNO",
-      title_key: "project_uno",
-      description_key: "project_uno_desc",
-      category: "Diversão",
-      filter: "brand",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/UNO.png",
-      github: "https://github.com/MatheusAbib/UNO",
-      live: "https://matheusabib.github.io/UNO/",
-      tags: ["Angular", "TypeScript", "HTML", "CSS"],
-      priority: 2
-    },
-    {
-      id: 12,
-      title: "Tocador de Música",
-      title_key: "project_musica",
-      description_key: "project_musica_desc",
-      category: "Diversão",
-      filter: "brand",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Tocador-de-Musica.png",
-      github: "https://github.com/MatheusAbib/Tocador-de-Musica",
-      live: "https://vintagemusicplayery2k.vercel.app/",
-      tags: ["HTML", "CSS", "JavaScript", "Web Audio API"],
-      priority: 2
-    },
-    {
-      id: 13,
-      title: "Figma & Power BI",
-      title_key: "project_links",
-      description_key: "project_links_desc",
-      category: "Links",
-      filter: "links",
-      stack: "frontend-only",
-      image: "/assets/img/portfolio/Projetos_Figma_Powerbi.png",
-      github: "https://github.com/MatheusAbib/Projetos-Figma-Powerbi",
-      live: "https://matheusabib.github.io/Projetos-Figma-Powerbi/",
-      tags: ["Figma", "Power BI", "UI/UX", "Data Analytics"],
-      priority: 3
-    },
-  ];
-
-  const filters = [
-    { key: '*', label: 'filter_all' },
-    { key: 'web', label: 'filter_websites' },
-    { key: 'motion', label: 'filter_tools' },
-    { key: 'brand', label: 'filter_fun' },
-    { key: 'links', label: 'filter_links' }
-  ];
-
-  const filteredProjects = activeFilter === '*' 
-    ? projects 
-    : projects.filter(project => project.filter === activeFilter);
-
-  const handleFilterClick = (filterKey) => {
-    if (filterKey === activeFilter) return;
-    
-    setVisibleProjects([]);
-    
-    setTimeout(() => {
-      setActiveFilter(filterKey);
-      if (scrollWrapperRef.current) {
-        scrollWrapperRef.current.scrollLeft = 0;
-      }
-    }, 200);
+    window.open(project.live, '_blank', 'noopener,noreferrer');
   };
 
-  useEffect(() => {
-    if (visibleProjects.length === 0) {
-      const timeoutId = setTimeout(() => {
-        setVisibleProjects(filteredProjects.map(p => p.id));
-      }, 300);
-      return () => clearTimeout(timeoutId);
+  const handleTouchStart = (event) => {
+    touchStartXRef.current = event.touches[0].clientX;
+    touchStartYRef.current = event.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (
+      touchStartXRef.current === null ||
+      touchStartYRef.current === null
+    ) {
+      return;
     }
-  }, [activeFilter, filteredProjects]);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - scrollWrapperRef.current.offsetLeft);
-    setScrollLeft(scrollWrapperRef.current.scrollLeft);
+    const differenceX =
+      event.changedTouches[0].clientX - touchStartXRef.current;
+
+    const differenceY =
+      event.changedTouches[0].clientY - touchStartYRef.current;
+
+    if (
+      Math.abs(differenceX) > 55 &&
+      Math.abs(differenceX) > Math.abs(differenceY) * 1.3
+    ) {
+      if (differenceX < 0) {
+        goToNext();
+      } else {
+        goToPrevious();
+      }
+    }
+
+    touchStartXRef.current = null;
+    touchStartYRef.current = null;
   };
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      goToPrevious();
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      goToNext();
+    }
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const getRelativePosition = (index, active, length) => {
+    if (length <= 1) return 0;
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollWrapperRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    scrollWrapperRef.current.scrollLeft = scrollLeft - walk;
-  };
+    let difference = index - active;
 
-  const getTagClass = (tag) => {
-    const tagClasses = {
-      'HTML': 'html-tag',
-      'CSS': 'css-tag',
-      'JavaScript': 'js-tag',
-      'Java': 'java-tag',
-      'SpringBoot' : 'java-tag',
-      'MySQL': 'mysql-tag',
-      'TypeScript': 'typescript-tag',
-      'SCSS': 'css-tag',
-      'PHP': 'php-tag',
-      'Docker': 'docker-tag',
-      'API': 'api-tag',
-      'Canvas API': 'canvas-tag',
-      'Date API': 'date-tag',
-      'Web Audio API': 'audio-tag',
-      'Charts': 'chart-tag',
-      'Authentication': 'auth-tag',
-      'H2-Database': 'mysql-tag',
-      'Node.Js': 'js-tag',
-      'Flutter': 'flutter-tag',
-      'Dart': 'dart-tag',
-      'Figma': 'figma-tag',
-      'Power BI': 'powerbi-tag',
-      'UI/UX': 'uxtag',
-      'Data Analytics': 'data-tag',
-      'React': 'react-tag',
-      'Express': 'js-tag',
-      'JWT': 'auth-tag',
-      'Angular': 'angular-tag'
-    };
-    return tagClasses[tag] || 'js-tag';
+    if (difference > length / 2) difference -= length;
+    if (difference < -length / 2) difference += length;
+
+    return difference;
   };
 
   return (
     <section id="portfolio" className="portfolio-section">
-
       <div className="container">
         <SectionLabel sectionId="portfolio" />
 
         <div className="section-title" data-aos="fade-up">
-          <h2 data-translate="portfolio_title">{t('portfolio_title')}</h2>
+          <h2 data-translate="portfolio_title">
+            {t('portfolio_title')}
+          </h2>
         </div>
 
-        <div className="portfolio-controls" data-aos="fade-up" data-aos-delay="100">
+        <div className="portfolio-controls">
           <div className="portfolio-controls-left">
-            <ul className="portfolio-filters">
-              {filters.map((filter) => (
-                <li
+            <div className="portfolio-filters" role="group">
+              {FILTERS.map((filter) => (
+                <button
                   key={filter.key}
-                  className={activeFilter === filter.key ? 'filter-active' : ''}
+                  type="button"
+                  className={`portfolio-filter ${
+                    activeFilter === filter.key ? 'filter-active' : ''
+                  }`}
                   onClick={() => handleFilterClick(filter.key)}
+                  aria-pressed={activeFilter === filter.key}
                 >
-                  <span data-translate={filter.label}>{t(filter.label)}</span>
-                </li>
+                  {t(filter.label)}
+                </button>
               ))}
-            </ul>
-            <span className="projects-count">{filteredProjects.length} {t('projects_count')}</span>
+            </div>
+
+            <span className="projects-count">
+              {totalProjects} {t('projects_count')}
+            </span>
           </div>
-          <a 
-            href="https://github.com/MatheusAbib" 
-            target="_blank" 
+
+          <a
+            href="https://github.com/MatheusAbib"
+            target="_blank"
             rel="noopener noreferrer"
             className="github-badge"
           >
             <i className="bi bi-github"></i>
             <span>{t('see_more_github')}</span>
-            <i className="bi bi-arrow-right"></i>
+            <i className="bi bi-arrow-up-right"></i>
           </a>
         </div>
+      </div>
 
-        <div className="portfolio-scroll-container">
-          {showLeftArrow && (
-            <button className="scroll-arrow scroll-arrow-left" onClick={() => scrollBy(-400)}>
-              <i className="bi bi-chevron-left"></i>
-            </button>
-          )}
-          
-          <div 
-            ref={scrollWrapperRef}
-            className="portfolio-scroll-wrapper"
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-          >
-            <div className="portfolio-horizontal-grid">
-              {filteredProjects.map((project, index) => (
-                <div 
-                  key={project.id} 
-                  className={`portfolio-item ${visibleProjects.includes(project.id) ? 'show' : ''}`}
-                  style={{ transitionDelay: visibleProjects.includes(project.id) ? `${index * 50}ms` : '0ms' }}
-                >
-                  <div className="portfolio-card">
-                    {project.featured && (
-                      <span className="featured-badge">
-                        <i className="bi bi-star-fill"></i> Destaque
-                      </span>
-                    )}
-                    <div className="portfolio-image">
-                      {!loadedImages[project.id] && (
-                        <div className="image-loader">
-                          <div className="loader-spinner"></div>
-                        </div>
-                      )}
-                      <img 
-                        src={project.image} 
-                        className={`img-fluid ${loadedImages[project.id] ? 'loaded' : 'loading'}`}
-                        alt={project.title} 
-                        loading="lazy"
-                        onLoad={() => handleImageLoad(project.id)}
-                      />
-                      <div className="portfolio-overlay">
-                        <div className="portfolio-actions">
-                          <a 
-                            href={project.github} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="github-link"
-                          >
-                            <i className="bi bi-github"></i>
-                          </a>
-                          {project.live ? (
-                            <a 
-                              href={project.live} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="details-link"
-                            >
-                              <i className="bi bi-arrow-right"></i>
-                            </a>
-                          ) : null}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="portfolio-content">
-                      <div className="category-wrapper">
-                      <span className={`category category-${project.category.toLowerCase()}`}>
-                        <span className={`category-dot ${project.filter}`}></span>
-                        {project.category === "Site" && t('category_site')}
-                        {project.category === "Ferramenta" && t('category_ferramenta')}
-                        {project.category === "Diversão" && t('category_diversao')}
-                        {project.category === "Links" && t('category_links')}
-                        {project.category === "Sistema" && t('category_system')}
-                      </span>
-                        <div className="stack-simple">
-                          <i className="bi bi-code-slash"></i>
-                          <span>
-                            {project.stack.includes('angular-badge') ? 'Angular' : 
-                             project.stack.includes('fullstack') ? 'Full Stack' : 'Front-end'}
-                          </span>
-                        </div>
-                      </div>
-                      <h3 data-translate={project.title_key}>{t(project.title_key)}</h3>
-                      <div className="tech-tags">
-                        {project.tags.slice(0, showAllTags[project.id] ? project.tags.length : 6).map((tag, idx) => (
-                          <span key={idx} className={`tag ${getTagClass(tag)}`}>
-                            {tag}
-                          </span>
-                        ))}
-                        {project.tags.length > 6 && (
-                          <button 
-                            className="show-more-tags"
-                            onClick={() => setShowAllTags(prev => ({...prev, [project.id]: !prev[project.id]}))}
-                          >
-                            {showAllTags[project.id] ? t('show_less') : `${t('show_more')} +${project.tags.length - 3}`}
-                          </button>
-                        )}
-                      </div>
-                      <p data-translate={project.description_key}>{t(project.description_key)}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+      <div className="portfolio-showcase">
+        <div className="portfolio-showcase-heading">
+          <div className="portfolio-showcase-heading-left">
+<span className="portfolio-showcase-eyebrow">
+  {t('portfolio_showcase_eyebrow')}
+</span>
+
+            <div className="portfolio-showcase-count">
+              <span className="portfolio-current-number">
+                {String(activeIndex + 1).padStart(2, '0')}
+              </span>
+
+              <span className="portfolio-count-separator">/</span>
+
+              <span className="portfolio-total-number">
+                {String(totalProjects).padStart(2, '0')}
+              </span>
             </div>
           </div>
-          
-          {showRightArrow && (
-            <button className="scroll-arrow scroll-arrow-right" onClick={() => scrollBy(400)}>
-              <i className="bi bi-chevron-right"></i>
-            </button>
-          )}
+
+
         </div>
-        
-        <div className="scroll-hint">
-          <i className="bi bi-arrow-left-right"></i>
-          <span data-translate="scroll_hint">{t('scroll_hint')}</span>
+
+        <div
+  className="portfolio-carousel"
+  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}
+  onKeyDown={handleKeyDown}
+  tabIndex={0}
+  role="region"
+  aria-roledescription="carrossel"
+  aria-label={t('portfolio_title')}
+>
+  <div
+    className="portfolio-carousel-track"
+    style={carouselHeight > 0 ? { height: carouselHeight } : undefined}
+  >
+    {filteredProjects.map((project, index) => {
+      const relativePosition = getRelativePosition(
+        index,
+        activeIndex,
+        totalProjects
+      );
+
+      const isActive = relativePosition === 0;
+      const isPrevious = relativePosition === -1;
+      const isNext = relativePosition === 1;
+      const isVisible = isActive || isPrevious || isNext;
+
+      const positionClass = isActive
+        ? 'is-active'
+        : isPrevious
+          ? 'is-previous'
+          : isNext
+            ? 'is-next'
+            : relativePosition < 0
+              ? 'is-hidden-left'
+              : 'is-hidden-right';
+
+      return (
+        <article
+          key={project.id}
+          ref={isActive ? activeSlideRef : null}
+          className={`portfolio-slide ${positionClass}`}
+          aria-hidden={!isActive}
+          onClick={() => {
+            if (isActive) {
+              openProject(project);
+            } else if (isVisible) {
+              goToProject(index);
+            }
+          }}
+        >
+          <div className="portfolio-slide-inner">
+            <div className="portfolio-project-visual">
+              <div className="portfolio-project-image">
+                {!loadedImages[project.id] && (
+                  <div className="image-loader">
+                    <div className="loader-spinner"></div>
+                  </div>
+                )}
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={
+                    loadedImages[project.id]
+                      ? 'loaded'
+                      : 'loading'
+                  }
+                  loading={isVisible ? 'eager' : 'lazy'}
+                  onLoad={() => handleImageLoad(project.id)}
+                />
+              </div>
+
+              {project.featured && (
+                <span className="portfolio-featured-label">
+                  <i className="bi bi-star-fill"></i>
+                  Destaque
+                </span>
+              )}
+            </div>
+
+            <div className="portfolio-project-details">
+              <div className="portfolio-project-meta">
+                <span className="portfolio-project-category">
+                  <span className="portfolio-category-dot"></span>
+                  {t(
+                    CATEGORY_KEYS[project.category] ||
+                      'category_site'
+                  )}
+                </span>
+
+                <span className="portfolio-project-stack">
+                  <i className="bi bi-code-slash"></i>
+                  {project.stack === 'fullstack'
+                    ? 'Full Stack'
+                    : 'Front-end'}
+                </span>
+              </div>
+
+              <h3 className="portfolio-project-title">
+                {t(project.title_key)}
+              </h3>
+
+              <p className="portfolio-project-description">
+                {t(project.description_key)}
+              </p>
+
+              <div className="portfolio-project-tags">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="portfolio-tech-tag"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="portfolio-project-actions">
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio-project-button portfolio-project-button-primary"
+                    tabIndex={isActive ? 0 : -1}
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    <span>Ver projeto</span>
+                    <i className="bi bi-arrow-up-right"></i>
+                  </a>
+                )}
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio-project-button portfolio-project-button-secondary"
+                    tabIndex={isActive ? 0 : -1}
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    <i className="bi bi-github"></i>
+                    <span>GitHub</span>
+                    <i className="bi bi-arrow-up-right"></i>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </article>
+      );
+    })}
+  </div>
+
+  <div className="portfolio-navigation portfolio-navigation-sides">
+    <button
+      type="button"
+      className="portfolio-nav-button portfolio-nav-prev"
+      onClick={goToPrevious}
+      disabled={totalProjects <= 1}
+      aria-label="Projeto anterior"
+    >
+      <i className="bi bi-arrow-left"></i>
+    </button>
+
+    <button
+      type="button"
+      className="portfolio-nav-button portfolio-nav-next"
+      onClick={goToNext}
+      disabled={totalProjects <= 1}
+      aria-label="Próximo projeto"
+    >
+      <i className="bi bi-arrow-right"></i>
+    </button>
+  </div>
+</div>
+        <div className="portfolio-carousel-footer">
+          <div className="portfolio-pagination">
+            {filteredProjects.map((project, index) => (
+              <button
+                key={project.id}
+                type="button"
+                className={`portfolio-pagination-dot ${
+                  index === activeIndex ? 'is-active' : ''
+                }`}
+                onClick={() => goToProject(index)}
+                aria-label={`Ir para ${project.title}`}
+              ></button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

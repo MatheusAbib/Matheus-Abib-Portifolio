@@ -1,281 +1,393 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 
+const NAV_ITEMS = [
+  { id: 'sobre-mim', textKey: 'menu_about' },
+  { id: 'journey', textKey: 'menu_methodologies' },
+  { id: 'skills', textKey: 'menu_skills' },
+  { id: 'certificates', textKey: 'menu_certificates' },
+  { id: 'publicacao', textKey: 'menu_publicacao' },
+  { id: 'portfolio', textKey: 'menu_projects' },
+  { id: 'form-section', textKey: 'menu_contact' }
+];
+
+const CV_ITEMS = [
+  {
+    key: 'cv_portuguese',
+    href: '/assets/CV/matheus_abib_curriculo.pdf',
+    language: 'PT',
+    icon: 'bi bi-file-earmark-person'
+  },
+  {
+    key: 'cv_english',
+    href: '/assets/CV/matheus_abib_resume.pdf',
+    language: 'EN',
+    icon: 'bi bi-file-earmark-person'
+  }
+];
+
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileNavActive, setMobileNavActive] = useState(false);
-  const [mobileNavClosing, setMobileNavClosing] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
-  const [clickedItem, setClickedItem] = useState(null);
-  const [isCvDropdownOpen, setIsCvDropdownOpen] = useState(false);
   const { t, toggleLanguage, currentLanguage } = useTranslation();
 
-  const navItems = [
-    { href: '#sobre-mim', textKey: 'menu_about', id: 'sobre-mim' },
-    { href: '#journey', textKey: 'menu_methodologies', id: 'journey' },
-    { href: '#skills', textKey: 'menu_skills', id: 'skills' },
-    { href: '#certificates', textKey: 'menu_certificates', id: 'certificates' },
-    { href: '#publicacao', textKey: 'menu_publicacao', id: 'publicacao' },
-    { href: '#portfolio', textKey: 'menu_projects', id: 'portfolio' },
-    { href: '#form-section', textKey: 'menu_contact', id: 'form-section' },
-  ];
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const [mobileNavActive, setMobileNavActive] = useState(false);
+  const [isCvDropdownOpen, setIsCvDropdownOpen] = useState(false);
+
+  const headerRef = useRef(null);
+  const cvDropdownRef = useRef(null);
+
+  const closeMenus = () => {
+    setMobileNavActive(false);
+    setIsCvDropdownOpen(false);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
+    }
+
+    const headerHeight = headerRef.current?.offsetHeight || 80;
+    const offset = headerHeight + 28;
+
+    const targetPosition =
+      element.getBoundingClientRect().top +
+      window.scrollY -
+      offset;
+
+    window.scrollTo({
+      top: Math.max(0, targetPosition),
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (event, id) => {
+    event.preventDefault();
+
+    setActiveSection(id);
+    closeMenus();
+    scrollToSection(id);
+  };
+
+  const handleLogoClick = () => {
+    closeMenus();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleLanguageChange = () => {
+    toggleLanguage();
+    setIsCvDropdownOpen(false);
+  };
 
   useEffect(() => {
-    if (mobileNavActive) {
-      document.body.classList.add('mobile-nav-active');
-    } else {
-      document.body.classList.remove('mobile-nav-active');
-    }
-    
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 24);
+
+      const offset = (headerRef.current?.offsetHeight || 80) + 100;
+      const position = window.scrollY + offset;
+
+      let current = '';
+
+      NAV_ITEMS.forEach((item) => {
+        const section = document.getElementById(item.id);
+
+        if (section && section.offsetTop <= position) {
+          current = item.id;
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, {
+      passive: true
+    });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle(
+      'mobile-nav-active',
+      mobileNavActive
+    );
+
     return () => {
       document.body.classList.remove('mobile-nav-active');
     };
   }, [mobileNavActive]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-      
-      let current = '';
-      const headerHeight = 100;
-      const scrollPosition = window.scrollY + headerHeight;
-      
-      for (const item of navItems) {
-        const element = document.getElementById(item.id);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            current = item.id;
-            break;
-          }
-        }
-      }
-      
-      setActiveSection(current);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [navItems]);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isCvDropdownOpen && !event.target.closest('.cv-dropdown') && !event.target.closest('.cv-dropdown-mobile')) {
+    const handleOutsideClick = (event) => {
+      if (
+        cvDropdownRef.current &&
+        !cvDropdownRef.current.contains(event.target)
+      ) {
         setIsCvDropdownOpen(false);
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, [isCvDropdownOpen]);
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeMenus();
+      }
+    };
 
-  const closeMobileNav = () => {
-    setMobileNavClosing(true);
-    setTimeout(() => {
-      setMobileNavActive(false);
-      setMobileNavClosing(false);
-    }, 300);
-  };
+    document.addEventListener('pointerdown', handleOutsideClick);
+    document.addEventListener('keydown', handleEscape);
 
-  const handleNavClick = (sectionId) => {
-    setClickedItem(sectionId);
-    setTimeout(() => setClickedItem(null), 300);
-    
-    if (mobileNavActive) {
-      closeMobileNav();
-    }
-    
-    setActiveSection(sectionId);
-  };
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, []);
 
-  const toggleMobileNav = () => {
-    if (mobileNavActive) {
-      closeMobileNav();
-    } else {
-      setMobileNavActive(true);
-    }
-  };
+  const renderNavItems = () =>
+    NAV_ITEMS.map((item) => (
+      <li key={item.id} className="nav-item">
+        <a
+          href={`#${item.id}`}
+          className={`nav-link ${
+            activeSection === item.id ? 'active' : ''
+          }`}
+          onClick={(event) => handleNavClick(event, item.id)}
+          aria-current={
+            activeSection === item.id ? 'location' : undefined
+          }
+        >
+          <span data-translate={item.textKey}>
+            {t(item.textKey)}
+          </span>
+        </a>
+      </li>
+    ));
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const header = document.querySelector('#header');
-      const headerHeight = header ? header.offsetHeight : 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const renderCvItems = () =>
+    CV_ITEMS.map((item) => (
+      <li key={item.key}>
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="dropdown-item-cv"
+          onClick={() => setIsCvDropdownOpen(false)}
+        >
+          <span className="cv-item-icon">
+            <i className={item.icon} aria-hidden="true"></i>
+          </span>
+
+          <span className="cv-item-content">
+            <span data-translate={item.key}>
+              {t(item.key)}
+            </span>
+
+            <small>{item.language}</small>
+          </span>
+
+          <i
+            className="bi bi-arrow-up-right cv-item-arrow"
+            aria-hidden="true"
+          ></i>
+        </a>
+      </li>
+    ));
 
   return (
     <>
-      <header 
-        id="header" 
-        className={`header d-flex align-items-center fixed-top ${scrolled ? 'scrolled' : ''}`}
-      >      
-        <div className="container position-relative d-flex align-items-center justify-content-between">
-          <div 
-            className="logo d-flex align-items-center" 
-            onClick={() => {
-              handleNavClick('hero');
-              scrollToSection('hero');
-            }}
-            style={{cursor: 'pointer'}}
+      <header
+        id="header"
+        ref={headerRef}
+        className={`header ${scrolled ? 'scrolled' : ''}`}
+      >
+        <div className="header-shell">
+          <button
+            type="button"
+            className="header-logo"
+            onClick={handleLogoClick}
+            aria-label={t('header_back_to_top')}
           >
-            <h1 className="sitename">Matheus Abib</h1><span>.</span>
-          </div>
+            <span className="header-logo-name">
+              Matheus Abib
+            </span>
 
-          <nav id="navmenu" className={`navmenu ${mobileNavActive ? 'mobile-nav-active' : ''} ${mobileNavClosing ? 'mobile-nav-closing' : ''}`}>
-            {mobileNavActive && (
-              <button 
-                className="mobile-nav-close-btn"
-                onClick={closeMobileNav}
-                aria-label="Fechar menu"
-              >
-                <i className="bi bi-x-lg"></i>
-              </button>
-            )}
-            <ul>
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <a 
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item.id);
-                      scrollToSection(item.id);
-                    }}
-                    className={`d-flex align-items-center ${activeSection === item.id ? 'active' : ''} ${clickedItem === item.id ? 'clicked' : ''} ${item.className || ''}`}
-                  >
-                    <span data-translate={item.textKey}>{t(item.textKey)}</span>
-                  </a>
-                </li>
-              ))}
-<li className="d-xl-none mt-3 pt-3 border-top">
-  <button 
-    className="btn-secondary w-100 d-flex justify-content-center align-items-center mb-2" 
-                  onClick={() => {
-                    toggleLanguage();
-                    handleNavClick(activeSection);
-                  }}
-                >
-                  <i className="bi bi-translate me-2"></i>
-                  <span data-translate="btn_translate">{t('btn_translate')}</span>
-                </button>
-                <div className="cv-dropdown-mobile w-100">
-<button 
-  className="btn-primary w-100 d-flex justify-content-center align-items-center" 
-                    type="button"
-                    onClick={() => setIsCvDropdownOpen(!isCvDropdownOpen)}
-                  >
-                    <i className="bi bi-download me-2"></i>
-                    <span>CV</span>
-                    <i className={`bi bi-chevron-${isCvDropdownOpen ? 'up' : 'down'} ms-2`}></i>
-                  </button>
-                  {isCvDropdownOpen && (
-                    <ul className="dropdown-menu-cv-mobile">
-                      <li>
-                        <a 
-                          className="dropdown-item-cv-mobile" 
-                          href="/assets/CV/matheus_abib_curriculo.pdf" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          onClick={() => setIsCvDropdownOpen(false)}
-                        >
-                          <i className="bi bi-flag"></i>
-                          <span data-translate="cv_portuguese">{t('cv_portuguese')}</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          className="dropdown-item-cv-mobile" 
-                          href="/assets/CV/matheus_abib_resume.pdf" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          onClick={() => setIsCvDropdownOpen(false)}
-                        >
-                          <i className="bi bi-flag-fill"></i>
-                          <span data-translate="cv_english">{t('cv_english')}</span>
-                        </a>
-                      </li>
-                    </ul>
-                  )}
-                </div>
-              </li>
+            <span className="header-logo-dot">.</span>
+          </button>
+
+          <nav
+            id="navmenu"
+            className="navmenu"
+            aria-label={t('header_navigation')}
+          >
+            <ul className="nav-list">
+              {renderNavItems()}
             </ul>
           </nav>
 
-          <div className="d-none d-xl-flex align-items-center gap-2">
-            <div className="cv-dropdown">
-              <button 
+          <div className="header-actions">
+            <div
+              ref={cvDropdownRef}
+              className={`cv-dropdown ${
+                isCvDropdownOpen ? 'open' : ''
+              }`}
+            >
+              <button
+                type="button"
                 className="btn-cv"
-                type="button" 
-                onClick={() => setIsCvDropdownOpen(!isCvDropdownOpen)}
+                onClick={() =>
+                  setIsCvDropdownOpen((previous) => !previous)
+                }
+                aria-expanded={isCvDropdownOpen}
+                aria-haspopup="true"
+                aria-label={t('header_cv')}
               >
-                <i className="bi bi-download"></i>
-                <span>CV</span>
-                <i className="bi bi-chevron-down"></i>
+                <i
+                  className="bi bi-file-earmark-arrow-down"
+                  aria-hidden="true"
+                ></i>
+
+                <span data-translate="header_cv">
+                  {t('header_cv')}
+                </span>
+
+                <i
+                  className={`bi bi-chevron-down cv-chevron ${
+                    isCvDropdownOpen ? 'rotated' : ''
+                  }`}
+                  aria-hidden="true"
+                ></i>
               </button>
+
               {isCvDropdownOpen && (
-                <ul className="dropdown-menu-cv show">
-                  <li>
-                    <a 
-                      className="dropdown-item-cv" 
-                      href="/assets/CV/matheus_abib_curriculo.pdf" 
-                      target="_blank" 
-                      onClick={() => setIsCvDropdownOpen(false)}
-                    >
-                      <i className="bi bi-flag-br"></i>
-                      <span data-translate="cv_portuguese">{t('cv_portuguese')}</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      className="dropdown-item-cv" 
-                      href="/assets/CV/matheus_abib_resume.pdf" 
-                      target="_blank" 
-                      onClick={() => setIsCvDropdownOpen(false)}
-                    >
-                      <i className="bi bi-flag-us"></i>
-                      <span data-translate="cv_english">{t('cv_english')}</span>
-                    </a>
-                  </li>
+                <ul className="dropdown-menu-cv">
+                  {renderCvItems()}
                 </ul>
               )}
             </div>
 
-            <button 
-              className="btn-translate" 
-              id="translateBtnDesktop" 
-              data-lang="pt"
-              onClick={toggleLanguage}
+            <button
+              type="button"
+              className="btn-translate"
+              onClick={handleLanguageChange}
+              aria-label={t('btn_translate')}
+              title={t('btn_translate')}
+              data-language={currentLanguage}
             >
-              <i className="bi bi-translate"></i>
-              <span data-translate="btn_translate">{t('btn_translate')}</span>
+              <i
+                className="bi bi-translate"
+                aria-hidden="true"
+              ></i>
+
+              <span data-translate="btn_translate">
+                {t('btn_translate')}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              className={`mobile-nav-toggle ${
+                mobileNavActive ? 'active' : ''
+              }`}
+              onClick={() =>
+                setMobileNavActive((previous) => !previous)
+              }
+              aria-label={
+                mobileNavActive
+                  ? t('header_close_menu')
+                  : t('header_open_menu')
+              }
+              aria-expanded={mobileNavActive}
+              aria-controls="mobile-navigation"
+            >
+              <i
+                className={`bi ${
+                  mobileNavActive ? 'bi-x-lg' : 'bi-list'
+                }`}
+                aria-hidden="true"
+              ></i>
             </button>
           </div>
-
-          <i 
-            className={`mobile-nav-toggle d-xl-none bi ${mobileNavActive ? 'bi-x' : 'bi-list'}`}
-            onClick={toggleMobileNav}
-            aria-label="Toggle navigation"
-          ></i>
         </div>
       </header>
 
       {mobileNavActive && (
-        <div 
-          className="mobile-nav-overlay"
-          onClick={closeMobileNav}
-        ></div>
+        <>
+          <div
+            className="mobile-nav-overlay"
+            onClick={closeMenus}
+            aria-hidden="true"
+          ></div>
+
+          <nav
+            id="mobile-navigation"
+            className="mobile-nav-panel"
+            aria-label={t('header_navigation')}
+          >
+            <div className="mobile-nav-header">
+              <span className="mobile-nav-title">
+                {t('header_navigation')}
+              </span>
+
+              <button
+                type="button"
+                className="mobile-nav-close-btn"
+                onClick={closeMenus}
+                aria-label={t('header_close_menu')}
+              >
+                <i
+                  className="bi bi-x-lg"
+                  aria-hidden="true"
+                ></i>
+              </button>
+            </div>
+
+            <ul className="mobile-nav-list">
+              {renderNavItems()}
+            </ul>
+
+            <div className="mobile-nav-footer">
+              <span className="mobile-nav-footer-label">
+                {t('header_documents')}
+              </span>
+
+              <div className="mobile-cv-links">
+                {CV_ITEMS.map((item) => (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mobile-cv-link"
+                    onClick={closeMenus}
+                  >
+                    <i
+                      className={item.icon}
+                      aria-hidden="true"
+                    ></i>
+
+                    <span data-translate={item.key}>
+                      {t(item.key)}
+                    </span>
+
+                    <i
+                      className="bi bi-arrow-up-right"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </nav>
+        </>
       )}
     </>
   );
