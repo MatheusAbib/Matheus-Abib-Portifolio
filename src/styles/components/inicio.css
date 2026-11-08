@@ -1096,7 +1096,7 @@
   }
 
   .tv-welcome-text {
-    font-size: clamp(0.9rem, 3.6vw, 1.2rem);
+    font-size: clamp(0.9rem, 3.9vw, 1.2rem);
     line-height: 1.5;
   }
 
