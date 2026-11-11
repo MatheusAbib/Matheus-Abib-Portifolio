@@ -2,7 +2,7 @@
 
 **Desenvolvedor Full Stack | Engenheiro de Software em Formação**
 
-> 🔗 **Acesse o projeto online:** [matheus-abib-portfolio.netlify.app](https://matheus-abib-portfolio.netlify.app/)
+> 🔗 **Acesse o projeto online:** (https://matheus-abib-portfolio.netlify.app/)
 
 ---
 
