@@ -19,10 +19,6 @@
   z-index: 1;
 }
 
-.skills-section .section-title {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

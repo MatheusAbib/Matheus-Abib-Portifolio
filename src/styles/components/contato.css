@@ -20,10 +20,6 @@
   z-index: 1;
 }
 
-.contact-section .section-title {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
 .contact-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);

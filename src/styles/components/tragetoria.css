@@ -47,16 +47,6 @@
   }
 }
 
-.journey-section .container,
-.journey-section .section-title {
-  position: relative;
-  z-index: 2;
-}
-
-.journey-section .section-title {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
 .journey-list {
   width: 100%;
 }

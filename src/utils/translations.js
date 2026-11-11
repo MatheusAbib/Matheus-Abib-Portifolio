@@ -127,7 +127,7 @@ const translations = {
     publicacao_tag_3: "LGPD",
     publicacao_tag_4: "Análise Comparativa",
 
-    portfolio_showcase_eyebrow: "PORTFÓLIO / PROJETOS SELECIONADOS",
+    portfolio_showcase_eyebrow: "PORTFÓLIO / PROJETOS PRINCIPAIS",
     portfolio_title: "Projetos Principais",
 
     filter_all: "Todos",
@@ -366,7 +366,7 @@ const translations = {
     publicacao_tag_3: "LGPD",
     publicacao_tag_4: "Comparative Analysis",
 
-    portfolio_showcase_eyebrow: "PORTFOLIO / SELECTED PROJECTS",
+    portfolio_showcase_eyebrow: "PORTFOLIO / FEATURED PROJECTS",
     portfolio_title: "Featured Projects",
 
     filter_all: "All",

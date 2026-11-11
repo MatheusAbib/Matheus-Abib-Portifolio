@@ -8,6 +8,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'aos/dist/aos.css';
 
+const disableAOSOnMobile = () => {
+  if (window.innerWidth <= 768) {
+    const style = document.createElement('style');
+    style.id = 'aos-mobile-off';
+    style.innerHTML = `
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+};
+
+disableAOSOnMobile();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const hidePreloader = () => {

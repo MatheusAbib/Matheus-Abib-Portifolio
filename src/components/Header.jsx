@@ -220,7 +220,6 @@ const Header = () => {
               Matheus Abib
             </span>
 
-            <span className="header-logo-dot">.</span>
           </button>
 
           <nav

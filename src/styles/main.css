@@ -79,6 +79,7 @@ section,
 .section-title {
   text-align: center;
   position: relative;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .section-title h2 {
@@ -213,39 +214,6 @@ section,
   margin: 0 auto;
   position: relative;
   z-index: 2;
-}
-
-.btn-primary {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 0.9rem 2.5rem;
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: var(--accent-strong);
-}
-
-.btn-secondary {
-  background: var(--surface-1);
-  backdrop-filter: blur(10px);
-  color: var(--fg);
-  border: 1px solid var(--hairline);
-  padding: 0.9rem 2.5rem;
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background: var(--surface-2);
 }
 
 .scroll-top {

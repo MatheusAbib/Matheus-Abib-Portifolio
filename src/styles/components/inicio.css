@@ -915,7 +915,7 @@
 
   .hero-tags {
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-actions {
@@ -964,7 +964,7 @@
   }
 
   .hero-tags {
-    gap: 7px;
+    gap: 5px;
   }
 
   .hero-tag {
@@ -1020,7 +1020,7 @@
   }
 
   .hero-content {
-    padding: 1rem 0 0;
+    padding: 0;
   }
 
   .hero-prefix {
@@ -1044,6 +1044,9 @@
   .hero-tag {
     padding: 5px 8px;
     font-size: 0.6rem;
+  }
+  .hero-tag-dot{
+    display: none;
   }
 
   .hero-actions {
@@ -1096,7 +1099,7 @@
   }
 
   .tv-welcome-text {
-    font-size: clamp(0.9rem, 3.9vw, 1.2rem);
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
     line-height: 1.5;
   }
 
@@ -1134,8 +1137,7 @@
   }
 
   .hero-bottom {
-    gap: 12px;
-    padding-top: 15px;
+   display: none;
   }
 
   .hero-availability-badge {

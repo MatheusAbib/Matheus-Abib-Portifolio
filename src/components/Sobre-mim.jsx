@@ -79,16 +79,20 @@ const SobreMim = () => {
   return (
     <section id="sobre-mim" className="sobre-mim section">
       <div className="container">
+        
         <SectionLabel sectionId="sobre-mim" />
-
-        <div className="sobre-mim-grid">
-          <div className="sobre-mim-left">
+             <div className="section-title" data-aos="fade-up">
             <h2
               className="sobre-mim-title"
               data-translate="about_title"
             >
               {t('about_title')}
             </h2>
+            </div>
+        <div className="sobre-mim-grid">
+          
+          <div className="sobre-mim-left">
+
 
             <div className="sobre-mim-features">
               {features.map((feature, index) => (

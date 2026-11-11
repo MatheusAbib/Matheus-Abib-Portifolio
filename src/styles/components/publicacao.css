@@ -19,10 +19,6 @@
   z-index: 1;
 }
 
-.publicacao-section .section-title {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
 .publicacao-card {
   position: relative;
   width: 100%;

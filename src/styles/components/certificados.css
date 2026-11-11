@@ -26,10 +26,6 @@
   z-index: 1;
 }
 
-.certificates-section .section-title {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
 .certificates-accordion {
   display: flex;
   flex-direction: column;
