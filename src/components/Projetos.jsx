@@ -5,17 +5,17 @@ import SectionLabel from '../services/SectionLabel';
 const PROJECTS = [
   {
     id: 0,
-    title: 'Imperatore - Sistema de Gestão',
-    title_key: 'project_imperator',
-    description_key: 'project_imperator_desc',
-    category: 'Ferramenta',
-    filter: 'motion',
+    title: 'E-Commerce - Livraria Online',
+    title_key: 'project_livros',
+    description_key: 'project_livros_desc',
+    category: 'Site',
+    filter: 'web',
     stack: 'fullstack',
-    image: '/assets/img/portfolio/imperatore.png',
-    github: 'https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas',
-    live: 'https://imperatore-zeta.vercel.app/',
-    tags: ['React', 'Node.js', 'Express', 'MySQL', 'JWT'],
-    priority: 0,
+    image: '/assets/img/portfolio/Livraria-Online.png',
+    github: 'https://github.com/MatheusAbib/e-commerce-livraria',
+    live: 'https://livrariaonline-gold.vercel.app/',
+    tags: ['Angular', 'TypeScript', 'Java', 'SpringBoot', 'MySQL'],
+    priority: 1,
     featured: true
   },
   {
@@ -48,23 +48,9 @@ const PROJECTS = [
     priority: 1,
     featured: true
   },
-  {
+
+    {
     id: 3,
-    title: 'E-Commerce - Livraria Online',
-    title_key: 'project_livros',
-    description_key: 'project_livros_desc',
-    category: 'Site',
-    filter: 'web',
-    stack: 'fullstack',
-    image: '/assets/img/portfolio/Livraria-Online.png',
-    github: 'https://github.com/MatheusAbib/e-commerce-livraria',
-    live: 'https://livrariaonline-gold.vercel.app/',
-    tags: ['Angular', 'TypeScript', 'Java', 'SpringBoot', 'MySQL'],
-    priority: 1,
-    featured: true
-  },
-  {
-    id: 4,
     title: 'Jornal de Receitas',
     title_key: 'project_receitas',
     description_key: 'project_receitas_desc',
@@ -77,6 +63,24 @@ const PROJECTS = [
     tags: ['React', 'Java', 'SpringBoot', 'JavaScript', 'MySQL'],
     priority: 1
   },
+
+    {
+    id: 4,
+    title: 'Imperatore - Sistema de Gestão',
+    title_key: 'project_imperator',
+    description_key: 'project_imperator_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'fullstack',
+    image: '/assets/img/portfolio/imperatore.png',
+    github: 'https://github.com/MatheusAbib/Imperatore-Sistema-de-Gestao-saas',
+    live: 'https://imperatore-zeta.vercel.app/',
+    tags: ['React', 'Node.js', 'Express', 'MySQL', 'JWT'],
+    priority: 0,
+    featured: true
+  },
+
+
   {
     id: 5,
     title: 'Dashboard de Vendas',
