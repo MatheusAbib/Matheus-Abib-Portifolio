@@ -116,6 +116,7 @@
 
 .journey-item-active .journey-timeline-marker {
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .journey-card {
