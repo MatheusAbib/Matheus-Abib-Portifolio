@@ -184,7 +184,7 @@ const translations = {
     project_musica: "Tocador de Música",
     project_musica_desc: "Player de música com estética Y2K e Frutiger Aero, biblioteca de artistas e álbuns, playlists personalizadas, favoritos, reprodução aleatória, visualizador de áudio e interface inspirada nos softwares dos anos 2000.",
 
-    project_links: "Projetos Figma & Power BI",
+    project_links: "Portfólio Figma & Power BI",
     project_links_desc: "Coleção de projetos organizados nas categorias Figma e Power BI, com acesso direto aos trabalhos e modal de apresentação profissional, incluindo informações, habilidades técnicas e certificado de Power BI.",
 
     category_site: "Site",
