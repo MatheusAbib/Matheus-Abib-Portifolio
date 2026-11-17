@@ -64,8 +64,24 @@ const PROJECTS = [
     priority: 1
   },
 
-    {
+
+  {
     id: 4,
+    title: 'A FORCA',
+    title_key: 'project_forca',
+    description_key: 'project_forca_desc',
+    category: 'Diversão',
+    filter: 'brand',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Forca.png',
+    github: 'https://github.com/MatheusAbib/Jogo-da-Forca',
+    live: 'https://matheusabib.github.io/Jogo-da-Forca/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    priority: 2
+  },
+
+    {
+    id: 5,
     title: 'Imperatore - Sistema de Gestão',
     title_key: 'project_imperator',
     description_key: 'project_imperator_desc',
@@ -82,7 +98,7 @@ const PROJECTS = [
 
 
   {
-    id: 5,
+    id: 6,
     title: 'Dashboard de Vendas',
     title_key: 'project_dashboard',
     description_key: 'project_dashboard_desc',
@@ -96,7 +112,7 @@ const PROJECTS = [
     priority: 1
   },
   {
-    id: 9,
+    id: 7,
     title: 'Yummy Lamen - Restaurante de Lamen',
     title_key: 'project_lamen',
     description_key: 'project_lamen_desc',
@@ -110,7 +126,7 @@ const PROJECTS = [
     priority: 2
   },
   {
-    id: 6,
+    id: 8,
     title: 'Gataria - Adoção Responsável',
     title_key: 'project_gataria',
     description_key: 'project_gataria_desc',
@@ -124,7 +140,7 @@ const PROJECTS = [
     priority: 1
   },
   {
-    id: 7,
+    id: 9,
     title: 'Floricultura Dama da Noite',
     title_key: 'project_floricultura',
     description_key: 'project_floricultura_desc',
@@ -138,7 +154,7 @@ const PROJECTS = [
     priority: 2
   },
   {
-    id: 8,
+    id: 10,
     title: 'Bloco de Notas',
     title_key: 'project_notas',
     description_key: 'project_notas_desc',
@@ -152,7 +168,7 @@ const PROJECTS = [
     priority: 2
   },
   {
-    id: 10,
+    id: 11,
     title: 'UNO',
     title_key: 'project_uno',
     description_key: 'project_uno_desc',
