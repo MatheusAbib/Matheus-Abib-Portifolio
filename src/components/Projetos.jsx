@@ -18,21 +18,24 @@ const PROJECTS = [
     priority: 1,
     featured: true
   },
-  {
+
+    {
     id: 1,
-    title: 'Desfumo - Controle de Consumo ao Tabagismo',
-    title_key: 'project_desfumo',
-    description_key: 'project_desfumo_desc',
+    title: 'Jornal de Receitas',
+    title_key: 'project_receitas',
+    description_key: 'project_receitas_desc',
     category: 'Site',
     filter: 'web',
     stack: 'fullstack',
-    image: '/assets/img/portfolio/Desfumo.png',
-    github: 'https://github.com/MatheusAbib/Tabagismo-Saude-Publica',
-    live: 'https://desfumo.vercel.app/',
-    tags: ['Flutter', 'Dart', 'Node.js', 'Express', 'MySQL'],
-    priority: 1,
-    featured: true
+    image: '/assets/img/portfolio/Jornal-de-Receitas.png',
+    github: 'https://github.com/MatheusAbib/Jornal-de-Receitas',
+    live: 'https://jornaldereceitas.vercel.app/',
+    tags: ['React', 'Java', 'SpringBoot', 'JavaScript', 'MySQL'],
+    priority: 1
   },
+
+
+
   {
     id: 2,
     title: 'Organizador de Arquivos',
@@ -48,22 +51,21 @@ const PROJECTS = [
     priority: 1,
     featured: true
   },
-
-    {
+  {
     id: 3,
-    title: 'Jornal de Receitas',
-    title_key: 'project_receitas',
-    description_key: 'project_receitas_desc',
+    title: 'Desfumo - Controle de Consumo ao Tabagismo',
+    title_key: 'project_desfumo',
+    description_key: 'project_desfumo_desc',
     category: 'Site',
     filter: 'web',
     stack: 'fullstack',
-    image: '/assets/img/portfolio/Jornal-de-Receitas.png',
-    github: 'https://github.com/MatheusAbib/Jornal-de-Receitas',
-    live: 'https://jornaldereceitas.vercel.app/',
-    tags: ['React', 'Java', 'SpringBoot', 'JavaScript', 'MySQL'],
-    priority: 1
+    image: '/assets/img/portfolio/Desfumo.png',
+    github: 'https://github.com/MatheusAbib/Tabagismo-Saude-Publica',
+    live: 'https://desfumo.vercel.app/',
+    tags: ['Flutter', 'Dart', 'Node.js', 'Express', 'MySQL'],
+    priority: 1,
+    featured: true
   },
-
 
   {
     id: 4,
