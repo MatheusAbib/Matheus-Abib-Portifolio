@@ -172,9 +172,9 @@ const translations = {
     project_lamen: "Yummy Lamen — 旨いラーメン",
     project_lamen_desc: "Site de restaurante japonês inspirado na estética retrô da era Shōwa, com identidade visual tradicional, cardápio digital interativo, galeria de imagens, divulgação de eventos, seção de reservas e design responsivo.",
 
-    project_calendario: "Calendário",
-    project_calendario_desc: "Calendário interativo para gerenciamento de compromissos, com feriados nacionais, eventos recorrentes (diários, semanais, mensais e anuais), navegação mensal e anual e relógio em tempo real.",
-
+    project_calendario: "Calendário — Almanaque Botânico",
+    project_calendario_desc: "Almanaque botânico interativo inspirado em calendários vintage, com ilustrações mensais, feriados nacionais, datas comemorativas, previsão do tempo, eventos personalizados e recorrentes, além de navegação entre meses e anos.",
+        
     project_uno: "UNO Arcade",
     project_uno_desc: "Versão digital do jogo UNO com estética neon retrô, bots inteligentes, cartas especiais, torneio eliminatório de seis rodadas, ranking de vitórias, chat de ações em tempo real e interface responsiva.",
 
@@ -411,9 +411,9 @@ const translations = {
     project_lamen: "Yummy Lamen — 旨いラーメン",
     project_lamen_desc: "Japanese restaurant website inspired by the retro aesthetics of the Shōwa era, featuring traditional Japanese visual design, an interactive digital menu, image gallery, event announcements, a reservation section, and responsive layouts.",
 
-    project_calendario: "Calendar",
-    project_calendario_desc: "Interactive calendar for appointment management, featuring national holidays, recurring events (daily, weekly, monthly, and yearly), monthly and yearly navigation, and a real-time clock.",
-
+    project_calendario: "Calendar — Botanical Almanac",
+    project_calendario_desc: "An interactive botanical almanac inspired by vintage calendars, featuring monthly illustrations, national holidays, special dates, weather forecasts, custom and recurring events, and month-by-month and year-by-year navigation.",
+        
     project_uno: "UNO Arcade",
     project_uno_desc: "Digital adaptation of the UNO card game featuring retro neon visuals, intelligent bots, special cards, a six-round elimination tournament, win rankings, a real-time action feed, and responsive design.",
 

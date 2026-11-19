@@ -168,6 +168,8 @@ const PROJECTS = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     priority: 2
   },
+
+  
   {
     id: 11,
     title: 'UNO',
@@ -196,8 +198,23 @@ const PROJECTS = [
     tags: ['HTML', 'CSS', 'JavaScript', 'Web Audio API'],
     priority: 2
   },
+
   {
     id: 13,
+    title: 'Calendario',
+    title_key: 'project_calendario',
+    description_key: 'project_calendario_desc',
+    category: 'Ferramenta',
+    filter: 'motion',
+    stack: 'frontend-only',
+    image: '/assets/img/portfolio/Calendario.png',
+    github: 'https://github.com/MatheusAbib/Calendario',
+    live: 'https://matheusabib.github.io/Calendario/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    priority: 2
+  },
+  {
+    id: 14,
     title: 'Figma & Power BI',
     title_key: 'project_links',
     description_key: 'project_links_desc',
