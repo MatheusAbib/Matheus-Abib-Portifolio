@@ -178,7 +178,7 @@ const SobreMim = () => {
               </div>
             </div>
 
-            <div className="sobre-mim-footer" data-aos="fade-up" data-aos-delay="100">
+            <div className="sobre-mim-footer">
               <div className="sobre-mim-actions-left">
                 <div className="dropdown" ref={dropdownRef}>
                   <button
